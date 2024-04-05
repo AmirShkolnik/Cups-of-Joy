@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com',
                 '127.0.0.1', 'localhost',
-                '.herokuapp.com',]
+                '.herokuapp.com']
 
 
 # Application definition
