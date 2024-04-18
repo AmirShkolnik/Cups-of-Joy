@@ -18,7 +18,8 @@ def about_me(request):
             collaborate_request.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Collaboration request received! I endeavor to respond within 2 working days.'
+                'Collaboration request received!'
+                'I endeavor to respond within 2 working days.'
             )
             collaborate_form = CollaborateForm()
         else:
@@ -29,6 +30,5 @@ def about_me(request):
     return render(
         request,
         "about/about.html",
-        {"about": about,
-        "collaborate_form": collaborate_form},
+        {"about": about, "collaborate_form": collaborate_form},
     )
