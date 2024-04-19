@@ -12,7 +12,7 @@ class TestAboutView(TestCase):
             title="About Me", content="This is about me.")
         self.about_content.save()
 
-def test_render_about_page_with_collaborate_form(self):
+    def test_render_about_page_with_collaborate_form(self):
         """Verifies get request for about me containing a collaboration form"""
         response = self.client.get(reverse('about'))
         self.assertEqual(response.status_code, 200)
