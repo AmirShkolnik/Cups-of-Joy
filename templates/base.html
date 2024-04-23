@@ -53,10 +53,10 @@
                 <a class="nav-link" href="javascript:void(0)">Visit</a>
               </li>
                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Chose Your Mug</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Choose Your Mug</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Mom</a></li>
-                  <li><a class="dropdown-item" href="#">Dad</a></li>
+                  <li><a class="dropdown-item" href="{% url 'choosemug:mom' %}">Mom</a></li>
+                  <li><a class="dropdown-item" href="{% url 'choosemug:dad' %}">Dad</a></li>
                 </ul>
               </li>
               {% if user.is_authenticated %}
