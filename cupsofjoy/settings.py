@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'cupsofjoy',
-    'home',
+    'chosemug',
     'about',
     'django_summernote',
     'cloudinary',
