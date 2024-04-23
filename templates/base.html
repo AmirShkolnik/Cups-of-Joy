@@ -35,7 +35,9 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
                         class="thin">|star</span></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img class="nav-logo" src="{% static 'images/jobfinder_logo.png' %}" alt="Job Finder logo">
+            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,10 +68,9 @@
                     {% endif %}
 
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
             </div>
+        </div>
+        </div>
         </div>
     </nav>
     <!-- displaying Django messages -->

@@ -9,6 +9,18 @@ body {
     color: #4A4A4F;
 }
 
+.logo {
+    background: url("../images/jobfinder_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 115px;
+    max-width: 100%;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
 .red-o {
     color: #E84610;
 }
@@ -26,7 +38,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: whitesmoke;
 }
 
 .card {
