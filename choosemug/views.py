@@ -7,3 +7,7 @@ def mom_view(request):
 def dad_view(request):
     # Add any necessary logic here
     return render(request, 'choosemug/dad.html')
+
+def welcome_view(request):
+    # Add any necessary logic here
+    return render(request, 'choosemug/welcome.html')

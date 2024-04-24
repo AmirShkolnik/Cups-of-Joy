@@ -2,6 +2,17 @@ body {
     background-color: #F9FAFC;
 }
 
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/mug-home-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
