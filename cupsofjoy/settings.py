@@ -55,9 +55,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cupsofjoy',
     'choosemug',
-    'about',
     'django_summernote',
     'cloudinary',
+    'about',
     'blog',
 ]
 
