@@ -11,7 +11,11 @@
 
             <div class="col-md-8">
                 <div class="row">
-                    
+                    {% for mom in moms %}
+
+                        <h2>Mom name: {{ mom.name }}, price M: {{ mom.priceM }}</h2>
+
+                    {% endfor %}
                 </div>
             </div>
 
@@ -22,11 +26,5 @@
         </div>
 
     </div>
-
-    {% for mom in moms %}
-
-        <h2>Mom name: {{ mom.name }}, price M: {{ mom.priceM }}</h2>
-
-    {% endfor %}
 
 {% endblock %}
