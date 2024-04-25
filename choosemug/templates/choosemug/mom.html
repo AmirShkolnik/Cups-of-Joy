@@ -10,7 +10,7 @@
             <h2 class="title">Mom Mugs</h2>
             <div class="row">
                 {% for mom in moms %}
-                <div class="col-md-6 p-4">
+                <div class="col-md-4 p-4">
                     {% if "placeholder" in mom.mug_image.url %}
                     <img src="{% static 'images/default.jpg' %}" class="mug-images" alt="placeholder image">
                     {% else %}
