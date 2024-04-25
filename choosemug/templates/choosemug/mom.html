@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Mom{% endblock %}
 
 {% block content %}
@@ -12,8 +12,14 @@
             <div class="col-md-8">
                 <div class="row">
                     {% for mom in moms %}
-                    <div class="col-md-6">
+                    <div class="col-md-6 p-4">
                         <img class="mug-images" src="{{ mom.pImage }}">
+                        {% if "placeholder" in about.profile_image.url %}
+                        <img src="{% static 'images/nobody.jpg' %}" class="mug-images" alt="placeholder image">
+                        {% else %}
+                        <img src="{{ choosemug.mug_image.url }}" class="mug-images" alt="{{ mom.name }}">
+                        {% endif %}
+                        <h4> {{ mom.name }}</h4>
                     </div>
                     {% endfor %}
                 </div>
