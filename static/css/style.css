@@ -24,12 +24,6 @@ body {
     height: 200px;
 }
 
-.mug-title {
-    position: relative;
-    margin-top: 10px;
-    left: 120px;
-}
-
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
