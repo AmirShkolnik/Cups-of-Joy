@@ -1,3 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}Mom{% endblock %}
+
+{% block content %}
+
+    {% for mom in moms %}
+
+        <h2>Mom name: {{ mom.name }}, price M: {{ mom.priceM }}</h2>
+
+    {% endfor %}
+
+{% endblock %}
