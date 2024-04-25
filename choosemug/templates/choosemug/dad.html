@@ -1,10 +1,48 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Dad{% endblock %}
 
 {% block content %}
 
-    <h1>Welcome</h1>
-    <div id="test"></div>
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-md-8">
+            <h2 class="title">Dad Mugs</h2>
+            <div class="row">
+                {% for dad in dads %}
+                <div class="col-md-6 p-4">
+                    {% if "placeholder" in dad.mug_image.url %}
+                    <img src="{% static 'images/default.jpg' %}" class="mug-images" alt="placeholder image">
+                    {% else %}
+                    <img src="{{ dad.mug_image.url }}" class="mug-images" alt="{{ dad.name }}">
+                    {% endif %}
+                    <h4 class="p-3"> {{ dad.name }}</h4>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" checked>
+                            {{ dad.colorAd }}
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio">
+                            {{ dad.colorBd }}
+                        </label>
+                </div>
+                <div>
+                    <button class="btn-info mt-3">Submit</button>
+                </div>
+            </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Mom
+from .models import Dad
 # Create your views here.
 
 def mom_view(request):
@@ -10,8 +11,10 @@ def mom_view(request):
     return render(request, 'choosemug/mom.html', ctx)
 
 def dad_view(request):
-    # Add any necessary logic here
-    return render(request, 'choosemug/dad.html')
+    dads = Dad.objects.all()
+    ctx = {'dads': dads}
+    print(dads)
+    return render(request, 'choosemug/dad.html', ctx)
 
 def welcome_view(request):
     # Add any necessary logic here
