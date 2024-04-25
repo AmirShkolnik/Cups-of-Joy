@@ -4,32 +4,45 @@
 
 {% block content %}
 
-    <h2 class="title">Mom Mugs</h2>
-
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-8">
-                <div class="row">
-                    {% for mom in moms %}
-                    <div class="col-md-6 p-4">
-                        {% if "placeholder" in mom.mug_image.url %}
-                        <img src="{% static 'images/default.jpg' %}" class="mug-images" alt="placeholder image">
-                        {% else %}
-                        <img src="{{ mom.mug_image.url }}" class="mug-images" alt="{{ mom.name }}">
-                        {% endif %}
-                        <h4 class="item-title"> {{ mom.name }}</h4>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="title">Mom Mugs</h2>
+            <div class="row">
+                {% for mom in moms %}
+                <div class="col-md-6 p-4">
+                    {% if "placeholder" in mom.mug_image.url %}
+                    <img src="{% static 'images/default.jpg' %}" class="mug-images" alt="placeholder image">
+                    {% else %}
+                    <img src="{{ mom.mug_image.url }}" class="mug-images" alt="{{ mom.name }}">
+                    {% endif %}
+                    <h4 class="mug-title"> {{ mom.name }}</h4>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" checked>
+                            {{ 'mom.colorA' }}
+                        </label>
                     </div>
-                    {% endfor %}
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio">
+                            {{ 'mom.colorB' }}
+                        </label>
+                </div>
+                <div>
+                    <button class="btn-info">Submit</button>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                
+                {% endfor %}
             </div>
+        </div>
+
+        <div class="col-md-4">
 
         </div>
 
     </div>
+
+</div>
 
 {% endblock %}

@@ -3,11 +3,11 @@ from .models import Mom, Dad
 # Register your models here.
 
 class MomAdmin(admin.ModelAdmin):
-    list_display = ('name', 'priceM', 'priceL')
+    list_display = ('name', 'colorA', 'colorB')
 
 admin.site.register(Mom, MomAdmin)
 
 class DadAdmin(admin.ModelAdmin):
-    list_display = ('name', 'priceM', 'priceL')
+    list_display = ('name', 'colorA', 'colorB')
 
 admin.site.register(Dad, DadAdmin)
