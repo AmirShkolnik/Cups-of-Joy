@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import Post, Comment
 from .forms import CommentForm
 
@@ -69,7 +70,6 @@ def post_detail(request, slug):
             "comment_form": comment_form
         },
     )
-
 
 def comment_edit(request, slug, comment_id):
     """
