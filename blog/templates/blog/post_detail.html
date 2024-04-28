@@ -9,10 +9,12 @@
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
+                  <!-- Post author goes before the | the post's created date goes after -->
+            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}
                 {% if request.user.is_authenticated %}
                 {% if fav %}
-                <div>
-                    <a href="{% url 'favourite_add' post.id %}" onclick="alert('Post removed from favourites.');" class="text-dark">
+                
+                    <a href="{% url 'favourite_add' post.id %}" onclick="alert('Post removed from favourites.');" class="text-white">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-check"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -21,10 +23,10 @@
                                 d="M15.854 2.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 4.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
                         </svg>
                     </a>
-                </div>
+                
                 {% else %}
-                <div>
-                    <a href="{% url 'favourite_add' post.id %}" onclick="alert('Post added to favourites.');" class="text-dark">
+               
+                    <a href="{% url 'favourite_add' post.id %}" onclick="alert('Post added to favourites.');" class="text-white">
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-plus"
                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -33,17 +35,20 @@
                                 d="M13 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z" />
                         </svg>
                     </a>
-                </div>
+                
                 {% endif %}
                 {% else %}
-                <div>
+                
                     <a href="{% url 'account_login' %}" target="_blank"
-                        onclick="alert('Please log in to add to favourite this post.');" class="">Add to Favorites</a>
-                </div>
-                {% endif %}
-            </div>
-            <!-- Post author goes before the | the post's created date goes after -->
-            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                        onclick="alert('Please log in to add to favourite this post.');" class="text-white"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-plus"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.5 2a.5.5 0 0 0-.5.5v11.066l4-2.667 4 2.667V8.5a.5.5 0 0 1 1 0v6.934l-5-3.333-5 3.333V2.5A1.5 1.5 0 0 1 4.5 1h4a.5.5 0 0 1 0 1h-4zm9-1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V1.5a.5.5 0 0 1 .5-.5z" />
+                        <path fill-rule="evenodd"
+                            d="M13 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z" />
+                    </svg></a>
+               
+                {% endif %} </p>
         </div>
         <div class="d-none d-md-block col-md-6 masthead-image">
             {% if "placeholder" in post.featured_image.url %}
