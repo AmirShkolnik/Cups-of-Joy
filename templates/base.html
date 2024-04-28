@@ -60,7 +60,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
-                  <a class="dropdown-item" href="{% url 'favourite_list' %}">Saved Posts</a>
+                  <a class="dropdown-item" href="{% url 'favourite_list' %}" onclick="alert('Please log in to see your favourite posts.');" >Favourite Posts</a>
                 </ul>
               </li>
               {% if user.is_authenticated %}
