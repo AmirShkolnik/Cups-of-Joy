@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -9,18 +9,35 @@
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                {% if request.user.is_authenticated %}
+                {% if fav %}
+                <div>
+                    <a href="{% url 'favourite_add' post.id %}" onclick="alert('Post removed from favourites.');">Remove Favorites</a>
+                </div>
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+                <div>
+                    <a href="{% url 'favourite_add' post.id %}">Add to
+                        Favorites</a>
+                </div>
+                {% endif %}
+                {% else %}
+                <div>
+                    <a href="{% url 'account_login' %}" target="_blank" onclick="alert('Please log in to add to favourite this post.');" class="">Add to Favorites</a>
+                </div>
                 {% endif %}
             </div>
+            <!-- Post author goes before the | the post's created date goes after -->
+            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+        </div>
+        <div class="d-none d-md-block col-md-6 masthead-image">
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+            {% else %}
+            <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+            {% endif %}
         </div>
     </div>
+</div>
 </div>
 
 <div class="container">
@@ -40,6 +57,19 @@
             <strong class="text-secondary">
                 <i class="far fa-comments"></i> {{ comment_count }}
             </strong>
+        </div>
+        <div class="d-flex">
+            {% if user.is_authenticated %}
+            <div class="pr-2">
+                <span class="" id="like_count">{{post.like_count}}</span>
+                <button class="btn btn-link text-dark p-0 border-0 btn-outline-light" id="like-button"
+                    value="{{ post.id }}">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            {% else %}
+            <i class="far fa-heart"></i>
+            {% endif %}
         </div>
         <div class="col-12">
             <hr>
@@ -113,5 +143,8 @@
 {% endblock content %}
 
 {% block extras %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{% static 'js/comments.js' %}"></script>
+<script src="{% static 'js/post.js' %}"></script>
+<script src="{% static 'js/like_bookmark.js' %}"></script>
 {% endblock %}

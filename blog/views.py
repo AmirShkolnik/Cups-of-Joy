@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
@@ -5,9 +6,26 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Post, Comment
 from .forms import CommentForm
+from blog.models import Post
+
 
 # Create your views here.
 
+@ login_required
+def favourite_list(request):
+    new = Post.newmanager.filter(favourites=request.user)
+    return render(request,
+                  'blog/favourites.html',
+                  {'new': new})
+
+@ login_required
+def favourite_add(request, id):
+    post = get_object_or_404(Post, id=id)
+    if post.favourites.filter(id=request.user.id).exists():
+        post.favourites.remove(request.user)
+    else:
+        post.favourites.add(request.user)
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 class PostList(generic.ListView):
     """
@@ -46,6 +64,13 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    likes_count = post.likes.count()
+    favourites_count = post.favourites.count()
+    fav = bool
+
+    if post.favourites.filter(id=request.user.id).exists():
+        fav = True
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -57,8 +82,10 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-    comment_form = CommentForm()
+    else:
+        comment_form = CommentForm()
 
     return render(
         request,
@@ -67,7 +94,10 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "likes_count": likes_count,
+            "favourites_count": favourites_count,
+            "comment_form": comment_form,
+            "fav": fav
         },
     )
 
