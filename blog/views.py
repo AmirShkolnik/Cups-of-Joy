@@ -18,13 +18,15 @@ def favourite_list(request):
                   'blog/favourites.html',
                   {'new': new})
 
-@ login_required
+@login_required
 def favourite_add(request, id):
     post = get_object_or_404(Post, id=id)
     if post.favourites.filter(id=request.user.id).exists():
         post.favourites.remove(request.user)
+        messages.success(request, "Removed from favorites.")
     else:
         post.favourites.add(request.user)
+        messages.success(request, "Added to favorites.")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 class PostList(generic.ListView):
