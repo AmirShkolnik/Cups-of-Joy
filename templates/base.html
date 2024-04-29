@@ -61,7 +61,7 @@
                       href="{% url 'account_logout' %}">Logout</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Choose Your Mug</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{ user }}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
