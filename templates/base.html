@@ -36,7 +36,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/mug-white.png' %}" alt="Cup Of Joy logo">
+            <a class="navbar-brand" {% if request.path == home_url %}active" aria-current="page{%endif%}"
+            href="{% url 'home' %}"><img src="{% static 'images/mug-white.png' %}" alt="Cup Of Joy logo">
                 <span class="brand, text-white">CUP<span class="red-o"> of </span><span
                         class="thin, text-white">JOY</span></span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -56,16 +57,16 @@
                 <a class="nav-link" href="javascript:void(0)">Visit</a>
               </li>
               {% if user.is_authenticated %}
-              <li class="nav-item">
-                  <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{%endif%}"
-                      href="{% url 'account_logout' %}">Logout</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{ user }}</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
-                  <a class="dropdown-item" href="{% url 'favourite_list' %}">Favourite Posts</a>
+                  <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourite Posts</a></li>
+                  <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'comments_list' %}">My Comments</a></li>
+                    <a class="dropdown-item {% if request.path == logout_url %}active" aria-current="page{%endif%}"
+                        href="{% url 'account_logout' %}">Logout</a>
+                </li>
                 </ul>
               </li>
               {% else %}

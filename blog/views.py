@@ -14,6 +14,10 @@ from blog.models import Post
 @ login_required
 def favourite_list(request):
     new = Post.newmanager.filter(favourites=request.user)
+
+    if not new:
+        messages.info(request, "You don't have any favorites yet.")
+        
     return render(request,
                   'blog/favourites.html',
                   {'new': new})
@@ -102,6 +106,18 @@ def post_detail(request, slug):
             "fav": fav
         },
     )
+
+@login_required
+def comments_list(request):
+    """
+    View for displaying posts commented on by the current user.
+    """
+    if request.method == 'GET':
+        commented_post_ids = Comment.objects.filter(
+            author=request.user).values_list('post_id', flat=True)
+        posts = Post.objects.filter(
+            id__in=commented_post_ids).order_by('-created_on')
+        return render(request, 'blog/comments.html', {'posts': posts})
 
 def comment_edit(request, slug, comment_id):
     """

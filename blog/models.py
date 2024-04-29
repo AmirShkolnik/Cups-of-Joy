@@ -1,6 +1,6 @@
+from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
-from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -8,10 +8,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
-
-    class NewManager(models.Manager):
-        def get_queryset(self):
-                return super().get_queryset() .filter(status=1)
         
     """
     Stores a single blog post entry related to :model:`auth.User`.
@@ -32,9 +28,13 @@ class Post(models.Model):
     likes = models.ManyToManyField(
         User, related_name='like', default=None, blank=True)
     like_count = models.BigIntegerField(default='0')
+
+    class NewManager(models.Manager):
+        def get_queryset(self):
+                return super().get_queryset() .filter(status=1)
+
     objects = models.Manager()  # default manager
     newmanager = NewManager()  # custom manager
-
     
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.slug])

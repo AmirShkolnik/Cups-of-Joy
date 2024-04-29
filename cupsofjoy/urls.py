@@ -16,15 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from choosemug import urls
-from about import views as about_views
 
 urlpatterns = [
     path("about/", include("about.urls"), name="about-urls"),
     path('choosemug/', include("choosemug.urls", namespace="choosemug")),
-    path('', include(('blog.urls', 'blog'), namespace='blog')),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path("", include("blog.urls"), name="blog-urls"),
+    path('', include('blog.urls')),
     path("accounts/", include("allauth.urls")),
 ]

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{ user }} Favourties{% endblock %}
+{% block title %}My Comments{% endblock %}
 {% block content %}
 <div class="container">
     <section class="jumbotron text-center bg-white">
@@ -12,10 +12,9 @@
     </section>
     <div>
         <div class="row">
-
             {% for post in new %}
             <div class="col-md-4">
-              <a class="text-dark" href="{% url 'post_detail' post.slug %}">
+                <a class="text-dark" href="{% url 'post_detail' post.slug %}">
                     <div class="card mb-4 box-shadow">
                         {% if "placeholder" in post.featured_image.url %}
                         <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
