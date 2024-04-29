@@ -36,7 +36,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" {% if request.path == home_url %}active" aria-current="page{%endif%}"
+            <a class="navbar-brand {% if request.path == home_url %}active" aria-current="page{%endif%}"
             href="{% url 'home' %}"><img src="{% static 'images/mug-white.png' %}" alt="Cup Of Joy logo">
                 <span class="brand, text-white">CUP<span class="red-o"> of </span><span
                         class="thin, text-white">JOY</span></span></a>
