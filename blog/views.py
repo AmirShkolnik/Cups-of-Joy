@@ -7,9 +7,28 @@ from django.urls import reverse
 from .models import Post, Comment
 from .forms import CommentForm
 from blog.models import Post
-
+from django.http import JsonResponse
 
 # Create your views here.
+
+@ login_required
+def like(request):
+    if request.POST.get('action') == 'post':
+        result = ''
+        id = int(request.POST.get('postid'))
+        post = get_object_or_404(Post, id=id)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            post.like_count -= 1
+            result = post.like_count
+            post.save()
+        else:
+            post.likes.add(request.user)
+            post.like_count += 1
+            result = post.like_count
+            post.save()
+
+        return JsonResponse({'result': result, })
 
 @ login_required
 def favourite_list(request):

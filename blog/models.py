@@ -12,6 +12,11 @@ class Post(models.Model):
     """
     Stores a single blog post entry related to :model:`auth.User`.
     """
+
+    class NewManager(models.Manager):
+        def get_queryset(self):
+                return super().get_queryset() .filter(status=1)
+        
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -26,18 +31,11 @@ class Post(models.Model):
     favourites = models.ManyToManyField(
         User, related_name='favourite', default=None, blank=True)
     likes = models.ManyToManyField(
-        User, related_name='like', default=None, blank=True)
+        User, related_name='blog_likes', default=None, blank=True)
     like_count = models.BigIntegerField(default='0')
-
-    class NewManager(models.Manager):
-        def get_queryset(self):
-                return super().get_queryset() .filter(status=1)
 
     objects = models.Manager()  # default manager
     newmanager = NewManager()  # custom manager
-    
-    def get_absolute_url(self):
-        return reverse('blog:post_detail', args=[self.slug])
         
     class Meta:
         ordering = ["-created_on"]
