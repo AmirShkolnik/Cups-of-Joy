@@ -127,40 +127,6 @@ def post_detail(request, slug):
     )
 
 @login_required
-def liked_posts(request):
-    """
-    View for displaying the user's liked posts.
-    """
-    if request.method == 'GET':
-        posts = Post.objects.filter(likes=request.user).order_by('-created_on')
-        return render(request, 'blog/liked_posts.html', {'posts': posts})
-
-@login_required
-def like_post(request):
-    """
-    View for handling post likes.
-    """
-    if request.method == 'POST':
-        post_id = request.POST.get('post_id')
-        post = Post.objects.get(id=post_id)
-        liked = False
-        message = 'Post unliked.'
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-            liked = True
-            message = 'Post liked.'
-        return JsonResponse({
-            'liked': liked,
-            'likes_count': post.likes.count(),
-            'message': message
-        })
-    else:
-        return JsonResponse({'error': 'Invalid request method'})
-
-
-@login_required
 def comments_list(request):
     """
     View for displaying posts commented on by the current user.
