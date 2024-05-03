@@ -34,8 +34,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com',
-                 '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io']
-
+                 '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io',
+                 '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu112.gitpod.io',
+                 ]
 
 # Application definition
 
@@ -121,7 +122,8 @@ if 'test' in sys.argv:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.com",
     "https://*.herokuapp.com",
-    "https://8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io"
+    "https://8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io",
+    "https://8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu112.gitpod.io",
 ]
 
 # Password validation

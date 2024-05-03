@@ -9,7 +9,7 @@ urlpatterns = [
          views.favourite_list, name='favourite_list'),
     path('blog/comments/', 
          views.comments_list, name='comments_list'),
-    path('like-post/', views.like_post, name='like_post'),
+    path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('<slug:slug>/', 
          views.post_detail, name="post_detail"),
     path('<slug:slug>/edit_comment/<int:comment_id>',

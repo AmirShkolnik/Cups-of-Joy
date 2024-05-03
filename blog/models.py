@@ -31,8 +31,7 @@ class Post(models.Model):
     favourites = models.ManyToManyField(
         User, related_name='favourite', default=None, blank=True)
     likes = models.ManyToManyField(
-        User, related_name='blog_likes', default=None, blank=True)
-    like_count = models.BigIntegerField(default='0')
+        User, related_name='post_like', default=None, blank=True)
 
     objects = models.Manager()  # default manager
     newmanager = NewManager()  # custom manager
@@ -43,6 +42,9 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | written by {self.author}"
     
+    def number_of_likes(self):
+        return self.likes.count()
+
     def favourites_count(self):
         """
         Returns the total number of favourites for the post.

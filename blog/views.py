@@ -1,35 +1,15 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from blog.models import Post
 from .models import Post, Comment
 from .forms import CommentForm
-from blog.models import Post
-from django.http import JsonResponse
 
 # Create your views here.
-
-@ login_required
-def like(request):
-    if request.POST.get('action') == 'post':
-        result = ''
-        id = int(request.POST.get('postid'))
-        post = get_object_or_404(Post, id=id)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-            post.like_count -= 1
-            result = post.like_count
-            post.save()
-        else:
-            post.likes.add(request.user)
-            post.like_count += 1
-            result = post.like_count
-            post.save()
-
-        return JsonResponse({'result': result, })
-
+    
 @ login_required
 def favourite_list(request):
     new = Post.newmanager.filter(favourites=request.user)
@@ -90,11 +70,14 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     likes_count = post.likes.count()
+    liked = False
     favourites_count = post.favourites.count()
     fav = bool
 
     if post.favourites.filter(id=request.user.id).exists():
         fav = True
+    if post.likes.filter(id=request.user.id).exists():
+            liked = True
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -120,45 +103,12 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "likes_count": likes_count,
+            "liked": liked,
             "favourites_count": favourites_count,
             "comment_form": comment_form,
             "fav": fav
         },
     )
-
-@login_required
-def liked_posts(request):
-    """
-    View for displaying the user's liked posts.
-    """
-    if request.method == 'GET':
-        posts = Post.objects.filter(likes=request.user).order_by('-created_on')
-        return render(request, 'blog/liked_posts.html', {'posts': posts})
-
-@login_required
-def like_post(request):
-    """
-    View for handling post likes.
-    """
-    if request.method == 'POST':
-        post_id = request.POST.get('post_id')
-        post = Post.objects.get(id=post_id)
-        liked = False
-        message = 'Post unliked.'
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-            liked = True
-            message = 'Post liked.'
-        return JsonResponse({
-            'liked': liked,
-            'likes_count': post.likes.count(),
-            'message': message
-        })
-    else:
-        return JsonResponse({'error': 'Invalid request method'})
-
 
 @login_required
 def comments_list(request):
@@ -229,3 +179,17 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.success(request, "Removed from likes.")
+        else:
+            post.likes.add(request.user)
+            messages.success(request, "Added to likes.")
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
