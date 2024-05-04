@@ -13,7 +13,7 @@
             <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}
                 <div class="col-1">
                     <strong>
-                        {% if user.is_authenticated %}
+                             {% if request.user.is_authenticated %}
                         <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                             {% csrf_token %}
                             {% if liked %}
@@ -23,6 +23,7 @@
                             {% endif %}
                         </form>
                         {% else %}
+                        
                         <span class="text-secondary"><i class="far fa-heart"></i></span>
                         {% endif %}
                     <!-- The number of likes goes before the closing strong tag -->
@@ -56,17 +57,13 @@
                     </div>
                 {% endif %}
                 {% else %}
-                  <div>
-                    <a href="{% url 'account_login' %}" target="_blank"
-                        class="text-white"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-plus"
-                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M4.5 2a.5.5 0 0 0-.5.5v11.066l4-2.667 4 2.667V8.5a.5.5 0 0 1 1 0v6.934l-5-3.333-5 3.333V2.5A1.5 1.5 0 0 1 4.5 1h4a.5.5 0 0 1 0 1h-4zm9-1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V1.5a.5.5 0 0 1 .5-.5z" />
-                        <path fill-rule="evenodd"
-                            d="M13 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z" />
-                    </svg></a>
-               </div>
-                {% endif %} </p>
+                <div>
+                    <span class="text-white">Please <a href="{% url 'account_login' %}" target="_blank" class="text-white">log in</a> to like and 
+                        add to favorites.</span>
+                    </div>
+                {% endif %} </p> 
+
+
         </div>
         <div class="d-none d-md-block col-md-6 masthead-image">
             {% if "placeholder" in post.featured_image.url %}
@@ -175,7 +172,6 @@
     </div>
 </div>
 {% endblock content %}
-
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
