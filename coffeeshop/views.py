@@ -1,6 +1,5 @@
 from .models import Review
 from django.views.generic import ListView, DetailView, UpdateView
-from django.shortcuts import render
 
 # Create your views here.
 

@@ -58,9 +58,9 @@ INSTALLED_APPS = [
     'choosemug',
     'django_summernote',
     'cloudinary',
+    'coffeeshop',
     'about',
     'blog',
-    'coffeeshop',
 ]
 
 SITE_ID = 1
