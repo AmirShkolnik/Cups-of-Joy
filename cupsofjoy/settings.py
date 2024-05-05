@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'coffeeshop',
     'about',
     'blog',
+    'widget_tweaks'
 ]
 
 SITE_ID = 1
