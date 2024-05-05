@@ -1,11 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Coffee Shop{% endblock %}
 
 {% block content %}
 
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
-            {% for core in index %}
+            {% for review in index %}
             <div class="col-md-4">
                 <div class="card md-4 box-shadow">
                     <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cup">
