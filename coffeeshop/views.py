@@ -7,6 +7,7 @@ from django.shortcuts import render
 class IndexView(ListView):
     model= Core
     template_name = 'coffeeshop/index.html'
+    context_object_name = 'index'
 
 class SingleView(DetailView):
     model = Core
