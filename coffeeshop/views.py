@@ -24,3 +24,10 @@ class AddView(CreateView):
     template_name = 'coffeeshop/add.html'
     fields = '__all__'
     success_url = reverse_lazy('coffeeshop:add_review')
+
+class EditView(UpdateView):
+    model= Review
+    template_name = 'coffeeshop/edit.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('coffeeshop:add_review')
