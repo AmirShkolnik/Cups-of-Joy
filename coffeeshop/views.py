@@ -1,5 +1,5 @@
 from .models import Review
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -31,3 +31,9 @@ class EditView(UpdateView):
     fields = '__all__'
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('coffeeshop:add_review')
+
+class DeleteView(DeleteView):
+    model= Review
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('coffeeshop:add_review')
+    template_name = 'coffeeshop/confirm-delete.html'
