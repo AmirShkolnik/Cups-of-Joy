@@ -26,12 +26,32 @@ class AddView(CreateView):
     fields = '__all__'
     success_url = reverse_lazy('coffeeshop:add_review')
 
+    def form_valid(self, form):
+        # Add a success message
+        messages.success(self.request, "Review added successfully.")
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['messages'] = messages.get_messages(self.request)
+        return context
+
 class EditView(UpdateView):
     model= Review
     template_name = 'coffeeshop/edit.html'
     fields = '__all__'
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('coffeeshop:add_review')
+
+    def form_valid(self, form):
+        # Add a success message
+        messages.success(self.request, "Review edited successfully.")
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['messages'] = messages.get_messages(self.request)
+        return context
 
 class Delete(DeleteView):
     model = Review
