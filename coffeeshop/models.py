@@ -17,6 +17,7 @@ class Review(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     updated = models.DateTimeField(auto_now=True)
     published = models.DateTimeField(default=timezone.now)
+    approved = models.BooleanField(default=False)
     coffee_image = CloudinaryField('image', default='placeholder')
 
 def get_absolute_url(self):
@@ -26,4 +27,4 @@ class Meta:
     ordering = ['-published']
 
 def __str__(self):
-    return self.title
+        return f"Comment {self.body} by {self.author}"

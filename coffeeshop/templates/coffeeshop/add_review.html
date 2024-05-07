@@ -5,7 +5,7 @@
 {% block content %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="navbar-brand">Review Administraion</div>
+    <div class="navbar-brand">Review Administration</div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -13,32 +13,35 @@
           </li>
         </ul>
     </div>
-  </nav>
+</nav>
 
-<div class="album py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            {% for coffeeshop in review_list %}
-            <div class="col-md-4">
-                <div class="card md-4 box-shadow">
+<div class="container mt-4">
+    <h2>Your Reviews</h2>
+    <div class="row">
+        {% for review in review_list %}
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ review.title }}</h5>
                     <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cup">
-                    <div class="card-body">
-                        <h4 class="lead"><a class="text-dark" href="{% url 'coffeeshop:single' coffeeshop.slug %}">{{ coffeeshop.title }}</a></h4>
-                        <p class="card-text"></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="{% url 'coffeeshop:single' coffeeshop.slug %}" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">View</a>
-                                <a href="{% url 'coffeeshop:edit' coffeeshop.pk %}" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">Edit</a>
-                                <a href="{% url 'coffeeshop:delete' coffeeshop.pk %}" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">Delete</a>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
+                    <p class="card-text">{{ review.excerpt }}</p>
+                    <a href="{% url 'coffeeshop:single' review.slug %}" class="btn btn-sm btn-outline-primary">View</a>
+                    <a href="{% url 'coffeeshop:edit' review.pk %}" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a href="{% url 'coffeeshop:delete' review.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</div>
+
+<div class="container mt-4">
+    <h2>Add New Review</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 {% endblock %}

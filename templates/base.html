@@ -52,7 +52,8 @@
                             href="{% url 'about' %}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Visit</a>
+                <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                            href="{% url 'coffeeshop:index' %}">Reviews</a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
@@ -60,8 +61,10 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
+                  <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add_review' %}">My Reviews</a></li>
                   <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourite Posts</a></li>
                   <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'comments_list' %}">My Comments</a></li>
+
                     <a class="dropdown-item {% if request.path == logout_url %}active" aria-current="page{%endif%}"
                         href="{% url 'account_logout' %}">Logout</a>
                 </li>

@@ -10,7 +10,7 @@ from .forms import CommentForm
 
 # Create your views here.
     
-@ login_required
+@login_required
 def favourite_list(request):
     new = Post.newmanager.filter(favourites=request.user)
 
