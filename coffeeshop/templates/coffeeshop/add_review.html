@@ -23,6 +23,13 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ review.title }}</h5>
+                    {% if review.status == 0 %}
+                        <p>This review is in draft status.</p>
+                    {% elif review.status == 1 and review.approved == False %}
+                        <p>This review is awaiting approval.</p>
+                    {% elif review.status == 1 and review.approved == True %}
+                        <p>This review is published.</p>
+                    {% endif %}
                     <div class="d-none d-md-block col-md-6 masthead-image">
                         {% if "placeholder" in review.coffee_image.url %}
                             <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">

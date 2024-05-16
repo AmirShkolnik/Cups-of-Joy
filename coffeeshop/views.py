@@ -16,11 +16,11 @@ class IndexView(ListView):
     context_object_name = 'reviews'
 
     def get_queryset(self):
-        return Review.objects.filter(approved=True)
+        return Review.objects.filter(status=1, approved=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['coffeeshops'] = Review.objects.filter(approved=True)
+        context['coffeeshops'] = Review.objects.filter(status=1, approved=True)
         return context
 
 class SingleView(DetailView):
@@ -33,18 +33,16 @@ class AddReviewView(LoginRequiredMixin, CreateView):
     template_name = 'coffeeshop/add_review.html'
     model = Review
     fields = '__all__'
-    success_url = reverse_lazy('coffeeshop:index') 
+    success_url = reverse_lazy('coffeeshop:index')
 
     def form_valid(self, form):
-        form.instance.author = self.request.user  # Set the author of the review as the logged-in user
+        form.instance.author = self.request.user
         messages.success(self.request, "Review added successfully.")
         return super(AddReviewView, self).form_valid(form)
-    
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Get reviews authored by the current user
-        user_reviews = Review.objects.filter(author=self.request.user)
+        user_reviews = Review.objects.filter(author=self.request.user).exclude(status=2)  # Exclude deleted reviews
         context['review_list'] = user_reviews
         return context
 
@@ -55,10 +53,10 @@ class AddView(CreateView):
     success_url = reverse_lazy('coffeeshop:add_review')
 
     def form_valid(self, form):
-        # Save the form as a draft
-        form.instance.status = 0  # Set the status to draft
+        # Save the form instance with the status set by the user
         form.instance.author = self.request.user
-        messages.success(self.request, "Review added successfully. It is now in draft status.")
+        self.object = form.save()
+        messages.success(self.request, "Review added successfully, waiting for approval.")
         return super().form_valid(form)
 
     def get_context_data(self, **kwargs):
@@ -78,10 +76,9 @@ class EditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == self.get_object().author or self.request.user.is_superuser
 
     def form_valid(self, form):
-        # Save the form as a draft
-        form.instance.status = 0  # Set the status to draft
-        form.instance.save()
-        messages.success(self.request, "Review edited successfully. It is now in draft status.")
+        # Save the form instance with the status set by the user
+        self.object = form.save()
+        messages.success(self.request, "Review edited successfully.")
         return super().form_valid(form)
 
     def get_success_url(self):
@@ -111,3 +108,11 @@ class Delete(DeleteView):
         context = super().get_context_data(**kwargs)
         context['messages'] = messages.get_messages(self.request)
         return context
+    
+@login_required
+def publish_review(request, pk):
+    review = get_object_or_404(Review, pk=pk, author=request.user)
+    review.status = 1  # Set the status to published
+    review.save()
+    messages.success(request, "Review published successfully.")
+    return redirect('coffeeshop:single', slug=review.slug)

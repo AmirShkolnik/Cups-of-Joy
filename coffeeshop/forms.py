@@ -4,7 +4,7 @@ from .models import Review
 
 # Form as ModelForm
 class PostForm(forms.ModelForm):
-   class Meta:
+    class Meta:
         model = Review
         fields = "__all__"
 
@@ -19,10 +19,9 @@ class ReviewForm(forms.ModelForm):
                 attrs={
                     'summernote': {
                         'width': '100%',
-                }
-            })
-         }
-
+                    }
+                })
+        }
 
     def __init__(self, *args, **kwargs):
         author = kwargs.pop('author', None)  # Get the current author
@@ -31,8 +30,3 @@ class ReviewForm(forms.ModelForm):
         if author:
             self.fields['author'].initial = author  # Set the initial value for the author field
             self.fields['author'].widget.attrs['disabled'] = True  # Disable the author field
-    
-    def clean(self):
-        cleaned_data = super().clean()
-        cleaned_data['status'] = 0  # Ensure status remains as draft
-        return cleaned_data
