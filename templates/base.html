@@ -62,6 +62,7 @@
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
                   <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
                   <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add_review' %}">My Reviews</a></li>
+                  <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add' %}">Add New Review</a></li>
                   <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourite Posts</a></li>
                   <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'comments_list' %}">My Comments</a></li>
 
