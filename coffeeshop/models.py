@@ -20,7 +20,7 @@ class Review(models.Model):
     published = models.DateTimeField(default=timezone.now)
     approved = models.BooleanField(default=False)
     coffee_image = CloudinaryField('image', null=True, blank=True)
-    image_alt = models.CharField(max_length=100, null=False, blank=False, default='No alt text provided')
+    image_alt = models.CharField(max_length=100, null=False, blank=False, default='Coffee Shop Image')
 
 def get_absolute_url(self):
     return reverse('coffeeshop:single', args=[self.slug])

@@ -31,10 +31,10 @@
                         <p>This review is published.</p>
                     {% endif %}
                     <div class="d-none d-md-block col-md-6 masthead-image">
-                        {% if "placeholder" in review.coffee_image.url %}
-                            <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                        {% if review.coffee_image %}
+                            <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
                         {% else %}
-                            <img src="{{ review.coffee_image.url }}" class="scale" alt="{{ post.image_alt }}">
+                            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
                         {% endif %}
                     </div>
                     <p class="card-text">{{ review.excerpt }}</p>
