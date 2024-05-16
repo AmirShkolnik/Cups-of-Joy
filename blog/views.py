@@ -33,6 +33,14 @@ def favourite_add(request, id):
         messages.success(request, "Added to favorites.")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
+@login_required
+def user_comments(request):
+    """
+    View for displaying all comments made by the current user.
+    """
+    comments = Comment.objects.filter(author=request.user).order_by('-created_on')
+    return render(request, 'blog/user_comments.html', {'comments': comments})
+
 class PostList(generic.ListView):
     """
     Returns all published posts in :model:`blog.Post`
