@@ -23,7 +23,13 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ review.title }}</h5>
-                    <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cup">
+                    <div class="d-none d-md-block col-md-6 masthead-image">
+                        {% if "placeholder" in review.coffee_image.url %}
+                            <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                        {% else %}
+                            <img src="{{ review.coffee_image.url }}" class="scale" alt="{{ post.image_alt }}">
+                        {% endif %}
+                    </div>
                     <p class="card-text">{{ review.excerpt }}</p>
                     <a href="{% url 'coffeeshop:single' review.slug %}" class="btn btn-sm btn-outline-primary">View</a>
                     <a href="{% url 'coffeeshop:edit' review.pk %}" class="btn btn-sm btn-outline-primary">Edit</a>
@@ -34,14 +40,4 @@
         {% endfor %}
     </div>
 </div>
-
-<div class="container mt-4">
-    <h2>Add New Review</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
-
 {% endblock %}

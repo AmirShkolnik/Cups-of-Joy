@@ -7,7 +7,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 pt-5">
-                    <img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cup">
+                    {% if 'placeholder' in post.coffee_image.url %}
+                        <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                        {% else %}
+                        <img src="{{ post.coffee_image.url }}" class="scale" alt="{{ post.image_alt }}">
+                        {% endif %}
+                    
                     <div class="card-body">
                         <h2 class="pt-5">{{ post.title }}</h2>
                         <p>{{ post.excerpt }}</p>
