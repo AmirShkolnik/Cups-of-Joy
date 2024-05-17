@@ -1,5 +1,9 @@
-body {
-    background-color: #F9FAFC;
+body{
+	margin:0;
+	padding:0;
+	background-color: #F9FAFC;
+	font-family: 'Raleway',sans-serif;
+
 }
 
 .welcome {
@@ -187,4 +191,14 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+.banner{
+	height: 80vh;
+	width: 100%;
+	background:url('../images/overlay.png'),url('../images/coffee.jpg');
+	background-position: top;
+	background-size:cover;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
 }
