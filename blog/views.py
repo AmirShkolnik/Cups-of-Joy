@@ -4,6 +4,7 @@ from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.db.models import Prefetch
 from blog.models import Post
 from .models import Post, Comment
 from .forms import CommentForm
@@ -38,7 +39,7 @@ def user_comments(request):
     """
     View for displaying all comments made by the current user.
     """
-    comments = Comment.objects.filter(author=request.user).order_by('-created_on')
+    comments = Comment.objects.filter(author=request.user).order_by('-created_on').prefetch_related('post')
     return render(request, 'blog/user_comments.html', {'comments': comments})
 
 class PostList(generic.ListView):

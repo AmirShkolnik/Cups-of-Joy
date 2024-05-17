@@ -21,12 +21,16 @@
                         <p class="card-text">
                             <small class="text-muted">{{ comment.created_on }}</small>
                             {% if comment.approved %}
-                                <span class="badge badge-success">Published</span>
+                                <span class="badge badge-success text-success">Published</span>
+                            {% elif comment %}
+                                <span class="badge badge-warning text-danger">Awaiting Approval</span>
                             {% else %}
-                                <span class="badge badge-warning">Awaiting Approval</span>
+                                <span class="badge badge-danger text-red-500">Rejected or Deleted</span>
                             {% endif %}
                         </p>
-                        <a href="{% url 'post_detail' comment.post.slug %}" class="btn btn-primary">View Post</a>
+                        {% if comment %}
+                            <a href="{% url 'post_detail' comment.post.slug %}" class="btn btn-primary">View Post</a>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}
