@@ -1,8 +1,10 @@
 from django.urls import path
+from .views import ArticlesView
 from . import views
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
+    path('articles/', ArticlesView.as_view(), name='articles'),
     path('fav/<int:id>/', 
          views.favourite_add, name='favourite_add'),
     path('blog/favourites/', 

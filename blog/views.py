@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic import ListView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -42,6 +43,12 @@ def user_comments(request):
     comments = Comment.objects.filter(author=request.user).order_by('-created_on').prefetch_related('post')
     return render(request, 'blog/user_comments.html', {'comments': comments})
 
+class ArticlesView(ListView):
+    model = Post
+    template_name = 'blog/articles.html'
+    context_object_name = 'post_list'
+    ordering = ['-created_on']
+
 class PostList(generic.ListView):
     """
     Returns all published posts in :model:`blog.Post`
@@ -60,7 +67,6 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 6
-
 
 def post_detail(request, slug):
     """

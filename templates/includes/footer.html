@@ -7,14 +7,14 @@
                 <h3><i class="fa-solid fa-house"></i> Home</h3>
                 <div>
                     <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
-                    href="{% url 'coffeeshop:index' %}">For Coffee Lovers</a>
+                    href="{% url 'home' %}">For Coffee Lovers</a>
                   </div>
             </div>
             <div class="col-sm-3 centralize-content">
                 <h3><i class="fa-solid fa-binoculars"></i> Discover</h3>
                 <div>
                   <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
-                  href="{% url 'coffeeshop:index' %}">Coffee Shop Reviews</a>
+                  href="{% url 'coffeeshop:index' %}">Coffee Shops Reviews</a>
                 </div>
             </div>
             <div class="col-sm-3 centralize-content">
