@@ -29,6 +29,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script>
+    // Get the current page URL
+        const currentUrl = window.location.href;
+        
+        // Get the navbar element
+        const navbar = document.querySelector('.navbar');
+        
+        // Check if the current page is not the index page
+        if (!currentUrl.endsWith('index.html')) {
+            // Change the navbar color to black
+            navbar.style.backgroundColor = 'black';
+        }
+    </script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
