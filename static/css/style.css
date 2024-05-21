@@ -1,57 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
 /*--------------------------------------------Colors*/
 
-.bg-color-name-title {
-    background-color: #676767;
-}
-
-.bg-color-three-reasons {
-    background-color: #ffffff;
-}
-
-.bg-color-personal-info {
-    background-color: #f4f4f4;
-}
-
-.bg-color-skills {
-    background-color: #ffffff;
-}
-
-.bg-color-work-history {
-    background-color: #9b59b6;
-}
-
-.bg-color-contact {
-    background-color: #ffffff;
-}
-
-.bg-color-conferences {
-    background-color: #f4f4f4;
-}
-
-.bg-color-groups {
-    background-color: #ffffff;
-}
-
 .ui-menu-color-home {
-    background-color: #f4cc5c;
+    background-color: #4a5060;
 }
 
-.ui-menu-color-resume {
-    background-color: #9b59b6;
+.ui-menu-color-articles {
+    background-color: #70AFE2;
 }
 
-.ui-menu-color-contact {
-    background-color: #DDB253;
+.ui-menu-color-review {
+    background-color: #926e5a;
 }
 
-.ui-menu-color-download {
-    background-color: #d9a81d;
-}
-
-.ui-menu-color-interests {
-    background-color: rgba(240, 246, 246, 0.5);
+.ui-menu-color-login {
+    background-color: #929fb0;
 }
 
 body {
@@ -121,7 +83,7 @@ main {
 .brand {
     font-family: roboto, sans-serif;
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .fixed-top {
@@ -129,7 +91,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
 }
 
 /* Navbar */
@@ -175,7 +137,6 @@ main {
 	color: #e84610;
 }
 
-
 /* Jumbotron */
 
 .jumbotron {
@@ -197,6 +158,7 @@ main {
 .lead {
 	font-size: 1.7rem;
 	font-weight: 300;
+    padding-bottom: 20px;
 }
 
 /* Block dividers */
@@ -515,6 +477,16 @@ h3 {
     .navbar {
         background-color: rgba(0, 0, 0);
     
+    }
+
+    .jumbotron-header {
+        font-size: 30px;
+
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        font-weight: 300;
     }
 
 	.justify-content-start,
