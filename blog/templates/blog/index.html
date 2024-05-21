@@ -1,24 +1,71 @@
 {% extends "base.html" %}
 {% load static %}
-
-{% block head %}
-  {{ block.super }}
-  <link rel="stylesheet" href="{% static 'css/blog_index.css' %}">
-{% endblock %}
-
+{% block title %}Home{% endblock %}
 {% block content %}
-<div class="container-fluid banner">
-  <div class="row">
-    <div class="col-md-12">
-   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- index.html content starts here -->
+
+<!-- Callout -->
+<div class="navbar-container">
+    {% include 'includes/navbar.html' %}
+  </div>
+<div class="container-fluid callout-container">
+
+  <div class="opaque-overlay"></div>
+  <div class="container content-container">
+      <div class="row">
+          <div class="col-12">
+              <section class="jumbotron text-center">
+                  <h1 class="jumbotron-header">From Bean to Bliss: Your Ultimate Guide to the Perfect Cup</h1>
+                  <hr class="block-divider">
+                  <p class="lead">Coffee: It's a lifestyle! Discover gems, brewing hacks & reviews! What's your favorite shop? Share it in Reviews!
+                      <span class="d-inline d-sm-none"><br></span>
+                  </p>
+              </section>
+          </div>
+      </div>
+      
+      <div class="row no-gutters">
+        <div class="col-md-3">
+            <ul id="nav-grid" class="list-inline menucontainer">
+                <li class="ui-menu-color-home menuitem">
+                    <a href="{% url 'home' as home_url %}" class="hvr-sweep-to-bottom"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul id="nav-grid" class="list-inline menucontainer">
+                <li class="ui-menu-color-resume menuitem">
+                    <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-newspaper" aria-hidden="true"></i><span>Articles</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul id="nav-grid" class="list-inline menucontainer">
+                <li class="ui-menu-color-contact menuitem">
+                    <a href="{% url 'coffeeshop:add_review' %}" class="hvr-sweep-to-bottom"><i class="fa-solid fa-magnifying-glass-location" aria-hidden="true "></i><span>Coffee Shop Reviews</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul id="nav-grid" class="list-inline menucontainer">
+                <li class="ui-menu-color-interests menuitem">
+                    <a href="interests.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-user" aria-hidden="true"></i><span>Login</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-8 offset-md-2 info">
-      <h1 class="text-center">From Bean to Bliss: Explore the World of Coffee</h1>
-      <p class="text-center">
-        From bean to bliss, your coffee journey starts here. Explore diverse flavors, brewing tips & hidden cafes. Tell us about your favorite coffee spots in the reviews!
-      </p>
-      <a href="#" class="btn btn-md text-center">GET STARTED</a>
+        </div>
     </div>
   </div>
+</div>
+</div>
+<!-- Callout -->
+ 
+<!-- index.html content ends here -->
+<div class="navbar-container">
+{% include 'includes/footer.html' %}
 </div>
 {% endblock %}
