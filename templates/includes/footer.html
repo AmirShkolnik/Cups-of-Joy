@@ -20,11 +20,10 @@
             <div class="col-sm-3 centralize-content">
                 <!-- Info -->
                 <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
-                <div><i class="fa-solid fa-phone"></i> +46-12345678</div>
                 <div>
-                    55 Best Place,
-                    Floda
-                </div>
+                    <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                    href="{% url 'about' %}">About Us</a>
+                  </div>
             </div>
             <div class="col-sm-3 centralize-content">
                 <!-- Social Media -->
