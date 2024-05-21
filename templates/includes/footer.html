@@ -4,35 +4,31 @@
     <div class="container content-container">
         <div class="row">
             <div class="col-sm-3 centralize-content">
-                <h3>Home</h3>
+                <h3><i class="fa-solid fa-house"></i> Home</h3>
                 <div>
                     <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
                     href="{% url 'coffeeshop:index' %}">For Coffee Lovers</a>
                   </div>
             </div>
             <div class="col-sm-3 centralize-content">
-                <h3>Discover</h3>
+                <h3><i class="fa-solid fa-binoculars"></i> Discover</h3>
                 <div>
                   <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
                   href="{% url 'coffeeshop:index' %}">Coffee Shop Reviews</a>
                 </div>
             </div>
             <div class="col-sm-3 centralize-content">
-                <!-- Restaurant Info -->
-                <h3>Contact</h3>
-                <div><i class="fa-solid fa-phone"></i> 83 1233535</div>
-                <div><i class="fa-solid fa-location-pin"></i> 
-                    55 Best Place Terrace,<br>
-                    Big Canal Quay,<br>
-                    Dublin.
-                </div>
-                <div><i class="fa-solid fa-envelope"></i>
-                    info@itrestaurant.com
+                <!-- Info -->
+                <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
+                <div><i class="fa-solid fa-phone"></i> +46-12345678</div>
+                <div>
+                    55 Best Place,
+                    Floda
                 </div>
             </div>
             <div class="col-sm-3 centralize-content">
-                <!-- Restaurant Social Media -->
-                <h3>Social</h3>
+                <!-- Social Media -->
+                <h3><i class="fa-solid fa-users"></i> Social</h3>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
                         <a target="_blank" href="https://www.facebook.com/">
