@@ -442,6 +442,7 @@ footer {
 
 h3 {
 	font-family: Lato, sans-serif;
+    font-size: 1.2rem;
 }
 
 .social-links {
@@ -457,7 +458,7 @@ h3 {
 	line-height: 7px;
 	text-align: center;
 	color: #fafafa;
-	background: #8f8f8f;
+	background: rgba(112, 175, 226);
 	-moz-transition: all 0.35s ease-in-out;
 	-webkit-transition: all 0.35s ease-in-out;
 	-o-transition: all 0.35s ease-in-out;

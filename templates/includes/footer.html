@@ -4,17 +4,18 @@
     <div class="container content-container">
         <div class="row">
             <div class="col-sm-3 centralize-content">
-                <h3>Cup Of Joy</h3>
-                <p>
-                    For Coffee Lovers
-                </p>
+                <h3>Home</h3>
+                <div>
+                    <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                    href="{% url 'coffeeshop:index' %}">For Coffee Lovers</a>
+                  </div>
             </div>
             <div class="col-sm-3 centralize-content">
                 <h3>Discover</h3>
-                <p>
+                <div>
                   <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
-                  href="{% url 'coffeeshop:index' %}">Reviews</a>
-                </p>
+                  href="{% url 'coffeeshop:index' %}">Coffee Shop Reviews</a>
+                </div>
             </div>
             <div class="col-sm-3 centralize-content">
                 <!-- Restaurant Info -->
@@ -35,14 +36,20 @@
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
                         <a target="_blank" href="https://www.facebook.com/">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                         <span class="sr-only">Facebook</span>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a target="_blank" href="https://www.instagram.com/">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.youtube.com/">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        <span class="sr-only">Youtube</span>
                         </a>
                     </li>
                 </ul>
