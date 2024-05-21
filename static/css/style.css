@@ -35,8 +35,6 @@ main {
 
 /* Containers */
 
-
-
 .callout-container {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
@@ -96,8 +94,6 @@ main {
 .navbar {
     margin-bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(112, 175, 226);
     border: 0;
     font-size: 20px;
     padding-right: 10px;
@@ -105,8 +101,20 @@ main {
     z-index: 2; /* Increase the z-index value */
 }
 
+.navbar-container-home {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(112, 175, 226);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3; /* Increase the z-index value */
+}
+
 .navbar-container {
     position: absolute;
+    background-color: rgba(0, 0, 0);
+    color: rgba(112, 175, 226);
     top: 0;
     left: 0;
     width: 100%;
