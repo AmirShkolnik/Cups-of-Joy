@@ -1,7 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
-{% url 'about' as about_url %}
+{% url 'articles' as articles_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -33,6 +33,65 @@
 
 <body class="d-flex flex-column min-vh-100">
 
+    <!-- Navigation -->
+    <div class="navbar-container">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand {% if request.path == home_url %}active" aria-current="page{%endif%}"
+            href="{% url 'home' %}"><img src="{% static 'images/mug-white.png' %}" alt="Cup Of Joy logo">
+                <span class="brand, blue-o">CUP<span class="text-white">of</span><span
+                        class="thin, blue-o">JOY</span></span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == articles_url %}active" aria-current="page{% endif %}" href="{% url 'articles' %}">Articles</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                            href="{% url 'coffeeshop:index' %}">Reviews</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{ user }}</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:mom' %}">Mom</a></li>
+                  <li><a class="dropdown-item {% if request.path == choosemug_url %}active" aria-current="page{%endif%}" href="{% url 'choosemug:dad' %}">Dad</a></li>
+                  <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add_review' %}">My Reviews</a></li>
+                  <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add' %}">Add New Review</a></li>
+                  <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourite Posts</a></li>
+                  <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'comments_list' %}">My Comments</a></li>
+    
+                    <a class="dropdown-item {% if request.path == logout_url %}active" aria-current="page{%endif%}"
+                        href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{%endif%}"
+                      href="{% url 'account_signup' %}">Register</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == login_url %}active" aria-current="page{%endif%}"
+                      href="{% url 'account_login' %}">Login</a>
+              </li>
+              {% endif %}
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          
+          </div>
+        </div>
+      </nav>
+      </div>
     <!-- displaying Django messages -->
     <div class="container">
         <div class="row">
@@ -55,8 +114,62 @@
         {% endblock content %}
 
     </main>
+
 </div>
-   
+<div class="footer-container">
+<footer class="container-wrapper">
+    <div class="container content-container">
+        <div class="row">
+            <div class="col-sm-3 centralize-content">
+                <h3><i class="fa-solid fa-house"></i> Home</h3>
+                <div>
+                    <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                    href="{% url 'home' %}">For Coffee Lovers</a>
+                  </div>
+            </div>
+            <div class="col-sm-3 centralize-content">
+                <h3><i class="fa-solid fa-binoculars"></i> Discover</h3>
+                <div>
+                  <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                  href="{% url 'coffeeshop:index' %}">Coffee Shops Reviews</a>
+                </div>
+            </div>
+            <div class="col-sm-3 centralize-content">
+                <!-- Info -->
+                <h3><i class="fa-solid fa-envelope"></i> Contact</h3>
+                <div>
+                    <a class="nav-link {% if request.path == coffeeshop %}active" aria-current="page{%endif%}"
+                    href="{% url 'about' %}">About Us</a>
+                  </div>
+            </div>
+            <div class="col-sm-3 centralize-content">
+                <!-- Social Media -->
+                <h3><i class="fa-solid fa-users"></i> Social</h3>
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.youtube.com/">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        <span class="sr-only">Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
