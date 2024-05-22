@@ -44,10 +44,9 @@ def user_comments(request):
     return render(request, 'blog/user_comments.html', {'comments': comments})
 
 class ArticlesView(ListView):
-    model = Post
-    template_name = 'blog/articles.html'
-    context_object_name = 'post_list'
-    ordering = ['-created_on']
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/articles.html"
+    paginate_by = 6
 
 class PostList(generic.ListView):
     """
