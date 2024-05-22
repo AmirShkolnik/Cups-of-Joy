@@ -446,6 +446,11 @@ footer {
     z-index: 3; /* Increase the z-index value */
 }
 
+.copyright-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .content-container {
     padding-bottom: 15px;
     border-radius: 8%;
