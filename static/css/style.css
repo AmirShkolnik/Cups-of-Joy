@@ -430,6 +430,10 @@ footer {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.container-wrapper {
+    padding-top: 20px;
+}
+
 .footer-container {
     position: relative;
     background-color: rgba(0, 0, 0);
@@ -441,7 +445,7 @@ footer {
 
 .footer-container-home {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     width: 100%;
     z-index: 3; /* Increase the z-index value */
@@ -490,9 +494,22 @@ h3 {
 	background: #926e5a;;
 }
 
+@media (max-width: 990px) {
+
+    .footer-container-home {
+        position: fixed;
+        bottom: -40px;
+        left: 0;
+        width: 100%;
+        z-index: 3; /* Increase the z-index value */
+    }
+
+   
+}
+
 @media (max-width: 767.98px) {
 
-    .navbar-container {
+    .navbar-container-home {
         position: relative;
     }
 
@@ -502,7 +519,8 @@ h3 {
     }
 
     .jumbotron-header {
-        font-size: 30px;
+        font-size: 24px;
+        padding-top: 10px;
 
     }
 
@@ -528,7 +546,15 @@ h3 {
     
     }
 
-    .footer-container {
+    .footer-container-home {
         position: relative;
+        background-color: rgba(0, 0, 0);
+        padding-top: 20px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3; /* Increase the z-index value */
     }
+
+   
 }
