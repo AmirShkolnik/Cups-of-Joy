@@ -520,69 +520,6 @@ h3 {
 	background: #926e5a;;
 }
 
-/* Media query: Mobile devices. (min-width:280px - max-width:320px) */
-
-@media screen and (min-width: 280px) and (max-width: 320px) {
-
-.navbar-container-home {
-    position: relative;
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0);
-
-}
-
-.jumbotron-header-home {
-    font-size: 24px;
-    padding-top: 10px;
-
-}
-
-.lead {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-.justify-content-start,
-.justify-content-end,
-.justify-content-center {
-    justify-content: center !important;
-}
-
-footer {
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* left: 0; */
-    width: 100%;
-    color: #fafafa;
-    padding-top: 20px;
-    background-color: rgba(0, 0, 0);
-
-}
-
-.footer-container-home {
-    position: relative;
-    background-color: rgba(0, 0, 0);
-    padding-top: 20px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3; /* Increase the z-index value */
-}
-
-}
-
-/* Media query: Mobile devices. (min-width:321px - max-width:480px) */
-
-@media screen and (min-width: 321px) and (max-width: 480px) {}
-
-/* Media query: iPads, Tablets. (min-width:481px - max-width:768px) */
-
-@media only screen and (min-width: 481px) and (max-width: 768px){}
-
-/* Media query: Small and Medium screens, laptops.. (min-width:769px - max-width:1024px) */
-
 @media only screen and (min-width: 769px) and (max-width: 1024px){
 
     .footer-container-home {
@@ -595,8 +532,45 @@ footer {
 
 }
 
-/* Media query: Desktops, large screens. (min-width:1025px - max-width:1200px) */
-@media only screen and (min-width: 1025px) and (max-width: 1200px){}
+@media (max-width: 767.98px) {
 
-/* Media query: Extra large screens, TV. (min-width:1201px) */
-@media only screen and (min-width: 1201px){}
+    .navbar-container-home {
+        position: relative;
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0);
+    }
+
+    .jumbotron-header-home {
+        font-size: 24px;
+        margin-top: 40px;
+
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+	.justify-content-start,
+	.justify-content-end,
+    .justify-content-center {
+		justify-content: center !important;
+	}
+
+    footer {
+        /* position: absolute; */
+        /* bottom: 0; */
+        /* left: 0; */
+        width: 100%;
+        color: #fafafa;
+        padding-top: 20px;
+        background-color: rgba(0, 0, 0);
+    
+    }
+
+    .footer-container-home {
+        position: relative;
+    }
+}
