@@ -248,6 +248,9 @@ main {
     border: none;
     background-color: transparent;
 }
+.card-title {
+    padding-top: 15px;
+}
 
 .image-container {
     position: relative;
