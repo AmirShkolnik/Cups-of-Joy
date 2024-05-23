@@ -11,7 +11,7 @@
             {% if review.approved %}
             <div class="col-md-4">
                 <div class="card md-4 box-shadow">
-                    <a href="{% url 'coffeeshop:single' review.slug %}">  
+                    <a class="a-review" href="{% url 'coffeeshop:single' review.slug %}">  
                     {% if 'placeholder' in review.coffee_image.url %}
                         <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
                     {% else %}

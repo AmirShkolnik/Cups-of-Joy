@@ -27,8 +27,9 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted" >Written by {{ post.author }} | {{ post.created_on|date:"N j, Y" }}
                                 </small>
-                                <div id="favourite-section"><a href="{% url 'favourite_add' post.id %}"
-                                        class="btn btn-outline-primary">Remove</a></div>
+                                <div id="favourite-section">
+                                    <a href="{% url 'favourite_add' post.id %}" class="btn btn-outline-primary custom-remove-btn">Remove</a>
+                                </div>
                             </div>
 
                         </div>

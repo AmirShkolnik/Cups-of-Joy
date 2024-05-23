@@ -461,6 +461,17 @@ a.text-dark:hover {
     color: #926e5a !important;
 }
 
+.btn-outline-primary {
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
 /*----------------------Footer*/
 
 footer {
