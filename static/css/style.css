@@ -29,6 +29,17 @@ body {
     background-color: whitesmoke;
 }
 
+.btn-secondary {
+    background-color: #70AFE2; /* Set the desired background color */
+    color: #ffffff; /* Set the desired text color */
+  }
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #85bfee; /* Set the desired background color on hover/focus */
+  color: #ffffff; /* Set the desired text color on hover/focus */
+}
+
 .flex-grow-1 {
     flex-grow: 1;
     background-color: whitesmoke;
