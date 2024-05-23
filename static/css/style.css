@@ -154,11 +154,13 @@ main {
 	font-weight: bold;
 	font-size: 45px;
 	opacity: .9;
+    text-align: center; 
 }
 
 .jumbotron .lead {
 	color: #f3f3f3;
 	opacity: .9;
+    text-align: center; 
 }
 
 .lead {
@@ -316,7 +318,7 @@ main {
 }
 
 .post-title {
-    margin-top: 3%;
+    margin-top: 10%;
     margin-left: 5%;
 }
 
@@ -518,7 +520,7 @@ h3 {
     
     }
 
-    .jumbotron-header {
+    .jumbotron-header-home {
         font-size: 24px;
         padding-top: 10px;
 
