@@ -35,7 +35,7 @@ main {
 
 /* Containers */
 
-.callout-container {
+.callout-container-home {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
     background-image: url("../images/coffee-blue.webp");
@@ -48,7 +48,7 @@ main {
     position: relative;
 }
 
-.opaque-overlay {
+.opaque-overlay-home {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -149,7 +149,7 @@ main {
 	background-color: transparent;
 }
 
-.jumbotron-header {
+.jumbotron-header-home {
 	color: #f3f3f3;
 	font-weight: bold;
 	font-size: 45px;
@@ -169,7 +169,7 @@ main {
 
 /* Block dividers */
 
-.block-divider {
+.block-divider-home {
     height: 5px !important;
     border: 0 !important;
     background-color: #70AFE2 !important;
@@ -281,7 +281,7 @@ main {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: rgba(112, 175, 226);;
     color: white;
     position: relative;
 }
@@ -298,7 +298,7 @@ main {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: rgba(112, 175, 226);;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -316,7 +316,7 @@ main {
 }
 
 .post-title {
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 5%;
 }
 
