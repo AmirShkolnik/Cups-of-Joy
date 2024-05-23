@@ -472,6 +472,15 @@ a.text-dark:hover {
     border-color: #dc3545;
   }
 
+
+/*--------------------------------------Add*/
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem; /* Adjust the value as needed */
+    margin-bottom: 5rem;
+}
 /*----------------------Footer*/
 
 footer {
