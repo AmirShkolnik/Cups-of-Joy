@@ -13,7 +13,7 @@
             {% else %}
                 <p>Status: Awaiting Approval</p>
             {% endif %}
-            <p>Written by {{ post.author }} | {{ post.published }}</p>
+            <p>Written by {{ post.author }} | {{ post.published|date:"Y-m-d" }}</p>
             <p>{{ post.content|safe }}</p>
         </div>
         <div class="col-md-4">
