@@ -19,7 +19,7 @@
 body {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    background-color: #fff;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,6 +27,7 @@ body {
 
 .flex-grow-1 {
     flex-grow: 1;
+    background-color: whitesmoke;
 }
 
 main {
@@ -348,7 +349,7 @@ main {
 }
 
 .link {
-    color: #23BBBB;
+    color: rgba(112, 175, 226);
     text-decoration: none;
 }
 
