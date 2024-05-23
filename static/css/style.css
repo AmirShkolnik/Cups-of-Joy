@@ -342,7 +342,7 @@ main {
 .post-title {
     margin-top: 5%;
     margin-left: 5%;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 .post-subtitle {
@@ -477,7 +477,7 @@ footer {
 .footer-container {
     position: relative;
     background-color: rgba(0, 0, 0);
-    bottom: 0;
+    bottom: 10;
     left: 0;
     width: 100%;
     z-index: 3; /* Increase the z-index value */
@@ -538,7 +538,7 @@ h3 {
 
     .footer-container-home {
         position: fixed;
-        bottom: -40px;
+        bottom: 0;
         left: 0;
         width: 100%;
         z-index: 3; /* Increase the z-index value */
@@ -557,12 +557,21 @@ h3 {
     }
 
     .jumbotron-header-home {
-        font-size: 24px;
+        font-size: 35px;
         margin-top: 40px;
     }
 
     .masthead {
         height: 25vh;
+    }
+
+    .content-container {
+        padding-bottom: 15px;
+        border-radius: 8%;
+    }
+    
+    .centralize-content {
+        text-align: center;
     }
 
     .lead {
