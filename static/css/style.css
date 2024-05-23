@@ -25,6 +25,10 @@ body {
     min-height: 100vh;
 }
 
+.about-text {
+    background-color: whitesmoke;
+}
+
 .flex-grow-1 {
     flex-grow: 1;
     background-color: whitesmoke;
