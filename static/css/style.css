@@ -51,6 +51,29 @@ main {
 
 /* Containers */
 
+.callout-container-reviews {
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url("../images/coffee.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.opaque-overlay-reviews {
+    position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 55%;
+}
+
 .callout-container-home {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
@@ -72,7 +95,6 @@ main {
 	width: 100%;
 	background-color: black;
 	opacity: 55%;
-
 }
 
 .grid-item {

@@ -20,7 +20,9 @@ class IndexView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['coffeeshops'] = Review.objects.filter(status=1, approved=True)
+        reviews = self.get_queryset()
+        context['coffeeshops'] = reviews
+        context['no_reviews'] = not reviews.exists()
         return context
 
 class SingleView(DetailView):

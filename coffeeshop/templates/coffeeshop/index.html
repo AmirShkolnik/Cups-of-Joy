@@ -3,8 +3,29 @@
 {% block title %}Edit Your Review{% endblock %}
 
 {% block content %}
+{% if no_reviews %}
+<div class="container-fluid callout-container-reviews">
+    <div class="opaque-overlay-reviews"></div>
+    <div class="container content-container">
+        <div class="row">
+            <div class="col-12">
+                <section class="jumbotron text-center-home">
+                    <h3 class="jumbotron-header-home">There are no reviews yet, be the first to add one.</h3>
+                    <hr class="block-divider-home">
+                    {% if user.is_authenticated %}
+                    <p class="lead">Be the first to <a href="{% url 'coffeeshop:add' %}" class="btn btn-primary">Add Review</a></p>
+                        {% else %}
+                        <p class="lead">Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> to add a review.</p>
+                        {% endif %}
+                        <span class="d-inline d-sm-none"><br></span>
+                    </p>
+                </section>
+            </div>
+        </div>
 
-<div class="album py-5 bg-light">
+        {% endif %}
+
+<div class="album bg-light">
     <div class="container">
         <div class="row">
             {% for review in reviews %}
