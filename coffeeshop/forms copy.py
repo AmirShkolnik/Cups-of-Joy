@@ -1,25 +1,20 @@
-from django import forms
-from django.core.validators import FileExtensionValidator
-from django.utils.translation import gettext_lazy as _
 from django_summernote.widgets import SummernoteWidget
+from django import forms
+from django.utils.translation import gettext_lazy as _
 from .models import Review
 
+# Form as ModelForm
 class PostForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = "__all__"
 
 class ReviewForm(forms.ModelForm):
-    coffee_image = forms.ImageField(
-        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])],
-        error_messages={'required': _('*** Please upload an image.')},
-        widget=forms.FileInput(attrs={'class': 'form-control-file'})
-    )
-
     class Meta:
         model = Review
         fields = "__all__"
         exclude = ['author', 'approved', 'published']
+
         widgets = {
             'content': SummernoteWidget(
                 attrs={
@@ -32,6 +27,7 @@ class ReviewForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         author = kwargs.pop('author', None)
         super().__init__(*args, **kwargs)
+        self.fields['coffee_image'].widget.attrs['class'] = 'form-control-file'
         if author:
             self.fields['author'].initial = author
             self.fields['author'].widget.attrs['disabled'] = True
