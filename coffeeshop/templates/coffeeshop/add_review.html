@@ -3,16 +3,14 @@
 {% block title %}Add a Review{% endblock %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="navbar-brand">Review Administration</div>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'coffeeshop:add' %}">Add New</a>
-          </li>
-        </ul>
+
+<section class="jumbotron text-center bg-white">
+    <div class="container">
+        <h1>{{ user }}'s Review Administration Page</h1>
+        <p class="lead text-muted">Here you can add a new review, view, edit, and remove the reviews you have written. All new and edited reviews will be approved by one of our staff members before being published live.</p>
+        <p class="lead text-muted">Share your story here <a href="{% url 'coffeeshop:add' %}" class="btn btn-primary">Add Review</a></p>
     </div>
-</nav>
+</section>
 
 <div class="container mt-4">
     <h2>Your Reviews</h2>
