@@ -130,12 +130,9 @@ def comments_list(request):
     """
     View for displaying posts commented on by the current user.
     """
-    if request.method == 'GET':
-        commented_post_ids = Comment.objects.filter(
-            author=request.user).values_list('post_id', flat=True)
-        posts = Post.objects.filter(
-            id__in=commented_post_ids).order_by('-created_on')
-        return render(request, 'blog/comments.html', {'posts': posts})
+    comments = Comment.objects.filter(author=request.user).order_by('-created_on').prefetch_related('post')
+    return render(request, 'blog/comments.html', {'comments': comments})
+
 
 def comment_edit(request, slug, comment_id):
     """
