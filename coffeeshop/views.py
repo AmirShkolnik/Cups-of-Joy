@@ -76,9 +76,10 @@ class EditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == self.get_object().author or self.request.user.is_superuser
 
     def form_valid(self, form):
-        # Save the form instance with the status set by the user
+        # Set the status to draft (0) before saving the form
+        form.instance.status = 0
         self.object = form.save()
-        messages.success(self.request, "Review edited successfully.")
+        messages.success(self.request, "Review updated and awaiting approval.")
         return super().form_valid(form)
 
     def get_success_url(self):
