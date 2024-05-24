@@ -336,7 +336,7 @@ main {
 }
 
 .masthead-text {
-    background-color: rgba(112, 175, 226);;
+    background-color: rgba(112, 175, 226);
     color: white;
     position: relative;
 }
@@ -585,7 +585,7 @@ h3 {
 }
 
 .social-links li a i:hover {
-	background: #926e5a;;
+	background: #926e5a;
 }
 
 @media only screen and (min-width: 768px) {
