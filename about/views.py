@@ -1,45 +1,45 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import About
-from .forms import CollaborateForm
+from .forms import ContactForm
 # Create your views here.
 
 
-def about_me(request):
+def about_me(us):
     """
     Renders the most recent information on the website author
-    and allows user collaboration requests.
+    and allows user collaboration uss.
 
     Displays an individual instance of :model:`about.About`.
 
     **Context**
     ``about``
         The most recent instance of :model:`about.About`.
-        ``collaborate_form``
-            An instance of :form:`about.CollaborateForm`.
+        ``contact_form``
+            An instance of :form:`about.contactForm`.
     **Template**
     :template:`about/about.html`
     """
     about = About.objects.all().order_by('-updated_on').first()
-    if request.method == "POST":
-        collaborate_form = CollaborateForm(data=request.POST)
-        if collaborate_form.is_valid():
-            collaborate_request = collaborate_form.save(commit=False)
-            collaborate_request.read = False
-            collaborate_request.save()
+    if us.method == "POST":
+        contact_form = ContactForm(data=us.POST)
+        if contact_form.is_valid():
+            contact = contact_form.save(commit=False)
+            contact.read = False
+            contact.save()
             messages.add_message(
-                request, messages.SUCCESS,
-                'Collaboration request received!'
-                'I endeavor to respond within 2 working days.'
+                us, messages.SUCCESS,
+                'We got your message! '
+                'We endeavor to respond within 2 working days.'
             )
-            collaborate_form = CollaborateForm()
+            contact_form = ContactForm()
         else:
-            collaborate_form = CollaborateForm()
+            contact_form = ContactForm()
     else:
-        collaborate_form = CollaborateForm()
+        contact_form = ContactForm()
 
     return render(
-        request,
+        us,
         "about/about.html",
-        {"about": about, "collaborate_form": collaborate_form},
+        {"about": about, "contact_form": contact_form},
     )

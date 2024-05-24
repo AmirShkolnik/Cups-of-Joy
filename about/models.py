@@ -17,7 +17,7 @@ class About(models.Model):
         return self.title
 
 
-class CollaborateRequest(models.Model):
+class Contact(models.Model):
     """
     Stores a single collaboration request message
     """
@@ -27,4 +27,4 @@ class CollaborateRequest(models.Model):
     read = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Collaboration request from {self.name}"
+        return f"Contact request from {self.name}"
