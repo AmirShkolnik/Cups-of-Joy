@@ -74,6 +74,14 @@ main {
 	opacity: 55%;
 }
 
+.jumbotron-header-reviews {
+	color: #f3f3f3;
+	font-weight: bold;
+	font-size: 30px;
+	opacity: .9;
+    text-align: center; 
+}
+
 .callout-container-home {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
