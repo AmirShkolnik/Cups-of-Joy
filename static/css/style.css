@@ -215,6 +215,10 @@ main {
     padding-bottom: 20px;
 }
 
+.lead a {
+    color: rgba(112, 175, 226);
+}
+
 /* Block dividers */
 
 .block-divider-home {
