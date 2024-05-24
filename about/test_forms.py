@@ -1,12 +1,12 @@
 from django.test import TestCase
-from .forms import CollaborateForm
+from .forms import ContactForm
 
 
-class TestCollaborateForm(TestCase):
+class TestContactForm(TestCase):
 
     def test_form_is_valid(self):
         """ Test for all fields"""
-        form = CollaborateForm({
+        form = ContactForm({
             'name': '',
             'email': 'test@test.com',
             'message': 'Hello!'
@@ -18,7 +18,7 @@ class TestCollaborateForm(TestCase):
 
     def test_email_is_required(self):
         """Test for the 'email' field"""
-        form = CollaborateForm({
+        form = ContactForm({
             'name': 'Matt',
             'email': '',
             'message': 'Hello!'
@@ -30,7 +30,7 @@ class TestCollaborateForm(TestCase):
 
     def test_message_is_required(self):
         """Test for the 'message' field"""
-        form = CollaborateForm({
+        form = ContactForm({
             'name': 'Matt',
             'email': 'test@test.com',
             'message': ''
