@@ -19,5 +19,6 @@ urlpatterns = [
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
     path('blog/user_comments/', views.user_comments, name='user_comments'),
+    path('favourite/<int:id>/remove/', views.favourite_remove, name='favourite_remove'),
          
 ]

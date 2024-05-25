@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import ListView
 from django.contrib import messages
@@ -28,8 +28,7 @@ def favourite_list(request):
 def favourite_add(request, id):
     post = get_object_or_404(Post, id=id)
     if post.favourites.filter(id=request.user.id).exists():
-        post.favourites.remove(request.user)
-        messages.success(request, "Removed from favorites.")
+        return redirect('favourite_remove', id=id)
     else:
         post.favourites.add(request.user)
         messages.success(request, "Added to favorites.")
@@ -213,3 +212,11 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+@login_required
+def favourite_remove(request, id):
+    post = get_object_or_404(Post, id=id)
+    if request.method == 'POST':
+        post.favourites.remove(request.user)
+        messages.success(request, "Removed from favorites.")
+        return redirect('favourite_list')
+    return render(request, 'blog/confirm_remove_favorite.html', {'post': post})

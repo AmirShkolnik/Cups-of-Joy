@@ -3,6 +3,9 @@
 {% block title %}Delete Your Review{% endblock %}
 
 {% block content %}
+<div class="container">
+    <section class="jumbotron text-center bg-white">
+        <div class="container">
 {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -14,9 +17,13 @@
 <div class="container pt-5">
     <form method="post">
         {% csrf_token %}
+        <h2>Confirm Delete Your Review</h2>
         <p>Are you sure you want to delete "{{ review.title }}"?</p>
-        <input type="submit" value="Confirm">
+        <button type="submit" class="btn btn-primary hover">Confirm</button>
+<a href="{% url 'coffeeshop:add_review' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>    
-
+</div>
+</section>
+</div>
 {% endblock %}
