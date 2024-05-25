@@ -10,11 +10,6 @@ class PostForm(forms.ModelForm):
         fields = "__all__"
 
 class ReviewForm(forms.ModelForm):
-    coffee_image = forms.ImageField(
-        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png'])],
-        error_messages={'required': _('*** Please upload an image.')},
-        widget=forms.FileInput(attrs={'class': 'form-control-file'})
-    )
 
     class Meta:
         model = Review
