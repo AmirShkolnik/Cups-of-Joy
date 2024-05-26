@@ -66,6 +66,10 @@ class AddView(CreateView):
         context['messages'] = messages.get_messages(self.request)
         return context
 
+    def form_invalid(self, form):
+        messages.error(self.request, "Please fill in all required fields.")
+        return super().form_invalid(form)
+
 class EditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Review
     template_name = 'coffeeshop/edit.html'
