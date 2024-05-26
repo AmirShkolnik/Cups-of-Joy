@@ -47,6 +47,16 @@ class ArticlesView(ListView):
     template_name = "blog/articles.html"
     paginate_by = 6
 
+@login_required
+def confirm_like_removal(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.success(request, "Removed from likes.")
+        return redirect('post_detail', slug=slug)
+    return render(request, 'blog/confirm_like_removal.html', {'post': post})
+
 class PostList(generic.ListView):
     """
     Returns all published posts in :model:`blog.Post`
@@ -194,21 +204,15 @@ def comment_delete(request, slug, comment_id):
 class PostLike(View):
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
-        
-        # Check if the user is authenticated (logged in)
+
         if request.user.is_authenticated:
             if post.likes.filter(id=request.user.id).exists():
-                post.likes.remove(request.user)
-                messages.success(request, "Removed from likes.")
+                return redirect('confirm_like_removal', slug=slug)
             else:
                 post.likes.add(request.user)
                 messages.success(request, "Added to likes.")
         else:
-            # User is not logged in
             messages.warning(request, "You must log in to like this post.")
-            # You can redirect the user to the login page or any other relevant page here.
-            # For example:
-            # return HttpResponseRedirect(reverse('login'))
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 

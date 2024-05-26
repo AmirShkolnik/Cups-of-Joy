@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ArticlesView
+from .views import ArticlesView, confirm_like_removal
 from . import views
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('blog/comments/', 
          views.comments_list, name='comments_list'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
+    path('like/<slug:slug>/confirm/', confirm_like_removal, name='confirm_like_removal'),
     path('<slug:slug>/', 
          views.post_detail, name="post_detail"),
     path('<slug:slug>/edit_comment/<int:comment_id>',
