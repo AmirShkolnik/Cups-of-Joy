@@ -3,139 +3,124 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="text-center mb-4">
+                <div class="d-md-block masthead-image">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                    {% else %}
+                    <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="text-container mb-4">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <div class="post-subtitle">Written by {{ post.author }} - {{ post.created_on|date:"Y-m-d" }}</div>
-                        
                 <div class="post-subtitle">
-                                {% if request.user.is_authenticated %}
-                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="fas fa-heart"></i></button>
-                                    {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="far fa-heart"></i></button>
-                                    {% endif %}
-                                </form>
-                                {% else %}
-                                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                                {% endif %}
-                                <!-- The number of likes goes before the closing strong tag -->
-                                <span class="text-secondary">{{ post.number_of_likes }}</span>
-                            {% if request.user.is_authenticated %}
-                            {% if fav %}
-                            <a href="{% url 'favourite_add' post.id %}" class="text-white">
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M4.5 2a.5.5 0 0 0-.5.5v11.066l4-2.667 4 2.667V8.5a.5.5 0 0 1 1 0v6.934l-5-3.333-5 3.333V2.5A1.5 1.5 0 0 1 4.5 1h4a.5.5 0 0 1 0 1h-4z" />
-                                    <path fill-rule="evenodd" d="M15.854 2.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 4.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                                </svg>
-                            </a>
+                    <div class="post-subtitle">
+                        {% if request.user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="fas fa-heart"></i></button>
                             {% else %}
-                            <a href="{% url 'favourite_add' post.id %}" class="text-white">
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bookmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M4.5 2a.5.5 0 0 0-.5.5v11.066l4-2.667 4 2.667V8.5a.5.5 0 0 1 1 0v6.934l-5-3.333-5 3.333V2.5A1.5 1.5 0 0 1 4.5 1h4a.5.5 0 0 1 0 1h-4zm9-1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V1.5a.5.5 0 0 1 .5-.5z" />
-                                    <path fill-rule="evenodd" d="M13 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z" />
-                                </svg>
-                            </a>
+                            <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="far fa-heart"></i></button>
                             {% endif %}
-                            {% else %}
-                            <span class="text-white">Please <a href="{% url 'account_login' %}" target="_blank" class="text-white">log in</a> to like and add to favorites.</span>
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <span class="text-secondary">{{ post.number_of_likes }}</span>
+                        {% if request.user.is_authenticated %}
+                        {% if fav %}
+                        <a href="{% url 'favourite_add' post.id %}" id="fav-red">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'favourite_add' post.id %}">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </a>
+                        {% endif %}
+                        {% else %}
+                        <span class="text-white">Please <a href="{% url 'account_login' %}" target="_blank" class="text-white">log in</a> to like and add to favorites.</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col card mb-4 mt-3">
+                    <div class="card-body">
+                        <article class="card-text">
+                            {{ post.content | safe }}
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <strong class="text-secondary">
+                        <i class="far fa-comments"></i> {{ comment_count }}
+                    </strong>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 card mb-4 mt-3">
+                    <h3>Comments:</h3>
+                    <div class="card-body">
+                        <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                        {% for comment in comments %}
+                        <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                            <p class="font-weight-bold">
+                                {{ comment.author }}
+                                <span class="font-weight-normal">
+                                    {{ comment.created_on }}
+                                </span> wrote:
+                            </p>
+                            <div id="comment{{ comment.id }}">
+                                {{ comment.body | linebreaks }}
+                            </div>
+                            {% if not comment.approved and comment.author == user %}
+                            <p class="approval">This comment is awaiting approval</p>
+                            {% endif %}
+                            {% if user.is_authenticated and comment.author == user %}
+                            <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                            <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                             {% endif %}
                         </div>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
-                {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
-                {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ total_comments }}</strong>
+                        {% endwith %}
+                    </div>
+                </div>
+                <div class="col-md-4 card mb-4 mt-3">
+                    <div class="card-body">
+                        {% if user.is_authenticated %}
+                        <h3>Leave a comment:</h3>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        </form>
+                        {% else %}
+                        <p>Log in to leave a comment</p>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <article class="card-text">
-                    {{ post.content | safe }}
-                </article>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <strong class="text-secondary">
-                <i class="far fa-comments"></i> {{ comment_count }}
-            </strong>
-        </div>
-        <div class="col-12">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4 mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                {% for comment in comments %}
-                <div
-                    class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
-                    </div>
-                    {% if not comment.approved and comment.author == user %}
-                    <p class="approval">This comment is awaiting approval</p>
-                    {% endif %}
-                    {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-                    {% endif %}
-                </div>
-                <!-- Our for loop ends here -->
-                {% endfor %}
-            </div>
-                <div class="col-1">
-                    {% with comments.count as total_comments %}
-                    <strong class="text-secondary"><i class="far fa-comments"></i>
-                        <!-- Our total_comments variable goes before the closing strong tag -->
-                        {{ total_comments }}</strong>
-                    {% endwith %}
-                </div>
-            </div>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4 mt-3 ">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% else %}
-                <p>Log in to leave a comment</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -154,6 +139,7 @@
         </div>
     </div>
 </div>
+
 {% endblock content %}
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>

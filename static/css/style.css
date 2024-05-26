@@ -522,6 +522,10 @@ a.text-dark:hover {
     border-color: #dc3545;
   }
 
+#fav-red {
+    color: #E84610;
+}
+
 
 /*--------------------------------------Add*/
 .form-buttons {
