@@ -25,6 +25,11 @@ body {
     min-height: 100vh;
 }
 
+.text-black {
+
+    color: black;
+}
+
 .about-text {
     background-color: whitesmoke;
 }
@@ -397,7 +402,7 @@ main {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: black;
 }
 
 .btn-signup,

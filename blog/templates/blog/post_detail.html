@@ -18,7 +18,6 @@
             <div class="text-container mb-4">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <div class="post-subtitle">Written by {{ post.author }} - {{ post.created_on|date:"Y-m-d" }}</div>
-                <div class="post-subtitle">
                     <div class="post-subtitle">
                         {% if request.user.is_authenticated %}
                         <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
@@ -44,10 +43,10 @@
                         </a>
                         {% endif %}
                         {% else %}
-                        <span class="text-white">Please <a href="{% url 'account_login' %}" target="_blank" class="text-white">log in</a> to like and add to favorites.</span>
+                        <span class="text-black"> - Please <a href="{% url 'account_login' %}" target="_blank" class="link">log in</a> to like and add to favorites.</span>
                         {% endif %}
                     </div>
-                </div>
+                
             </div>
             <div class="row">
                 <div class="col card mb-4 mt-3">
