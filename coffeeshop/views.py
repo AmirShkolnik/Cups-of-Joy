@@ -57,7 +57,14 @@ class AddView(CreateView):
     def form_valid(self, form):
         # Save the form instance with the status set by the user
         form.instance.author = self.request.user
-        self.object = form.save()
+        self.object = form.save()  # Save the instance to the database
+
+        # Handle the image upload
+        coffee_image = form.cleaned_data.get('coffee_image')
+        if coffee_image:
+            self.object.coffee_image = coffee_image
+            self.object.save()  # Save the instance again after updating the image
+
         messages.success(self.request, "Review added successfully, waiting for approval.")
         return super().form_valid(form)
 
