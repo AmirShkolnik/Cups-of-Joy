@@ -317,6 +317,11 @@ main {
     object-fit: cover;
 }
 
+.container {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+
 .image-flash {
     position: absolute;
     bottom: 5%;
