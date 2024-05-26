@@ -17,36 +17,45 @@
             </div>
             <div class="text-container mb-4">
                 <h1 class="post-title">{{ post.title }}</h1>
-                <div class="post-subtitle">Written by {{ post.author }} - {{ post.created_on|date:"Y-m-d" }}</div>
-                    <div class="post-subtitle">
-                        {% if request.user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if liked %}
-                            <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="fas fa-heart"></i></button>
-                            {% else %}
-                            <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="far fa-heart"></i></button>
-                            {% endif %}
-                        </form>
-                        {% else %}
-                        <span class="text-secondary"><i class="far fa-heart"></i></span>
-                        {% endif %}
-                        <span class="text-secondary">{{ post.number_of_likes }}</span>
-                        {% if request.user.is_authenticated %}
-                        {% if fav %}
-                        <a href="{% url 'favourite_add' post.id %}" id="fav-red">
-                            <i class="fa-solid fa-bookmark"></i>
-                        </a>
-                        {% else %}
-                        <a href="{% url 'favourite_add' post.id %}">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </a>
-                        {% endif %}
-                        {% else %}
-                        <span class="text-black"> - Please <a href="{% url 'account_login' %}" target="_blank" class="link">log in</a> to like and add to favorites.</span>
-                        {% endif %}
+                <div class="post-subtitle">Written by {{ post.author }} - {{ post.created_on|date:"Y-m-d" }}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <div class="post-subtitle">
+                                    {% if request.user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="fas fa-heart"></i> {{ post.number_of_likes }}</button>
+                                        {% else %}
+                                        <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i class="far fa-heart"></i> {{ post.number_of_likes }}</button>
+                                        {% endif %}
+                                    </form>
+                                    {% else %}
+                                    <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="mr-3">
+                                    <strong class="text-secondary">
+                                        <i class="far fa-comments"></i> {{ comment_count }}
+                                    </strong>
+                                </div>
+                                {% if request.user.is_authenticated %}
+                                {% if fav %}
+                                <a href="{% url 'favourite_add' post.id %}" id="fav-red" class="mr-3">
+                                    <i class="fa-solid fa-bookmark"></i>
+                                </a>
+                                {% else %}
+                                <a href="{% url 'favourite_add' post.id %}" class="mr-3">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </a>
+                                {% endif %}
+                                {% else %}
+                                <span class="text-black mr-3">- Please <a href="{% url 'account_login' %}" target="_blank" class="link">log in</a> to like and add to favorites.</span>
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
-                
             </div>
             <div class="row">
                 <div class="col card mb-4 mt-3">
@@ -58,11 +67,6 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <strong class="text-secondary">
-                        <i class="far fa-comments"></i> {{ comment_count }}
-                    </strong>
-                </div>
                 <div class="col-12">
                     <hr>
                 </div>

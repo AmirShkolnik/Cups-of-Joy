@@ -428,6 +428,10 @@ main {
     text-decoration: underline;
 }
 
+.mr-3 {
+    margin-right: 0.75rem; /* Adjust the value as needed */
+}
+
 .btn-like {
     color: #E84610;
     border: none;
