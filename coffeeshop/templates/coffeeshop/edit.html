@@ -4,6 +4,8 @@
 {% block title %}Edit Your Review{% endblock %}
 
 {% block content %}
+{% if messages %}
+{% endif %}
 <div class="container pt-5">
     <form method="post" enctype="multipart/form-data" novalidate>
         {% csrf_token %}
@@ -23,13 +25,29 @@
             {% endfor %}
         </div>
         {% endfor %}
-    <div class="form-group form-buttons">
-        <button type="submit" class="btn btn-success">
-            <span class="glyphicon glyphicon-ok"></span> Save
-        </button>
-        <a href="{% url 'coffeeshop:add_review' %}" class="btn btn-outline-primary custom-remove-btn">Cancel</a>
-    </div>
-</form>
-</div>
 
+        <div class="form-group">
+            <label for="confirm_submission">
+              <input type="checkbox" id="confirm_submission" name="confirm_submission" required>
+              I understand that all changes will be lost if I don't publish the review.
+            </label>
+          </div>
+      
+          <div class="form-group form-buttons">
+            <button type="submit" class="btn btn-success" disabled>
+              <span class="glyphicon glyphicon-ok"></span> Submit Review
+            </button>
+            <a href="{% url 'coffeeshop:add_review' %}" class="btn btn-outline-primary custom-remove-btn" onclick="return confirm('Are you sure you want to discard your changes?');">Discard Changes</a>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+        // Enable submit button only on checkbox check
+        const submitButton = document.querySelector('button[type="submit"]');
+        const confirmCheckbox = document.getElementById('confirm_submission');
+        confirmCheckbox.addEventListener('change', () => {
+          submitButton.disabled = !confirmCheckbox.checked;
+        });
+      </script>
 {% endblock %}

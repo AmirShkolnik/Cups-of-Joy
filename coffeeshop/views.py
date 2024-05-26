@@ -88,10 +88,14 @@ class EditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         messages.success(self.request, "Review updated and awaiting approval.")
         return super().form_valid(form)
 
+    def form_invalid(self, form):
+        messages.error(self.request, "Please fill in all required fields.")
+        return super().form_invalid(form)
+
     def get_success_url(self):
         # Redirect to the detail page of the edited content
         return reverse('coffeeshop:single', kwargs={'slug': self.object.slug})
-
+    
 @user_passes_test(lambda u: u.is_superuser)
 def approve_review(request, pk):
     review = get_object_or_404(Review, pk=pk)
