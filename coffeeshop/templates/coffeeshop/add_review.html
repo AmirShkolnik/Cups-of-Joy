@@ -27,7 +27,7 @@
                     {% elif review.status == 1 and review.approved == True %}
                         <p>This review is published.</p>
                     {% endif %}
-                    <div class="d-none d-md-block col-md-6 masthead-image">
+                    <div class="image-container">
                         {% if review.coffee_image %}
                             <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
                         {% else %}
