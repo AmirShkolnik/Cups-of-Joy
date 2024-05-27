@@ -57,15 +57,13 @@ main {
 /* Containers */
 .callout-container-reviews {
     height: 80vh;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-image: url("../images/coffee.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.1) url("../images/coffee.jpg") no-repeat center center / cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Add this line */
+    justify-content: center; /* Vertically center the flex items */
+    align-items: center; /* Horizontally center the flex items */
     position: relative;
+    margin-top: -25px
 }
 
 .opaque-overlay-reviews {
@@ -75,7 +73,7 @@ main {
 	height: 100%;
 	width: 100%;
 	background-color: black;
-	opacity: 55%;
+	opacity: 60%;
 }
 
 .jumbotron-header-reviews {
