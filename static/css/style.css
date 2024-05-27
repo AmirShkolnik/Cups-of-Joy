@@ -635,6 +635,10 @@ h3 {
 
 @media (max-width: 767.98px) {
 
+    .contain-likes {
+        padding-left: 0;
+    }
+
     .navbar-container-home {
         position: relative;
     }
