@@ -25,10 +25,10 @@ def favourite_list(request):
 
 
 @login_required
-def favourite_add(request, id):
-    post = get_object_or_404(Post, id=id)
+def favourite_add(request, slug):
+    post = get_object_or_404(Post, slug=slug)
     if post.favourites.filter(id=request.user.id).exists():
-        return redirect('favourite_remove', id=id)
+        return redirect('favourite_remove', slug=slug)
     else:
         post.favourites.add(request.user)
         messages.success(request, "Added to favorites.")
@@ -217,10 +217,10 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 @login_required
-def favourite_remove(request, id):
-    post = get_object_or_404(Post, id=id)
+def favourite_remove(request, slug):
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         post.favourites.remove(request.user)
         messages.success(request, "Removed from favorites.")
-        return redirect('favourite_list')
+        return redirect('post_detail', slug=post.slug)
     return render(request, 'blog/confirm_remove_favorite.html', {'post': post})

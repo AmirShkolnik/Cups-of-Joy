@@ -42,11 +42,11 @@
                                 </div>
                                 {% if request.user.is_authenticated %}
                                 {% if fav %}
-                                <a href="{% url 'favourite_add' post.id %}" id="fav-red" class="mr-3">
+                                <a href="{% url 'favourite_add' post.slug %}" id="fav-red" class="mr-3">
                                     <i class="fa-solid fa-bookmark"></i>
                                 </a>
                                 {% else %}
-                                <a href="{% url 'favourite_add' post.id %}" class="mr-3">
+                                <a href="{% url 'favourite_add' post.slug %}" class="mr-3">
                                     <i class="fa-regular fa-bookmark"></i>
                                 </a>
                                 {% endif %}

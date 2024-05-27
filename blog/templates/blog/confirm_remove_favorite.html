@@ -8,10 +8,10 @@
         <div class="container">
 <h2>Confirm Remove Favorite</h2>
   <p>Are you sure you want to remove "{{ post.title }}" from your favorites?</p>
-  <form method="post" action="{% url 'favourite_remove' post.id %}">
+  <form method="post" action="{% url 'favourite_remove' post.slug %}">
     {% csrf_token %}
     <button type="submit" class="btn btn-primary hover">Confirm</button>
-<a href="{% url 'favourite_list' %}" class="btn btn-secondary">Cancel</a>
+<a href="{% url 'post_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
   </form> 
 </div>
 </section>

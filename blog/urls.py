@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('articles/', ArticlesView.as_view(), name='articles'),
-    path('fav/<int:id>/', 
+    path('fav/<slug:slug>/', 
          views.favourite_add, name='favourite_add'),
     path('blog/favourites/', 
          views.favourite_list, name='favourite_list'),
@@ -20,6 +20,6 @@ urlpatterns = [
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
     path('blog/user_comments/', views.user_comments, name='user_comments'),
-    path('favourite/<int:id>/remove/', views.favourite_remove, name='favourite_remove'),
+    path('favourite/<slug:slug>/remove/', views.favourite_remove, name='favourite_remove'),
          
 ]
