@@ -20,8 +20,8 @@
                 <div class="post-subtitle">Written by {{ post.author }} - {{ post.created_on|date:"Y-m-d" }}
                     <div class="row">
                         <div class="col-12">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="post-subtitle">
+                            <div class="d-flex align-items-start justify-content-start">
+                                <div class="post-likes-comment mr-3">
                                     {% if request.user.is_authenticated %}
                                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                         {% csrf_token %}

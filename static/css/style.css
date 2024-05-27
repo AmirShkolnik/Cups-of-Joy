@@ -323,7 +323,7 @@ main {
 }
 
 .container {
-    margin-bottom: 20px; /* Adjust the value as needed */
+    margin-bottom: 20px;
 }
 
 
@@ -396,12 +396,16 @@ main {
 
 .post-title {
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 2%;
     font-size: 45px;
 }
 
 .post-subtitle {
-    margin-left: 5%;
+    margin-left: 2%;
+    color: black;
+}
+
+.post-likes-comment {
     color: black;
 }
 
