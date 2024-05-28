@@ -67,9 +67,10 @@ We tested this webpage very carefully many times while we were making it. We did
 | Register link | Redirect to the correct Page | Passed |
 | **Footer** |  |  |
 |   | 
-| Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
-| Click on About Us, Coffee Shops Reviews and For Coffee Lovers | Redirect to correct pages | Passed |
-
+| Social Media  Buttons- Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
+| About Us - Click | Redirect to about/ | Passed |
+| Coffee Shops Reviews - Click | Redirect to coffeeshop/index | Passed |
+| For Coffee Lovers - Click | Redirect to home page - blog/index | Passed |
 ### As a logged in User 
 
 | What was tested | Expected Result | Outcome |
