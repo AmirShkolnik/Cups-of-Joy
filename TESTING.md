@@ -10,46 +10,61 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| Navbar |  |  |
-| Click to open links on Navbar | Redirect to each page | Passed |
-| Click on the Logo on the navbar | Redirect to the home page | Passed|
-| Click on the Register, Login, Logout on the nav bar | Redirect to the relevant pages | Passed |
-| Home |  |  |
-| Click on the Login, coffeeshops reviews, articles and home | Redirect to the relevant pages | Passed|
-| Articles |  |  |
+| **Navbar** |  |  |
+|   |  
+| Links - Click to open links | Redirect to each page | Passed |
+| Logo - Click on the Logo | Redirect to the home page | Passed|
+| Register - Click on the "Register" Button | Redirect to the relevant pages | Passed |
+| Login - Click on the "Login" Button | Redirect to the relevant pages | Passed |
+| Logout - Click on the "Logout" Button | Redirect to the relevant pages | Passed |
+| **Home - Fisrt LP Page**|  |  |
+|   |  
+| Click on the clickable "Login" box | Redirect to the relevant pages | Passed|
+| Click on the clickable "Coffee Shops Reviews" box | Redirect to the relevant pages | Passed|
+| Click on the clickable "Articles" box| Redirect to the relevant pages | Passed|
+| Click on the clickable "Home" box | Redirect to the relevant pages | Passed|
+| **Articles List Page**|  |  |
+|   |  
 | Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
 | Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
-| Article |  |  
 | Click on an Article from Articles page | Redirect to the correct Article | Passed |
+| **Singel Article Page** |  |  
+|   |  
 | Written by Author and published date | Should display | Passed |
-| Click on the "like" button | No action should take place | Passed |
-| Likes and comments icons and numbers | Should display | Passed |
-| Click on the "comment" button | No action should take place | Passed |
-| Comments and published date | Should display at the end of the article | Passed |
-| Log in to leave a comment | Should display at the end of the article | Passed |
-| Message "Please log in to like and add to favorites." | Should display near comments | Passed |
-| Reviews |  | 
-| Navbar - Click on Reviews| Redirect to the reviews page | Passed |
-| No reviews| Show a message to login or register, bg image | Passed |
-| Reviews page - click on login or register| Redirect to correct page | Passed |
+| Likes - Click on the "Like" button | No action should take place | Passed |
+| Likes - Heart icon and numbers | Should display | Passed |
+| Likes - Message "Please log in to like and add to favorites." | Should display | Passed |
+| Comments - Click on the "Comment" button | No action should take place | Passed |
+| Comments - comments icon and numbers | Should display | Passed |
+| Comments - Comments and published date | Should display at the end of the article | Passed |
+| Comments - Message "Log in to leave a comment" | Should display at the end of the article | Passed |
+| **Reviews List Page** |  | 
+|   | 
+| Navbar - Click on "Reviews" button | Redirect to the Reviews page | Passed |
+| No reviews | Show a message to login or register and bg image | Passed |
+| Reviews page - click on login or register | Redirect to coffeeshop/index | Passed |
 | Yes Reviews| Redirect to the correct reviews list with images, text, author and date| Passed |
 | Slideshow above reviews list| Rotating, fading slideshow with clickable dots | Passed |
-| Review |  |  
+| **Singel Review Page** |  |  
+|   | 
 | Click on a Review from Reviews list page | Redirect to the correct Review | Passed |
 | Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
-| Register |  |  |
+| **Register - Sign Up Page** |  |  |
+|   | 
 | Navbar - Click on Register | Redirect to Sign Up page | Passed |
 | Creating an account | Username and Password are required | Passed |
 | Password | Auto password creation | Passed |
 | Email| Email address is only optional to create an account | Passed |
 | After Sign Up| Redirect to Articles page and success message is prompt| Passed |
-| Login |  |  |
+| **Login - Sign In Page** |  |  |
+|   | 
 | Navbar - Click on Login | Redirect to Login page | Passed |
 | Sign In | Username and Password are required, remember me is optional | Passed |
 | Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
 | Register link | Redirect to the correct Page | Passed |
-| Footer |  |  |
+| **Footer** |  |  |
+|   | 
 | Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
 | Click on About Us, Coffee Shops Reviews and For Coffee Lovers | Redirect to correct pages | Passed |
 
@@ -57,7 +72,7 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| Click on the "User Name" button | Display dropdown menue | Passed |
+| Click on the "User Name" button | Display dropdown menu | Passed |
 | My Reviews Page|  |  |
 | Click on the "My Reviews" button | Redirect to coffeeshop/add_review | Passed |
 | Click on the "My Reviews" button | If the user wrote a review it should display | Passed |
