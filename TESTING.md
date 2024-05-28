@@ -28,6 +28,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
 | Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
 | Click on an Article from Articles page | Redirect to the correct Article | Passed |
+| Likes - Heart icon and numbers | Should display - NOT clickable | Passed |
+| Date - Article published date | Should display | Passed |
 | **Singel Article Page** |  |  
 |   |  
 | Written by Author and published date | Should display | Passed |
@@ -72,31 +74,52 @@ We tested this webpage very carefully many times while we were making it. We did
 | Coffee Shops Reviews - Click | Redirect to coffeeshop/index | Passed |
 | For Coffee Lovers - Click | Redirect to home page - blog/index | Passed |
 ### As a logged in User 
-
+|   | 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
 | Login - Click on the "Sign in" button | Message should prompt "Successfully signed in as user." | Passed |
 | Click on the "User Name" button | Display dropdown menu | Passed |
 | **My Reviews Page**|  |  |
+|   | 
 | Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
 | Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
 | Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 | **Single Review Page**|  |  |
+|   | 
 | Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
 | View - Single Review - click View | Should redirect to the single review page | Passed |
 | View - Single Review - click View | Should display, image, text, author and review status - limited for user only | Passed |
 | Edit - Single Review - click Edit | Should redirect to the single review edit page | Passed |
 | Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
 | **My Favourites Page**|  |  |
+|   | 
 | Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
-| Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You haven't added any Favourites yet." | Passed | | Passed |
-| Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
+| Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You don't have any favorites yet." | Passed |
+| Remove - Click on the "Remove" button | Should redirect to favourite/article-name/remove/ | Passed |
+| **My Comments Page**|  |  |
+|   | 
+| Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
+| Click on the "My Comments" link | Should display article headline, comment and published date | Passed |
+| Click on the "My Comments" link | Headline should be clickable | Passed |
+| **Singel Article Page** |  |  
+|   | 
+| Add Like - Click on the "Like" heart icon | Add 1 to the number of likes and the heart turns red, green message "Added to likes." | Passed |
+| Remove Like - Click on the "Like" heart icon | Should redirect to like/article-slug/confirm/ | Passed |
+| Remove Like - Click on the "Cancel" button | Should redirect back to the article | Passed |
+| Remove Like - Click on the "Confirm" button | Should redirect back to the article and dedact 1 to the number of likes and the heart turns empty | Passed |
+| Comments | A body window should be active for typing | Passed |
+| Comments - Click on the "Submit" button after adding a comment | A green window message should prompt "Comment submitted and awaiting approval" | Passed |
+| Comments Icon after approval | Add 1 to the number of comments and the comment should display | Passed |
+| Comments after approval | Delet and Edit options are available | Passed |
+| Delete - Comments after approval - Click on "Delete" Button | Warning window should open with close and delete options, close - remove window and stay on page, delete - remove comment | Passed |
+| Edit - Comments after approval - Click on "Edit" Button | comment display on window and an "Update" button display. After updating a message should display - "Comment updated and is awaiting approval." | Passed |
+| Add to Favourites - Click on the "Bookmark" icon | Icon should turns red and a green message display "Added to favorites." | Passed |
+| Remove from Favourites - Click on the "Bookmark" icon | Should redirect to favourite/article-name/remove/ with 2 optins Confirm and Cancel, Cancel redirect back to the article, Confirm remove from favourites and redirect back to the article. Green message display "Removed from favorites." | Passed |
 
+ 
 
-
-
-
+ Comment submitted and awaiting approval
 add form
 edit form
 Confirm Delete Your Review
@@ -114,6 +137,7 @@ Confirm Delete Your Review
 
 
 | **coffeeshop/add**|  |  |
+|   | 
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 
