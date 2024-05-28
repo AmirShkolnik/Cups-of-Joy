@@ -61,7 +61,7 @@ We tested this webpage very carefully many times while we were making it. We did
 | After Sign Up| Redirect to Articles page and success message is prompt| Passed |
 | **Login - Sign In Page** |  |  |
 |   | 
-| Navbar - Click on Login | Redirect to Login page | Passed |
+| Navbar - Click on Login | Redirect to Login page - accounts/login | Passed |
 | Sign In | Username and Password are required, remember me is optional | Passed |
 | Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
 | Register link | Redirect to the correct Page | Passed |
@@ -75,14 +75,17 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
+| Login - Click on the "Sign in" button | Message should prompt "Successfully signed in as user." | Passed |
 | Click on the "User Name" button | Display dropdown menu | Passed |
-| My Reviews Page|  |  |
-| Click on the "My Reviews" button | Redirect to coffeeshop/add_review | Passed |
-| Click on the "My Reviews" button | If the user wrote a review it should display | Passed |
-| Click on the "My Reviews" button | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
-| Click on the "My Reviews" button | click on "Add Review" button redirect to coffeeshop/add | Passed |
+| **My Reviews Page**|  |  |
+| Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
+| Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
+| Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
+| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 
-
+| **coffeeshop/add**|  |  |
+| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
+| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 
 | Click on the cancel button on the create a recipe detail page | Redirect to the Home page | Passed |
 | Populated all the fields in the add a recipe detail page, click on the submit button| User is redirected to the recipe detail which was just created | Passed |
