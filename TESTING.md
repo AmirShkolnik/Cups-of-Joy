@@ -14,6 +14,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click to open links on Navbar | Redirect to each page | Passed |
 | Click on the Logo on the navbar | Redirect to the home page | Passed|
 | Click on the Register, Login, Logout on the nav bar | Redirect to the relevant pages | Passed |
+| Home |  |  |
+| Click on the Login, coffeeshops reviews, articles and home | Redirect to the relevant pages | Passed|
 | Articles |  |  |
 | Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
 | Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
@@ -47,14 +49,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Sign In | Username and Password are required, remember me is optional | Passed |
 | Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
 | Register link | Redirect to the correct Page | Passed |
-
-
-
-
-
-
+| Footer |  |  |
 | Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
-| Click on Sign-Up & enter relevant info | Notification of being signed in and the new username created | Passed |
+| Click on About Us, Coffee Shops Reviews and For Coffee Lovers | Redirect to correct pages | Passed |
 
 ### As a logged in User 
 
