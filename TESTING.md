@@ -36,6 +36,20 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on a Review from Reviews list page | Redirect to the correct Review | Passed |
 | Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
+| Register |  |  |
+| Navbar - Click on Register | Redirect to Sign Up page | Passed |
+| Creating an account | Username and Password are required | Passed |
+| Password | Auto password creation | Passed |
+| Email| Email address is only optional to create an account | Passed |
+| After Sign Up| Redirect to Articles page and success message is prompt| Passed |
+| Login |  |  |
+| Navbar - Click on Login | Redirect to Login page | Passed |
+| Sign In | Username and Password are required, remember me is optional | Passed |
+| Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
+| Register link | Redirect to the correct Page | Passed |
+
+
+
 
 
 
