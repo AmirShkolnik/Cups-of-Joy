@@ -15,10 +15,12 @@
             </div>
             <div class="text-left mb-4"><h2>{{ post.title }}</h2></div>
             {% if user.is_authenticated %}
-                {% if post.approved %}
-                <p>Status: Published</p>
-                {% else %}
-                <p>Status: Awaiting Approval</p>
+                {% if post.status == 0 %}
+                    <p>Status: This review is in <span class="text-warning">draft status</span>.</p>
+                {% elif post.status == 1 and post.approved == False %}
+                    <p>Status: This review is <span class="text-warning">awaiting approval</span>.</p>
+                {% elif post.status == 1 and post.approved == True %}
+                    <p>Status: This review is <span class="text-success">published</span>.</p>
                 {% endif %}
             {% endif %}
             <p>Written by {{ post.author }} | {{ post.published|date:"Y-m-d" }}</p>

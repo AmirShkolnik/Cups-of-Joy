@@ -46,11 +46,11 @@ We tested this webpage very carefully many times while we were making it. We did
 | Reviews Page - Empty - Click on the "register" link| Redirect to accounts/signup/ | Passed |
 | Reviews Page - Atleast one review | Redirect to the correct reviews list with images, text, author and date| Passed |
 | Reviews Page - Atleast one review | Slideshow above reviews list with rotating, fading images | Passed |
-| Reviews Page - Atleast one review | clickable dots under images | Passed |
+| Reviews Page - Atleast one review | Clickable dots under slideshow | Passed |
 | **Singel Review Page** |  |  
 |   | 
-| Click on a Review from Reviews list page | Redirect to the correct Review | Passed |
-| Written by Author and published date | Should display | Passed |
+| Review - Click on a Review from Reviews list page | Redirect to the correct Review page | Passed |
+| Review - Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
 | **Register - Sign Up Page** |  |  |
 |   | 
