@@ -149,6 +149,17 @@ main {
     z-index: 2; /* Increase the z-index value */
 }
 
+/* Navbar active state */
+.navbar .nav-link.active {
+    background-color: transparent !important;
+    font-weight: bold;
+}
+
+/* Logo active state */
+.navbar-brand.active {
+    background-color: transparent !important;
+}
+
 .navbar-container-home {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
@@ -637,7 +648,7 @@ h3 {
   
   /* Slideshow container */
   .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
   }
@@ -688,7 +699,7 @@ h3 {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* Slideshow dots */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -699,16 +710,16 @@ h3 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
-.active, .dot:hover {
+  
+.dot:hover, .active {
   background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-    animation-name: fade;
-    animation-duration: 1s; /* Change the duration to 1s */
-  }
+  animation-name: fade;
+  animation-duration: 1s; /* Change the duration to 1s */
+}
   
   @keyframes fade {
     from {
