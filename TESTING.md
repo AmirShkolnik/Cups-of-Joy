@@ -12,8 +12,8 @@ We tested this webpage very carefully many times while we were making it. We did
 |:---|:---|:---:|
 | Click to open links on Nav bar | Redirect to each page | Passed |
 | Click on the Logo on the nav bar | Redirect to the home page | Passed|
-| Click on the Sign Up, Login, Logout on the nav bar | Redirect to the relevant pages | Passed |
-| Click on a Recipe | Redirect to the Recipe detail | Passed |
+| Click on the Register, Login, Logout on the nav bar | Redirect to the relevant pages | Passed |
+| Click on an Article | Redirect to the correct Article | Passed |
 | Click on the "like" button | No action should take place | Passed |
 | Click on the "next" or "back" buttons below the recipe posts | Redirect to the next/prev page | Passed |
 | Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |

@@ -3,61 +3,134 @@
 {% block title %}Edit Your Review{% endblock %}
 
 {% block content %}
-{% if no_reviews %}
-<div class="container-fluid callout-container-reviews">
-    <div class="opaque-overlay-reviews"></div>
-    <div class="container content-container">
-        <div class="row">
-            <div class="col-12">
-                <section class="jumbotron text-center-home">
-                    <h1 class="jumbotron-header-reviews">There are no reviews yet, be the first to tell us about your favorite coffee shop.</h1>
-                    <hr class="block-divider-home">
-                    {% if user.is_authenticated %}
-                    <p class="lead">Share your story here <a href="{% url 'coffeeshop:add' %}" class="btn btn-primary">Add Review</a></p>
-                    {% else %}
-                    <p class="lead">Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> to add a review.</p>
-                    {% endif %}
-                    <span class="d-inline d-sm-none"><br></span>
-                    </p>
-                </section>
+<div class="album bg-light">
+    {% if no_reviews %}
+    <div class="container-fluid callout-container-reviews">
+        <div class="opaque-overlay-reviews"></div>
+        <div class="container content-container">
+            <div class="row">
+                <div class="col-12">
+                    <section class="jumbotron text-center-home">
+                        <h1 class="jumbotron-header-reviews">There are no reviews yet, be the first to tell us about
+                            your
+                            favorite coffee shop.</h1>
+                        <hr class="block-divider-home">
+                        {% if user.is_authenticated %}
+                        <p class="lead">Share your story here <a href="{% url 'coffeeshop:add' %}"
+                                class="btn btn-primary">Add Review</a></p>
+                        {% else %}
+                        <p class="lead">Please <a href="{% url 'account_login' %}">log in</a> or <a
+                                href="{% url 'account_signup' %}">register</a> to add a review.</p>
+                        {% endif %}
+                        <span class="d-inline d-sm-none"><br></span>
+                        </p>
+                    </section>
+                </div>
             </div>
-        </div>
-        {% endif %}
-        <div class="album bg-light">
+            {% endif %}
             <div class="container">
                 <div class="row">
-                    {% for review in reviews %}
-                    {% if review.approved %}
-                    <div class="col-md-4">
-                        <div class="card md-4 box-shadow">
-                            <a class="a-review" href="{% url 'coffeeshop:single' review.slug %}">
-                                {% if review.coffee_image %}
-                                <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
-                                {% else %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
-                                {% endif %}
-                            <div class="card-body">
-                                <h4 class="">{{ review.title }}</h4>
-                                <p class="card-text">{{ review.excerpt }}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p>Written by {{ review.author }} | {{ review.published|date:"N j, Y" }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
-                    {% else %}
-                    <div class="col-md-4">
-                        <div class="card md-4 box-shadow">
-                            <div class="card-body">
-                                <p>This review is awaiting approval.</p>
-                            </div>
+                    <div class="col-12">
+                        <div class="slideshow-container">
+                            {% include 'includes/slideshow.html' %}
                         </div>
                     </div>
-                    {% endif %}
-                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            {% for review in reviews %}
+            {% if review.approved %}
+            <div class="col-md-4">
+                <div class="card md-4 box-shadow">
+                    <a class="a-review" href="{% url 'coffeeshop:single' review.slug %}">
+                        {% if review.coffee_image %}
+                        <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
+                        {% endif %}
+                        <div class="card-body">
+                            <h4 class="">{{ review.title }}</h4>
+                            <p class="card-text">{{ review.excerpt }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>Written by {{ review.author }} | {{ review.published|date:"N j, Y" }}</p>
+                            </div>
+                        </div>
+                </div>
+                </a>
+            </div>
+            {% else %}
+            <div class="col-md-4">
+                <div class="card md-4 box-shadow">
+                    <div class="card-body">
+                        <p>This review is awaiting approval.</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+{% block extra_js %}
+<script>
+let slideIndex = 0;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+let slideInterval;
+
+// Start the slideshow automatically when the page loads
+startSlideshow();
+
+function startSlideshow() {
+  slideInterval = setInterval(showSlides, 5000); // Change image every 5 seconds
+}
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("fade");
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("fade");
+  dots[slideIndex - 1].className += " active";
+}
+
+function plusSlides(n) {
+  clearInterval(slideInterval); // Stop the automatic slideshow
+  showSlides((slideIndex += n));
+  startSlideshow(); // Restart the automatic slideshow
+}
+
+function currentSlide(n) {
+  clearInterval(slideInterval); // Stop the automatic slideshow
+  slideIndex = n - 1; // Set the slideIndex to the clicked dot index
+  showSlides(slideIndex); // Show the corresponding slide
+  startSlideshow(); // Restart the automatic slideshow
+}
+
+// Add event listeners to the dots and arrow buttons
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function () {
+    currentSlide(i + 1);
+  });
+}
+
+
+</script>
+</div>
 {% endblock %}
+{% endblock content%}
