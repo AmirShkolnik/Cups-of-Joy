@@ -41,10 +41,12 @@ We tested this webpage very carefully many times while we were making it. We did
 | **Reviews List Page** |  | 
 |   | 
 | Navbar - Click on "Reviews" button | Redirect to the Reviews page | Passed |
-| No reviews | Show a message to login or register and bg image | Passed |
-| Reviews page - click on login or register | Redirect to coffeeshop/index | Passed |
-| Yes Reviews| Redirect to the correct reviews list with images, text, author and date| Passed |
-| Slideshow above reviews list| Rotating, fading slideshow with clickable dots | Passed |
+| No Reviews | Show a message "There are no reviews yet. Please log in or register to add a review." bg image | Passed |
+| Reviews Page - Empty - Click on the "lon in" link| Redirect to accounts/login/ | Passed |
+| Reviews Page - Empty - Click on the "register" link| Redirect to accounts/signup/ | Passed |
+| Reviews Page - Atleast one review | Redirect to the correct reviews list with images, text, author and date| Passed |
+| Reviews Page - Atleast one review | Slideshow above reviews list with rotating, fading images | Passed |
+| Reviews Page - Atleast one review | clickable dots under images | Passed |
 | **Singel Review Page** |  |  
 |   | 
 | Click on a Review from Reviews list page | Redirect to the correct Review | Passed |
