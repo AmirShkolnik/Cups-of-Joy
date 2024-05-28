@@ -57,7 +57,9 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| Click on the "Add Recipe" button | Redirect to the add a recipe detail page | Passed |
+| Click on the "User Name" button | Display dropdown menue | Passed |
+| Click on the "My Reviews" button | If the user wrote a review it should display | Passed |
+| Click on the "My Reviews" button | If the user didn't write a review it should display | Passed |
 | Click on the cancel button on the create a recipe detail page | Redirect to the Home page | Passed |
 | Populated all the fields in the add a recipe detail page, click on the submit button| User is redirected to the recipe detail which was just created | Passed |
 | Click on the "like" button | Add 1 to the number of like and the heart turns red or back to grey if the recipe was already liked | Passed |

@@ -46,6 +46,7 @@ class AddReviewView(LoginRequiredMixin, CreateView):
         context = super().get_context_data(**kwargs)
         user_reviews = Review.objects.filter(author=self.request.user).exclude(status=2)  # Exclude deleted reviews
         context['review_list'] = user_reviews
+        context['no_reviews'] = not user_reviews.exists()
         return context
 
 class AddView(CreateView):
