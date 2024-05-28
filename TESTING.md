@@ -82,6 +82,36 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
 | Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
+| **Single Review Page**|  |  |
+| Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
+| View - Single Review - click View | Should redirect to the single review page | Passed |
+| View - Single Review - click View | Should display, image, text, author and review status - limited for user only | Passed |
+| Edit - Single Review - click Edit | Should redirect to the single review edit page | Passed |
+| Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
+| **My Favourites Page**|  |  |
+| Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
+| Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You haven't added any Favourites yet." | Passed | | Passed |
+| Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
+
+
+
+
+
+add form
+edit form
+Confirm Delete Your Review
+
+
+
+| Single Review - click Edit | Should display 3 buttons - View, Edit, Delete | Passed |
+| Single Review - click Delete | Should display 3 buttons - View, Edit, Delete | Passed |
+
+
+| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
+| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
+
+
+
 
 | **coffeeshop/add**|  |  |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
