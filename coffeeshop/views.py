@@ -49,7 +49,7 @@ class AddReviewView(LoginRequiredMixin, CreateView):
         context['no_reviews'] = not user_reviews.exists()
         return context
 
-class AddView(CreateView):
+class AddView(LoginRequiredMixin, CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'coffeeshop/add.html'
