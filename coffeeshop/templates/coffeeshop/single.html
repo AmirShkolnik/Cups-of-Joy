@@ -14,10 +14,12 @@
                 {% endif %}
             </div>
             <div class="text-left mb-4"><h2>{{ post.title }}</h2></div>
-            {% if post.approved %}
-            <p>Status: Published</p>
-            {% else %}
-            <p>Status: Awaiting Approval</p>
+            {% if user.is_authenticated %}
+                {% if post.approved %}
+                <p>Status: Published</p>
+                {% else %}
+                <p>Status: Awaiting Approval</p>
+                {% endif %}
             {% endif %}
             <p>Written by {{ post.author }} | {{ post.published|date:"Y-m-d" }}</p>
             <p>{{ post.content|safe }}</p>

@@ -10,12 +10,35 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| Click to open links on Nav bar | Redirect to each page | Passed |
-| Click on the Logo on the nav bar | Redirect to the home page | Passed|
+| Navbar |  |  |
+| Click to open links on Navbar | Redirect to each page | Passed |
+| Click on the Logo on the navbar | Redirect to the home page | Passed|
 | Click on the Register, Login, Logout on the nav bar | Redirect to the relevant pages | Passed |
-| Click on an Article | Redirect to the correct Article | Passed |
+| Articles |  |  |
+| Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
+| Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
+| Article |  |  
+| Click on an Article from Articles page | Redirect to the correct Article | Passed |
+| Written by Author and published date | Should display | Passed |
 | Click on the "like" button | No action should take place | Passed |
-| Click on the "next" or "back" buttons below the recipe posts | Redirect to the next/prev page | Passed |
+| Likes and comments icons and numbers | Should display | Passed |
+| Click on the "comment" button | No action should take place | Passed |
+| Comments and published date | Should display at the end of the article | Passed |
+| Log in to leave a comment | Should display at the end of the article | Passed |
+| Message "Please log in to like and add to favorites." | Should display near comments | Passed |
+| Reviews |  | 
+| Navbar - Click on Reviews| Redirect to the reviews page | Passed |
+| No reviews| Show a message to login or register, bg image | Passed |
+| Reviews page - click on login or register| Redirect to correct page | Passed |
+| Yes Reviews| Redirect to the correct reviews list with images, text, author and date| Passed |
+| Slideshow above reviews list| Rotating, fading slideshow with clickable dots | Passed |
+| Review |  |  
+| Click on a Review from Reviews list page | Redirect to the correct Review | Passed |
+| Written by Author and published date | Should display | Passed |
+| Review status| Should NOT display | Passed |
+
+
+
 | Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
 | Click on Sign-Up & enter relevant info | Notification of being signed in and the new username created | Passed |
 
