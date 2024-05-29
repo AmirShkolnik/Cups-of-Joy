@@ -250,10 +250,14 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Base Page**                | [View PDF]() | 0      | 0        |
 | **Home Page**                | [View PDF]() | 0      | 0        |
 | **About & Contact Page**     | [View PDF]() | 0      | 0        |
-| **Categories Page**          | [View PDF]() | 0      | 0        |
-| **Search Results Page**      | [View PDF]() | 0      | 0        |
+| **Articles Page**             | [View PDF]() | 0      | 0        |
+| **Reviews Page**             | [View PDF]() | 0      | 0        |
 | **Register Page**            | [View PDF]() | 0      | 0        |
 | **Login Page**               | [View PDF]() | 0      | 0        |
+| **My Reviews Page**          | [View PDF]() | 0      | 0        |
+| **Add New Review**           | [View PDF]() | 0      | 0        |
+| **My Favourites Posts**      | [View PDF]() | 0      | 0        |
+| **My Comments**              | [View PDF]() | 0      | 0        |
 | **Logout Page**              | [View PDF]() | 0      | 0        |
 | **Post Detail**              | [View PDF]() | 0      | 0        |
 | **Add Post Page**            | [View PDF]() | 0      | 0        |
