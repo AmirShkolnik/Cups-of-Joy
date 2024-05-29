@@ -7,35 +7,38 @@
 <section class="jumbotron text-center bg-white">
     <div class="container">
         <h1>{{ user }}'s Review Administration Page</h1>
-        <p class="lead text-muted">Here you can add a new review, view, edit, and remove the reviews you have written. All new and edited reviews will be approved by one of our staff members before being published live.</p>
-        <p class="lead text-muted">Share your story here <a href="{% url 'coffeeshop:add' %}" class="btn btn-primary">Add Review</a></p>
+        <p class="lead text-muted">Here you can add a new review, view, edit, and remove the reviews you have written.
+            All new and edited reviews will be approved by one of our staff members before being published live.</p>
+        <p class="lead text-muted">Share your story here <a href="{% url 'coffeeshop:add' %}"
+                class="btn btn-primary">Add Review</a></p>
     </div>
 </section>
 
 <div class="container mt-4">
     <h2>Your Reviews</h2>
     {% if no_reviews %}
-        <p>You haven't added any reviews yet.</p>
+    <p>You haven't added any reviews yet.</p>
     {% else %}
-        <div class="row">
     <div class="row">
         {% for review in review_list %}
         <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ review.title }}</h5>
-                    {% if review.status == 0 %}
-                        <p>This review is in draft status.</p>
+                    {% if review.status == 0 and review.approved == True %}
+                    <p>Your review has been approved. Click the Edit button to change the status to Published.</p>
+                    {% elif review.status == 0 %}
+                    <p>This review is in draft status.</p>
                     {% elif review.status == 1 and review.approved == False %}
-                        <p>This review is awaiting approval.</p>
+                    <p>This review is awaiting approval.</p>
                     {% elif review.status == 1 and review.approved == True %}
-                        <p>This review is published.</p>
+                    <p>This review is published.</p>
                     {% endif %}
                     <div class="image-container">
                         {% if review.coffee_image %}
-                            <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
+                        <img class="card-img-top" src="{{ review.coffee_image.url }}" alt="{{ review.image_alt }}">
                         {% else %}
-                            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
+                        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default Image">
                         {% endif %}
                     </div>
                     <p class="card-text">{{ review.excerpt }}</p>

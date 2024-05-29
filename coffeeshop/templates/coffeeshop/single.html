@@ -15,7 +15,9 @@
             </div>
             <div class="text-left mb-4"><h2>{{ post.title }}</h2></div>
             {% if user.is_authenticated %}
-                {% if post.status == 0 %}
+                {% if post.status == 0 and post.approved == True %}
+                    <p>Your review has been approved. Click the Edit button to change the status to Published. <a href="{% url 'coffeeshop:edit' post.pk %}" class="btn btn-primary btn-sm">Edit Review</a></p>
+                {% elif post.status == 0 %}
                     <p>Status: This review is in <span class="text-warning">draft status</span>.</p>
                 {% elif post.status == 1 and post.approved == False %}
                     <p>Status: This review is <span class="text-warning">awaiting approval</span>.</p>
