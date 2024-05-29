@@ -249,7 +249,7 @@ class Delete(DeleteView):
 @login_required
 def publish_review(request, pk):
     review = get_object_or_404(Review, pk=pk, author=request.user)
-    review.status = 1  # Set the status to published
+    review.status = 1
     review.save()
     messages.success(request, "Review published successfully.")
     return redirect('coffeeshop:single', slug=review.slug)
@@ -257,8 +257,8 @@ def publish_review(request, pk):
 @user_passes_test(lambda u: u.is_superuser)
 def approve_review(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    review.approved = True  # Set the approved field to True
-    review.status = 1  # Set the status to published
+    review.approved = True
+    review.status = 1
     review.save()
     messages.success(request, "Review approved and published successfully.")
     return redirect('coffeeshop:single', slug=review.slug)
