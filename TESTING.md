@@ -81,9 +81,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on the "User Name" button | Display dropdown menu | Passed |
 | **My Reviews Page**|  |  |
 |   | 
-| Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
-| Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
-| Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
+| Dropdown Menu - Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
+| Dropdown Menu - Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
+| Dropdown Menu - Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 | **Single Review Page**|  |  |
 |   | 
@@ -94,13 +94,13 @@ We tested this webpage very carefully many times while we were making it. We did
 | Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
 | **My Favourites Page**|  |  |
 |   | 
-| Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
-| Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You don't have any favorites yet." | Passed |
+| Dropdown Menu - Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
+| Dropdown Menu - Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You don't have any favorites yet." | Passed |
 | Remove - Click on the "Remove" button | Should redirect to favourite/article-name/remove/ | Passed |
 | **My Comments Page**|  |  |
 |   | 
-| Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
-| Click on the "My Comments" link | Should display article headline, comment and published date | Passed |
+| Dropdown Menu - Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
+| Dropdown Menu - Click on the "My Comments" link | Should display article headline, comment and published date | Passed |
 | Click on the "My Comments" link | Headline should be clickable | Passed |
 | **Singel Article Page** |  |  
 |   | 
@@ -116,8 +116,40 @@ We tested this webpage very carefully many times while we were making it. We did
 | Edit - Comments after approval - Click on "Edit" Button | comment display on window and an "Update" button display. After updating a message should display - "Comment updated and is awaiting approval." | Passed |
 | Add to Favourites - Click on the "Bookmark" icon | Icon should turns red and a green message display "Added to favorites." | Passed |
 | Remove from Favourites - Click on the "Bookmark" icon | Should redirect to favourite/article-name/remove/ with 2 optins Confirm and Cancel, Cancel redirect back to the article, Confirm remove from favourites and redirect back to the article. Green message display "Removed from favorites." | Passed |
+| **Add New Review** |  |  
+|   | 
+| Dropdown Menu - Click on the "Add New Review" link | Redirect to coffeeshop/add | Passed |
+| Populated all the fields in the add a review detail page, click on the "Add Review" button| User is redirected to the recipe detail which was just created | Passed |
+| Cancel - click on the "Cancel" button at any stage | Javascript message prompt, asking the user to confirm canceling, both message buttons - click cancle user stay on page and no changes are lost, click ok user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
+| Check box - unchecked | "Add Review" button NOT clickable, button's color is off | Passed |
+| Check box - checked | "Add Review" button IS clickable, button's color is green. After click the user is redirected to coffeeshop/add_review - User's Reviews list page, Green message prompt "Review added successfully, waiting for approval." and display "This review is in draft status." under article headline | Passed |
+| Missing or unvalid fileds - Click on the "Add Review" button | Warning disply "Please fill in all required fields."  | Passed |
+| No image uploaded | Display default coffee image | Passed |
 
- 
+| Status - Draft | New Review is added at the Admin back office for approval with status draft, display "This review is in draft status." under article headline  | Passed |
+| After admin approval - Status - Draft | On coffeeshop/add_review/ under the headline the text should display "This review is published." | Passed |
+| Status - Published | New Review is added at the Admin back office for approval with status published, display "Status: This review is awaiting approval." under article headline | Passed |
+
+| After admin approval - Status - Published | On coffeeshop/add_review/ under the headline the text should display "This review is published." | Passed |
+
+
+
+
+
+
+
+| Click on the cancel button on the create a recipe detail page | Redirect to the Home page | Passed |
+| Populated all the fields in the add a recipe detail page, click on the submit button| User is redirected to coffeeshop/add_review - User's Reviews list page  | Passed |
+| Click on the "like" button | Add 1 to the number of like and the heart turns red or back to grey if the recipe was already liked | Passed |
+| Click on the edit button in a recipe post that belongs to the logged in user | The user is able to edit the recipe post | Passed |
+| Click on the delete button in a recipe post that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
+| Populate the comment text area and click the "post comment" button | Creates a comment below the recipe detail | Passed |
+| Click on the delete button on the comments that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
+| Click on the edit button on the comments that belongs to the logged in user | The comment can be edited | Passed |
+| Populate the contact form on the about page and clicked the submit button | Submits successfully and notifies the user | Passed |
+| Click logout in the nav bar | Logout is successful and user is redirected to the Home page | Passed |
+| **Edit Review** |  |  
+|   | 
 
  Comment submitted and awaiting approval
 add form
