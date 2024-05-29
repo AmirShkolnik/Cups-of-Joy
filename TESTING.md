@@ -232,6 +232,59 @@ During the development of the webpage the testing was done using Google Chrome. 
 
 ### [W3C HTML Validator](https://validator.w3.org/)
 
+### HTML Validatoin
+
+#### HTML Validation
+- **Tool Used:** [HTML W3C Markup Validator](https://validator.w3.org/)
+- **Purpose:** Validates the HTML code of the application to ensure it is free from syntax errors and adheres to the standards set by the World Wide Web Consortium (W3C).
+- **Process:** All HTML pages of the Software Stacks are checked through the W3C validator to identify and fix any markup errors or warnings.
+
+![HTML Screenshot](documentation/screenshots/html.JPG)
+
+**HTML Validation Results**
+
+Below is a table summarizing the HTML validation results for various pages of the Software Stacks website. This validation ensures that the HTML is up to standards, improving cross-browser compatibility, and enhancing SEO performance.
+
+| HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
+|------------------------------|---------------------------------------|--------|----------|
+| **Base Page**                | [View PDF]() | 0      | 0        |
+| **Home Page**                | [View PDF]() | 0      | 0        |
+| **About & Contact Page**     | [View PDF]() | 0      | 0        |
+| **Categories Page**          | [View PDF]() | 0      | 0        |
+| **Search Results Page**      | [View PDF]() | 0      | 0        |
+| **Register Page**            | [View PDF]() | 0      | 0        |
+| **Login Page**               | [View PDF]() | 0      | 0        |
+| **Logout Page**              | [View PDF]() | 0      | 0        |
+| **Post Detail**              | [View PDF]() | 0      | 0        |
+| **Add Post Page**            | [View PDF]() | 0      | 0        |
+| **My Bookmarks Page**        | [View PDF]() | 0      | 0        |
+| **My Likes Page**            | [View PDF]() | 0      | 0        |
+| **My Comments Page**         | [View PDF]() | 0      | 0        |
+| **My Posts Page**            | [View PDF]() | 0      | 0        |
+| **404 Page**                 | [View PDF]() | 0      | 0        |
+
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
+| about |  | Passed |
+| add_review |  | Passed |
+| add |  | Passed |
+| confirm-delete | Passed |
+| edit | Passed |
+| footer | Passed |
+| single | Passed |
+| articles | Passed |
+| comments | Passed |
+| confirm_like_removal | Passed |
+| confirm_remove_favorite | Passed |
+| favourites | Passed |
+| index | Passed |
+| post_detail | Passed |
+| test | Passed |
+| user_comments | Passed |
+| single | Passed |
+| base | Passed |
+| base_home | Passed |
+
 Some html pages do contain comments for ease of navigation through sections
 
 <details>
