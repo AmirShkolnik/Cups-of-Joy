@@ -10,28 +10,32 @@ We tested this webpage very carefully many times while we were making it. We did
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| **Navbar** |  |  |
-|   |  
+### Navbar
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Links - Click to open links | Redirect to each page | Passed |
 | Logo - Click on the Logo | Redirect to the home page | Passed|
 | Register - Click on the "Register" Button | Redirect to the relevant pages | Passed |
 | Login - Click on the "Login" Button | Redirect to the relevant pages | Passed |
 | Logout - Click on the "Logout" Button | Redirect to the relevant pages | Passed |
-| **Home - Fisrt LP Page**|  |  |
-|   |  
+### Home - Fisrt LP Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Click on the clickable "Login" box | Redirect to the relevant pages | Passed|
 | Click on the clickable "Coffee Shops Reviews" box | Redirect to the relevant pages | Passed|
 | Click on the clickable "Articles" box| Redirect to the relevant pages | Passed|
 | Click on the clickable "Home" box | Redirect to the relevant pages | Passed|
-| **Articles List Page**|  |  |
-|   |  
+### Articles List Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
 | Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
 | Click on an Article from Articles page | Redirect to the correct Article | Passed |
 | Likes - Heart icon and numbers | Should display - NOT clickable | Passed |
 | Date - Article published date | Should display | Passed |
-| **Singel Article Page** |  |  
-|   |  
+### Singel Article Page 
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:| 
 | Written by Author and published date | Should display | Passed |
 | Likes - Click on the "Like" button | No action should take place | Passed |
 | Likes - Heart icon and numbers | Should display | Passed |
@@ -40,8 +44,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Comments - comments icon and numbers | Should display | Passed |
 | Comments - Comments and published date | Should display at the end of the article | Passed |
 | Comments - Message "Log in to leave a comment" | Should display at the end of the article | Passed |
-| **Reviews List Page** |  | 
-|   | 
+### Reviews List Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Navbar - Click on "Reviews" button | Redirect to the Reviews page | Passed |
 | No Reviews | Show a message "There are no reviews yet. Please log in or register to add a review." bg image | Passed |
 | Reviews Page - Empty - Click on the "lon in" link| Redirect to accounts/login/ | Passed |
@@ -49,61 +54,69 @@ We tested this webpage very carefully many times while we were making it. We did
 | Reviews Page - Atleast one review | Redirect to the correct reviews list with images, text, author and date| Passed |
 | Reviews Page - Atleast one review | Slideshow above reviews list with rotating, fading images | Passed |
 | Reviews Page - Atleast one review | Clickable dots under slideshow | Passed |
-| **Singel Review Page** |  |  
-|   | 
+### Singel Review Page 
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Review - Click on a Review from Reviews list page | Redirect to the correct Review page | Passed |
 | Review - Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
-| **Register - Sign Up Page** |  |  |
-|   | 
+### Register - Sign Up Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Navbar - Click on Register | Redirect to Sign Up page | Passed |
 | Creating an account | Username and Password are required | Passed |
 | Password | Auto password creation | Passed |
 | Email| Email address is only optional to create an account | Passed |
 | After Sign Up| Redirect to Articles page and success message is prompt| Passed |
-| **Login - Sign In Page** |  |  |
-|   | 
+### Login - Sign In Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Navbar - Click on Login | Redirect to Login page - accounts/login | Passed |
 | Sign In | Username and Password are required, remember me is optional | Passed |
 | Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
 | Register link | Redirect to the correct Page | Passed |
-| **Footer** |  |  |
-|   | 
+### Footer
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Social Media  Buttons- Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
 | About Us - Click | Redirect to about/ | Passed |
 | Coffee Shops Reviews - Click | Redirect to coffeeshop/index | Passed |
 | For Coffee Lovers - Click | Redirect to home page - blog/index | Passed |
 ### As a logged in User 
-|   | 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
 | Login - Click on the "Sign in" button | Message should prompt "Successfully signed in as user." | Passed |
 | Click on the "User Name" button | Display dropdown menu | Passed |
-| **My Reviews Page**|  |  |
-|   | 
+### My Reviews Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Dropdown Menu - Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
 | Dropdown Menu - Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
 | Dropdown Menu - Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 | Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
-| **Single Review Page**|  |  |
-|   | 
+### Single Review Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | View - Single Review - click View | Should redirect to the single review page | Passed |
 | View - Single Review - click View | Should display, image, text, author and review status - limited for user only | Passed |
 | Edit - Single Review - click Edit | Should redirect to the single review edit page | Passed |
 | Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
-| **My Favourites Page**|  |  |
-|   | 
+### My Favourites Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Dropdown Menu - Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
 | Dropdown Menu - Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You don't have any favorites yet." | Passed |
 | Remove - Click on the "Remove" button | Should redirect to favourite/article-name/remove/ | Passed |
-| **My Comments Page**|  |  |
-|   | 
+### My Comments Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Dropdown Menu - Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
 | Dropdown Menu - Click on the "My Comments" link | Should display article headline, comment and published date | Passed |
 | Click on the "My Comments" link | Headline should be clickable | Passed |
-| **Singel Article Page** |  |  
-|   | 
+### Singel Article Page
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Add Like - Click on the "Like" heart icon | Add 1 to the number of likes and the heart turns red, green message "Added to likes." | Passed |
 | Remove Like - Click on the "Like" heart icon | Should redirect to like/article-slug/confirm/ | Passed |
 | Remove Like - Click on the "Cancel" button | Should redirect back to the article | Passed |
@@ -116,8 +129,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Edit - Comments after approval - Click on "Edit" Button | comment display on window and an "Update" button display. After updating a message should display - "Comment updated and is awaiting approval." | Passed |
 | Add to Favourites - Click on the "Bookmark" icon | Icon should turns red and a green message display "Added to favorites." | Passed |
 | Remove from Favourites - Click on the "Bookmark" icon | Should redirect to favourite/article-name/remove/ with 2 optins Confirm and Cancel, Cancel redirect back to the article, Confirm remove from favourites and redirect back to the article. Green message display "Removed from favorites." | Passed |
-| **Add New Review** |  |  
-|   | 
+### Add New Review
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | Dropdown Menu - Click on the "Add New Review" link | Redirect to coffeeshop/add | Passed |
 | Populated all the fields in the add a review detail page, click on the "Add Review" button| User is redirected to coffeeshop/add_review/ reviews list page | Passed |
 | Cancel - click on the "Cancel" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
@@ -130,8 +144,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
 | Status - Admin not approvd YET- User - published | Display "Status: This review is awaiting approval." under article headline. | Passed |
 | Status - Admin Rejected | Display "Status: This review got rejected, please follow our guidelines" under article headline. | Future Feature |
-| **Edit a Review** |  |  
-|   | 
+### Edit a Review 
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
 | coffeeshop/add_review/ - Click on the "Edit" button | Redirect to coffeeshop/edit/review-number | Passed |
 | Edit relevant fields, check the box and click on the "Save Changes" button| User is redirected to coffeeshop/relevant-review, image, status, author and contnet should display, Green message "Review Update" display | Passed |
 | Cancel - click on the "Discard Changes" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
@@ -142,52 +157,40 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | No image uploaded | Display default coffee image | Passed |
 | Edit Status to Draft | Review's status has been changed at the Admin back office for approval with status draft, display "This review is awaiting approval." under article headline both on the review and reviews list page | Passed |
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
-
-
-
-| Single Review - click Edit | Should display 3 buttons - View, Edit, Delete | Passed |
-| Single Review - click Delete | Should display 3 buttons - View, Edit, Delete | Passed |
-
-
-| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
-| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
-
-
-
-
-| **coffeeshop/add**|  |  |
-|   | 
-| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
-| Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
-
-| Click on the cancel button on the create a recipe detail page | Redirect to the Home page | Passed |
-| Populated all the fields in the add a recipe detail page, click on the submit button| User is redirected to the recipe detail which was just created | Passed |
-| Click on the "like" button | Add 1 to the number of like and the heart turns red or back to grey if the recipe was already liked | Passed |
-| Click on the edit button in a recipe post that belongs to the logged in user | The user is able to edit the recipe post | Passed |
-| Click on the delete button in a recipe post that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
-| Populate the comment text area and click the "post comment" button | Creates a comment below the recipe detail | Passed |
-| Click on the delete button on the comments that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
-| Click on the edit button on the comments that belongs to the logged in user | The comment can be edited | Passed |
-| Populate the contact form on the about page and clicked the submit button | Submits successfully and notifies the user | Passed |
-| Click logout in the nav bar | Logout is successful and user is redirected to the Home page | Passed |
+### About Us
+| What was tested | Expected Result | Outcome |
+|:---|:---|:---:|
+| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
+| Click Submit - missing fields | Notification: "Fill this field." | Passed |
 
 ### Notifications and Errors
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| A user/visitor not being logged in | Notification in the nav bar when "you are not logged in" on the home page | Passed |
-| Logout | Notification: "You have signed out." | Passed |
 | Login | Notification: "Successfully signed in as {username}." | Passed |
-| Sign-up | Notification: "Successfully signed in as {username}." | Passed |
-| Recipe post created & submitted | Notification: "Your recipe has been posted!" | Passed |
-| Recipe post edited & submitted | Notification: "Your recipe has been updated successfully!" | Passed |
-| Post a comment | Notification: "Comment was posted successfully!" | Passed |
-| Update a comment | Notification: "Your comment has been successfully updated!" | Passed |
-| Delete a comment confirmation | Notification: "Are you sure you want to delete your comment? You cannot undo this action once confirmed." | Passed |
-| Delete a comment | Notification: "Your comment has been deleted!" | Passed |
-| Delete a Recipe confirmation | Notification: "Are you sure you want to delete this recipe, once confirmed this cannot be undone?" | Passed |
-| Delete a Recipe | Notification: "Your recipe has been deleted!" | Passed |
-| Contact form submitted | Notification: "Contact request received! We endeavour to respond within 24 hours." | Passed |
+| Logout | Notification: "You have signed out." | Passed |
+| Register - Sign-up | Notification: "Successfully signed in as {username}." | Passed |
+|User's Review Administration Page| Empty: Notification - "You haven't added any reviews yet." | Passed |
+| Review created & submitted | Notification: "Review added successfully, waiting for approval." | Passed |
+| Review edited & submitted | Notification: "Review updated.", "Status: This review is in xxx status." Author name. | Passed |
+| Delete a Review confirmation | Notification: "Are you sure you want to delete "title"?" | Passed |
+| Delete a Review | Notification: "Review deleted successfully." | Passed |
+| My favourite posts page | Empty: "You don't have any favorites yet." | Passed |
+| Add favourite posts | Notification: "Added to favorites." | Passed |
+| Add favourite posts | Notification: "red bookmark sign" | Passed |
+| Remove favourite posts confirmation | Notification: "Are you sure you want to remove "title" from your favorites?" | Passed |
+| Remove favourite posts | Notification: "Removed from favorites." | Passed |
+| Add likes | Notification: "Added to likes." | Passed |
+| Likes counter | Displays the correct number of likes | Passed |
+| Remove likes confirmation | Notification: "Are you sure you want to remove "Title" from your likes?" | Passed |
+| Remove likes | Notification: "Removed from likes." | Passed |
+| My comments page | Empty: "You haven't made any comments yet." | Passed |
+| Post a comment | Notification: "Comment submitted and awaiting approval" | Passed |
+| Comment counter| Displays the correct number of comments | Passed |
+| Update a comment | Notification: "Comment updated and is awaiting approval." | Passed |
+| Delete a comment confirmation | Notification: "Are you sure you want to delete your comment? This action cannot be undone." | Passed |
+| Delete a comment | Notification: "Comment deleted!" | Passed |
+| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
 | Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND | Passed |
 
 ### Layout and built in functionality
