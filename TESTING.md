@@ -197,12 +197,20 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
-| Recipe posts | Views as newest recipes to oldest on the home page | Passed |
-| Time stamps on recipes and comments | Views the time a post or comment is created | Passed |
-| "Like" icon on home page | "Like" icon and count updates on home page | Passed |
+| Home | Background image with interactice navigation with the user name after login | Passed |
+| Articles | Views as newest articles to oldest on the articles page | Passed |
+| Time stamps on articles, reviews and comments | Views the time a post or comment is created | Passed |
+| Author name on articles, reviews and comments | Views the time a post or comment is created | Passed |
+| "Like" icon on articles page | "Like" icon and count updates on articles page | Passed |
+| "Like" icon on single article page | "Like" icon and count updates on article page | Passed |
+| Likes counter | Displays the correct number of likes | Passed |
+| "Favourite" icon on single article page | "Favourite" icon on article page | Passed |
 | Comment counter | Displays the correct number of comments | Passed |
-| Author banner on the recipe post | Displays the correct author | Passed |
-| Recipe titles cannot be duplicated | A recipe wont allow posting if another one exist with the same title | Passed |
+| Author banner on the article post | Displays the correct author on the articles list page | Passed |
+| Rotating slideshow with navigation dots | Displays fading images automaticly | Passed |
+| Rotating slideshow with navigation dots | Clickable dots in sync with images | Passed |
+| Empty reviews page | when there are no reviews "Be the first" page is display | Passed |
+| Transparnt Navbar and Footer | Display on home page| Passed |
 
 ### Chrome Developer Tools
 
