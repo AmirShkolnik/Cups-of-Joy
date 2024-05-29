@@ -471,11 +471,11 @@ main {
     color: rgb(222, 146, 168);
 }
 
-#nav-grid {
+.nav-grid {
     margin: 0;
 }
 
-#nav-grid li {
+.nav-grid-li {
     padding: 0;
 }
 
