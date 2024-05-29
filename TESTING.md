@@ -85,9 +85,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Dropdown Menu - Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
 | Dropdown Menu - Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
+| Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
 | **Single Review Page**|  |  |
 |   | 
-| Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
 | View - Single Review - click View | Should redirect to the single review page | Passed |
 | View - Single Review - click View | Should display, image, text, author and review status - limited for user only | Passed |
 | Edit - Single Review - click Edit | Should redirect to the single review edit page | Passed |
@@ -142,26 +142,6 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | No image uploaded | Display default coffee image | Passed |
 | Edit Status to Draft | Review's status has been changed at the Admin back office for approval with status draft, display "This review is awaiting approval." under article headline both on the review and reviews list page | Passed |
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
-
-
-
-| Click on the cancel button on the create a recipe detail page | Redirect to the Home page | Passed |
-| Populated all the fields in the add a recipe detail page, click on the submit button| User is redirected to coffeeshop/add_review - User's Reviews list page  | Passed |
-| Click on the "like" button | Add 1 to the number of like and the heart turns red or back to grey if the recipe was already liked | Passed |
-| Click on the edit button in a recipe post that belongs to the logged in user | The user is able to edit the recipe post | Passed |
-| Click on the delete button in a recipe post that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
-| Populate the comment text area and click the "post comment" button | Creates a comment below the recipe detail | Passed |
-| Click on the delete button on the comments that belongs to the logged in user | The user is redirected to a delete confirmation page, the post is deleted if confirmed | Passed |
-| Click on the edit button on the comments that belongs to the logged in user | The comment can be edited | Passed |
-| Populate the contact form on the about page and clicked the submit button | Submits successfully and notifies the user | Passed |
-| Click logout in the nav bar | Logout is successful and user is redirected to the Home page | Passed |
-| **Edit Review** |  |  
-|   | 
-
- Comment submitted and awaiting approval
-add form
-edit form
-Confirm Delete Your Review
 
 
 
