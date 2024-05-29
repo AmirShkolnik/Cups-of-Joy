@@ -119,22 +119,29 @@ We tested this webpage very carefully many times while we were making it. We did
 | **Add New Review** |  |  
 |   | 
 | Dropdown Menu - Click on the "Add New Review" link | Redirect to coffeeshop/add | Passed |
-| Populated all the fields in the add a review detail page, click on the "Add Review" button| User is redirected to the recipe detail which was just created | Passed |
-| Cancel - click on the "Cancel" button at any stage | Javascript message prompt, asking the user to confirm canceling, both message buttons - click cancle user stay on page and no changes are lost, click ok user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
-| Check box - unchecked | "Add Review" button NOT clickable, button's color is off | Passed |
-| Check box - checked | "Add Review" button IS clickable, button's color is green. After click the user is redirected to coffeeshop/add_review - User's Reviews list page, Green message prompt "Review added successfully, waiting for approval." and display "This review is in draft status." under article headline | Passed |
-| Missing or unvalid fileds - Click on the "Add Review" button | Warning disply "Please fill in all required fields."  | Passed |
+| Populated all the fields in the add a review detail page, click on the "Add Review" button| User is redirected to coffeeshop/add_review/ reviews list page | Passed |
+| Cancel - click on the "Cancel" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
+| Check box - unchecked | "Request Approval" button NOT clickable, button's color is off | Passed |
+| Check box - checked | "Request Approval" button IS clickable, button's color is green. After click the user is redirected to coffeeshop/add_review - User's Reviews list page, Green message prompt "Review added successfully, waiting for approval." and display "This review is in draft status." under article headline | Passed |
+| Missing or unvalid fileds - Click on the "Request Approval" button | Warning disply "Please fill in all required fields." relevant field is marked with text. | Passed |
 | No image uploaded | Display default coffee image | Passed |
-
 | Status - Draft | New Review is added at the Admin back office for approval with status draft, display "This review is in draft status." under article headline  | Passed |
-| After admin approval - Status - Draft | On coffeeshop/add_review/ under the headline the text should display "This review is published." | Passed |
-| Status - Published | New Review is added at the Admin back office for approval with status published, display "Status: This review is awaiting approval." under article headline | Passed |
-
-| After admin approval - Status - Published | On coffeeshop/add_review/ under the headline the text should display "This review is published." | Passed |
-
-
-
-
+| Status - Admin approved- User - Draft | On coffeeshop/add_review/ under the headline the text should display "Your review has been approved. Click the Edit button to change the status to Published." | Passed |
+| Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
+| Status - Admin not approvd YET- User - published | Display "Status: This review is awaiting approval." under article headline. | Passed |
+| Status - Admin Rejected | Display "Status: This review got rejected, please follow our guidelines" under article headline. | Future Feature |
+| **Edit a Review** |  |  
+|   | 
+| coffeeshop/add_review/ - Click on the "Edit" button | Redirect to coffeeshop/edit/review-number | Passed |
+| Edit relevant fields, check the box and click on the "Save Changes" button| User is redirected to coffeeshop/relevant-review, image, status, author and contnet should display, Green message "Review Update" display | Passed |
+| Cancel - click on the "Discard Changes" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
+| Check box - unchecked | "Request Approval" button NOT clickable, button's color is off | Passed |
+| Check box - checked | "Request Approval" button IS clickable, button's color is green. After click 
+the user is redirected to coffeeshop/relevant-review, Green message prompt "Review updated." and display "Status: This review is awaiting approval." under article headline | Passed |
+| Missing or unvalid fileds - Click on the "Request Approval" button | Warning disply "Please fill in all required fields." relevant field is marked with text. | Passed |
+| No image uploaded | Display default coffee image | Passed |
+| Edit Status to Draft | Review's status has been changed at the Admin back office for approval with status draft, display "This review is awaiting approval." under article headline both on the review and reviews list page | Passed |
+| Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
 
 
 
