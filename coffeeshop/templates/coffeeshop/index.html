@@ -107,12 +107,6 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
 }
 
-function plusSlides(n) {
-  clearInterval(slideInterval); // Stop the automatic slideshow
-  showSlides((slideIndex += n));
-  startSlideshow(); // Restart the automatic slideshow
-}
-
 function currentSlide(n) {
   clearInterval(slideInterval); // Stop the automatic slideshow
   slideIndex = n - 1; // Set the slideIndex to the clicked dot index
@@ -122,7 +116,8 @@ function currentSlide(n) {
 
 // Add event listeners to the dots and arrow buttons
 for (let i = 0; i < dots.length; i++) {
-  dots[i].addEventListener("click", function () {
+  const currentDot = dots[i]; // Create a new variable to capture the current dot
+  currentDot.addEventListener("click", function () {
     currentSlide(i + 1);
   });
 }
