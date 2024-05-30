@@ -26,7 +26,7 @@
                 {% endif %}
             {% endif %}
             <p>Written by {{ post.author }} | {{ post.published|date:"Y-m-d" }}</p>
-            <p>{{ post.content|safe }}</p>
+            {{ post.content|safe }}
         </div>
     </div>
 </div>
