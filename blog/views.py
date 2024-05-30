@@ -11,14 +11,15 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 # Create your views here.
-    
+
+
 @login_required
 def favourite_list(request):
     new = Post.newmanager.filter(favourites=request.user)
 
     if not new:
         messages.info(request, "You don't have any favorites yet.")
-        
+
     return render(request,
                   'blog/favourites.html',
                   {'new': new})
@@ -34,18 +35,22 @@ def favourite_add(request, slug):
         messages.success(request, "Added to favorites.")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
+
 @login_required
 def user_comments(request):
     """
     View for displaying all comments made by the current user.
     """
-    comments = Comment.objects.filter(author=request.user).order_by('-created_on').prefetch_related('post')
+    comments = Comment.objects.filter(author=request.user).order_by
+    ('-created_on').prefetch_related('post')
     return render(request, 'blog/user_comments.html', {'comments': comments})
+
 
 class ArticlesView(ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/articles.html"
     paginate_by = 6
+
 
 @login_required
 def confirm_like_removal(request, slug):
@@ -56,6 +61,7 @@ def confirm_like_removal(request, slug):
             messages.success(request, "Removed from likes.")
         return redirect('post_detail', slug=slug)
     return render(request, 'blog/confirm_like_removal.html', {'post': post})
+
 
 class PostList(generic.ListView):
     """
@@ -75,6 +81,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 6
+
 
 def post_detail(request, slug):
     """
@@ -101,7 +108,7 @@ def post_detail(request, slug):
     if post.favourites.filter(id=request.user.id).exists():
         fav = True
     if post.likes.filter(id=request.user.id).exists():
-            liked = True
+        liked = True
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -134,12 +141,14 @@ def post_detail(request, slug):
         },
     )
 
+
 @login_required
 def comments_list(request):
     """
     View for displaying posts commented on by the current user.
     """
-    comments = Comment.objects.filter(author=request.user).order_by('-created_on').prefetch_related('post')
+    comments = Comment.objects.filter(author=request.user).order_by
+    ('-created_on').prefetch_related('post')
     return render(request, 'blog/comments.html', {'comments': comments})
 
 
@@ -169,7 +178,8 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment updated and is awaiting approval.')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Comment updated and is awaiting approval.')
         else:
             messages.add_message(request, messages.ERROR,
                                  'Error updating comment!')
@@ -201,6 +211,7 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 class PostLike(View):
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -215,6 +226,7 @@ class PostLike(View):
             messages.warning(request, "You must log in to like this post.")
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 @login_required
 def favourite_remove(request, slug):
