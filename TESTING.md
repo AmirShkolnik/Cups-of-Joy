@@ -248,9 +248,9 @@ Below is a table summarizing the HTML validation results for various pages of th
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
 | **Base Page**                | [View PDF]() | 0      | 0        |
-| **Home Page**                | [View PDF]() | 0      | 0        |
-| **About & Contact Page**     | [View PDF]() | 0      | 0        |
-| **Articles Page**             | [View PDF]() | 0      | 0        |
+| **Home Page**                | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/home.pdf) | 0      | 0        |
+| **About & Contact Page**     | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/about.pdf) | 0      | 0        |
+| **Articles Page**            | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/articles.pdf) | 0      | 0        |
 | **Reviews Page**             | [View PDF]() | 0      | 0        |
 | **Register Page**            | [View PDF]() | 0      | 0        |
 | **Login Page**               | [View PDF]() | 0      | 0        |
