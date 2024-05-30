@@ -1,9 +1,10 @@
 from django import forms
 from .models import Contact
 
+
 class ContactForm(forms.ModelForm):
     """
-    Form class for users to request a collaboration 
+    Form class for users to request a collaboration
     """
     class Meta:
         """
