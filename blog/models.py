@@ -8,15 +8,14 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
-        
     """
     Stores a single blog post entry related to :model:`auth.User`.
     """
 
     class NewManager(models.Manager):
         def get_queryset(self):
-                return super().get_queryset() .filter(status=1)
-        
+            return super().get_queryset() .filter(status=1)
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -35,13 +34,13 @@ class Post(models.Model):
 
     objects = models.Manager()  # default manager
     newmanager = NewManager()  # custom manager
-        
+
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-    
+
     def number_of_likes(self):
         return self.likes.count()
 
