@@ -14,27 +14,29 @@
                         <h1 class="jumbotron-header-reviews">There are no reviews yet, be the first to tell us about your favorite coffee shop.</h1>
                         <hr class="block-divider-home">
                         {% if user.is_authenticated %}
-                        <p class="lead">Share your story here <a href="{% url 'coffeeshop:add' %}" class="btn btn-primary">Add Review</a></p>
+                        <p class="lead">Share your story here <a href="{% url 'coffeeshop:add' %}"
+                                class="btn btn-primary">Add Review</a></p>
                         {% else %}
-                        <p class="lead">Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> to add a review.</p>
+                        <p class="lead">Please <a href="{% url 'account_login' %}">log in</a> or <a
+                                href="{% url 'account_signup' %}">register</a> to add a review.</p>
                         {% endif %}
                         <span class="d-inline d-sm-none"><br></span>
                         </p>
                     </section>
                 </div>
             </div>
+          </div>
         </div>
-    </div>
-    {% endif %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {% if reviews %}
-                {% include 'includes/slideshow.html' %}
-                {% endif %}
+            {% endif %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                      {% if reviews %}
+                            {% include 'includes/slideshow.html' %}
+                      {% endif %}
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
     <div class="container">
         <div class="row">
             {% for review in reviews %}
@@ -54,8 +56,8 @@
                                 <p>Written by {{ review.author }} | {{ review.published|date:"N j, Y" }}</p>
                             </div>
                         </div>
-                    </a>
-                </div>
+                      </a>
+                      </div>
             </div>
             {% else %}
             <div class="col-md-4">
@@ -70,60 +72,60 @@
         </div>
     </div>
 </div>
-{% endblock content %}
 
 {% block extra_js %}
 <script>
-    let slideIndex = 0;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    let slideInterval;
+let slideIndex = 0;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+let slideInterval;
 
-    // Start the slideshow automatically when the page loads
-    startSlideshow();
+// Start the slideshow automatically when the page loads
+startSlideshow();
 
-    function startSlideshow() {
-        slideInterval = setInterval(showSlides, 5000); // Change image every 5 seconds
-    }
+function startSlideshow() {
+  slideInterval = setInterval(showSlides, 5000); // Change image every 5 seconds
+}
 
-    function showSlides() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("fade");
-            slides[i].style.display = "none";
-        }
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("fade");
+    slides[i].style.display = "none";
+  }
 
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
 
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
 
-        slides[slideIndex - 1].style.display = "block";
-        slides[slideIndex - 1].classList.add("fade");
-        dots[slideIndex - 1].className += " active";
-    }
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("fade");
+  dots[slideIndex - 1].className += " active";
+}
 
-    function plusSlides(n) {
-        clearInterval(slideInterval); // Stop the automatic slideshow
-        showSlides((slideIndex += n));
-        startSlideshow(); // Restart the automatic slideshow
-    }
+function plusSlides(n) {
+  clearInterval(slideInterval); // Stop the automatic slideshow
+  showSlides((slideIndex += n));
+  startSlideshow(); // Restart the automatic slideshow
+}
 
-    function currentSlide(n) {
-        clearInterval(slideInterval); // Stop the automatic slideshow
-        slideIndex = n - 1; // Set the slideIndex to the clicked dot index
-        showSlides(slideIndex); // Show the corresponding slide
-        startSlideshow(); // Restart the automatic slideshow
-    }
+function currentSlide(n) {
+  clearInterval(slideInterval); // Stop the automatic slideshow
+  slideIndex = n - 1; // Set the slideIndex to the clicked dot index
+  showSlides(slideIndex); // Show the corresponding slide
+  startSlideshow(); // Restart the automatic slideshow
+}
 
-    // Add event listeners to the dots and arrow buttons
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].addEventListener("click", function () {
-            currentSlide(i + 1);
-        });
-    }
+// Add event listeners to the dots and arrow buttons
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", function () {
+    currentSlide(i + 1);
+  });
+}
 </script>
 {% endblock %}
+{% endblock content %}
