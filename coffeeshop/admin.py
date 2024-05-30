@@ -6,11 +6,13 @@ from .models import Review
 
 # @admin.register(Review)
 # class PostAdmin(admin.ModelAdmin):
-    # prepopulated_fields = {'slug': ('title',), }
+# prepopulated_fields = {'slug': ('title',), }
+
 
 class ReviewAdmin(SummernoteModelAdmin):
     list_display = ('title', 'excerpt', 'status', 'published')
     summernote_fields = ('content',)
     prepopulated_fields = {'slug': ('title',), }
+
 
 admin.site.register(Review, ReviewAdmin)
