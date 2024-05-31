@@ -296,6 +296,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Login Page**               | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/login.pdf) | 0      | 0        |
 | **My Reviews Page**          | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-reviews.pdf) | 0      | 0        |
 | **Add New Review**           | [View PDF]() | 0      | 0        |
+| **Edit A Review**           | [View PDF]() | 0      | 0        |
 | **My Favourites Posts**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
 | **My Comments**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **Logout Page**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/sign-out.pdf) | 0      | 0        |
@@ -303,7 +304,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Single Article Page**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/single-article.pdf) | 0      | 0        |
 | **My Favourites Page**        | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
 | **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
-| **404 Page**                 | [View PDF]() | 0      | 0        |
+| **404 Page**                 | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/404.pdf) | 0      | 0        |
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
