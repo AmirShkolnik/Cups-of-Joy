@@ -9,61 +9,60 @@ This is the TESTING file for the [CupsOfJoy](https://cupsofjoy-c2c917eb3f59.hero
 
 Return back to the [README.md](README.md) file.
 
-## Testing  Table of Contents  
-- [Testing](#testing)
-  - [Testing Table of Contents](#testing--table-of-contents)
+## Testing  Table of Contents 
+- [Testing Table of Contents](#testing--table-of-contents)
   - [Manual Testing](#manual-testing)
       - [As a visitor](#as-a-visitor)
       	- [Navbar](#navbar)
         - [Home](#home)
-	- [Articles List Page](#articles-list-page)
+	    - [Articles List Page](#articles-list-page)
         - [Reviews List Page](#reviews-list-page)
         - [Singel Review Page](#singel-review-page)
     	- [Sign Up Page](#sign-up-page)
         - [Sign In Page](#sign-in-page)
-	- [Footer](#footer)
+	    - [Footer](#footer)
         - [Reviews List Page](#reviews-list-page)
         - [Singel Review Page](#singel-review-page)
-	- [About Us](#about-us)
+	    - [About Us](#about-us)
      - [As a logged in User](#as-a-logged-in-user)
       	- [My Reviews Page](#my-reviews-page)
         - [Single Review Page](#single-review-page)
-	- [My Favourites Page](#my-favourites-page)
+	    - [My Favourites Page](#my-favourites-page)
         - [My Comments Page](#my-comments-page)
         - [Singel Article Page](#singel-article-page)
     	- [Add New Review](#add-new-review)
         - [Edit a Review](#edit-a-review)
-     - [Notifications and Errors](#notifications-and-errors)
-     - [Layout and Built in Functionality](#Layout-and-built-in-functionality)
-  - [Chrome Developer Tools](#chrome-developer-tools)
-  - [Browser Testing](#browser-testing)
-  - [Validation](#validation)
-      - [HTML Validation](#html-validation)
-      - [CSS Validation](#css-validation)
-      - [JavaScript Validation](#javascript-validation)
-      - [Python Validation](#python-validation)
-      - [Lighthouse Scores](#lighthouse-scores)
-      - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
-  - [Manual Testing](#manual-testing)
+- [Notifications and Errors](#notifications-and-errors)
+- [Layout and Built in Functionality](#Layout-and-built-in-functionality)
+- [Automated Testing](#automated-testing)
+    - [Running the Tests](#running-the-tests)
+    - [Test Database](#test-database)
+    - [Importance of Testing](#importance-of-testing)  
+- [Chrome Developer Tools](#chrome-developer-tools)
+- [Browser Testing](#browser-testing)
+- [Validation](#validation)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [JavaScript Validation](#javascript-validation)
+    - [Python Validation](#python-validation)
+    - [Lighthouse Scores](#lighthouse-scores)
+    - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
+- [Manual Testing](#manual-testing)
     - [User Input/Form Validation](#user-inputform-validation)
     - [Browser Compatibility](#browser-compatibility)
     - [Django Messages Implementation Testing](#django-messages-implementation-testing)
     - [User Story Testing](#user-story-testing)
     - [Responsiveness - Dev Tools/Real World Device Testing](#responsiveness---dev-toolsreal-world-device-testing)
-  - [Automated Testing](#automated-testing)
-    - [Running the Tests](#running-the-tests)
-    - [Test Database](#test-database)
-    - [Importance of Testing](#importance-of-testing)
-    - [Continuous Integration](#continuous-integration)
-  - [Bugs](#bugs)
+- [Bugs](#bugs)
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
     - [Unknown Bugs](#unknown-bugs)
+  - [Must Improve](#must-improve)
 
 
 # Testing
 
-Back to the [README.md](/workspace/job-finder/README.md)
+Back to the [README.md](README.md)
 
 We tested this webpage very carefully many times while we were making it. We did this testing to make sure all the different parts and features work smoothly and properly.
 
@@ -307,6 +306,40 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | Rotating slideshow with navigation dots | Clickable dots in sync with images | Passed |
 | Empty reviews page | when there are no reviews "Be the first" page is display | Passed |
 | Transparnt Navbar and Footer | Display on home page| Passed |
+
+## Automated Testing
+
+Automated testing plays a critical role in the Software Stacks development process, ensuring the integrity and functionality of the application as new features are added or existing features are modified. This screenshot below provides an overview of our automated test suite's execution.
+
+![screenshot](documentation/screenshots/autotest.JPG)
+
+### Running the Tests
+
+To run the automated tests for Software Stacks, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Navigate to the root directory of the project where the `manage.py` file is located.
+3. Execute the following command:
+   ```bash
+   python manage.py test
+   ```
+   This command will initiate the Django test runner, which will find and run tests written throughout the project.
+
+### Test Database
+
+During testing, Django creates a separate database to ensure that the tests do not interfere with the production or development database. This test database is created before the tests run and is destroyed once the tests have completed. This process ensures that the testing environment is isolated and consistent.
+
+### Importance of Testing
+
+Automated tests help us to:
+- Quickly detect and fix bugs.
+- Ensure that new features integrate seamlessly without breaking existing functionality.
+- Improve code quality and maintainability.
+- Build confidence in the stability of the application.
+
+### Continuous Integration
+
+Our project integrates these tests into a continuous integration (CI) system, which automatically runs the tests on every push to the repository. This ensures that all changes are validated and meet our quality standards before they are merged into the main codebase.
 
 ### Chrome Developer Tools
 
