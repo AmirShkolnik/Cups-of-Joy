@@ -497,19 +497,18 @@ As this was my first Django/Database project, most of the bugs that I encountere
 | 7   | RuntimeError: Model class choosemug.models.Mom doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS. | Yes | After deleting the Chosemug app, I forgot to migrate.  |  |
 | 8   | add_review page - Error: End tag main seen, but there were open elements. | Yes | Closing div was missing  |  |
 | 9   | article page - Error: The font element is obsolete. Use CSS instead. | Yes | Add @import rules at the top of the CSS file  | [StackOverFlow](https://stackoverflow.com/questions/10036977/best-way-to-include-css-why-use-import) |
+| 10  | About Us - Automated Testing - AssertionError: b'About Me' not found  | Yes | Changed About Me to About Us  | CI testing tutorials |
 
 ### Known Bugs
 
-*Post Deleted Successfully!* Django message doesn't show up most of the times.
+I am not aware of any remaining bugs.
 
 ### Unknown Bugs
 I am not aware of any remaining bugs.
 
-## Known / Unresolved Bugs
+### Must Improve
 
-1. The Recipe posts on the home page are slightly big on the desktop view, so I have considered adding more recipes to the first page to give it a more squashed view. 
-2. Comments get duplicated if a user refreshes their web page after posting a comment on a recipe post.
-3. List style on Recipe posts ingredients looks great with the bullet point in more views however does not work well when using devices 500px and smaller.
-4. The recipe post image, excerpt, cook & prep time and serves fields are not fitting to my liking on mobile screen sizes. This will be fixed after some research and changes have been done.
+1. Reviews Page - Slidshow uploads slowly.
+2. Reduce images size for better performance.
 
 Back to the [README.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md)
