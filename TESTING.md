@@ -480,13 +480,30 @@ Below is a table summarizing the JavaScript validation results for specific file
 | **Articles Page**            | ![screenshot](documentation/Lighthouse/articles.png) |
 | **Reviews Page**            | ![screenshot](documentation/Lighthouse/reviews.png) |
 
-## Fixed Bugs
+## Bugs
 
-1. Slug field was added to the Recipe model after the model was created however it was creating errors. The fix was to provide a default value of null.
-2. Text fields for the parts Recipe post form however they did not allow for user editing, summernote was added to create a better user experience when adding recipe ingredients & Instructions
-3. The summernote editors were not responsive on smaller devices credits to my husband and fellow student who found a way to customise summernote editor in the settings.py file.
-4. Other bugs were minor spacing and colour matching of buttons, layouts etc that had been fixed.
-5. Summernote in the admin panel on some fields had disappeared after adding summernote configuration to settings.py. The fix was done by removing the iframes=false config.
+### Solved Bugs  
+  
+As this was my first Django/Database project, most of the bugs that I encountered were learning and teething issues. The below bugs are bugs that I spent a longer length of time investigating or required the assistance of Tutor Support.
+
+| No. | Bug | Solved | Fix | Solution Credit |
+| --- | ---------------- | ---- | ------------- | -------------- | 
+| 1   | About Us - contact form is not displaying | Yes | Adding the form rendering code in the about.html template. | CI walkthrough tutorials |
+| 2   | Remove favourites from favourites list confirmation not working | Yes | Adding a new view function to handle the confirmation and removal of the favorite | CI walkthrough tutorials |
+| 3   | PEP8 error - "E402 module level import not at top of file" | Yes | The error "E402 module level import not at top of file" is a style warning raised by the linter (a tool that analyzes code for potential errors or style issues). This warning occurs when import statements are not placed at the top of the file, which is the recommended practice in Python. To resolve this issue, you need to move all the import statements to the top of the file, before any other code or class definitions. | [StackOverFlow](<https://stackoverflow.com/questions/36827962/pep8-import-not-at-top-of-file-with-sys-path>) |
+| 4   | PEP8 error - "E501 line too long" | Yes | The error "E501 line too long" is a style warning from the linter (a tool that analyzes code for potential errors or style issues). This warning is raised when a line of code exceeds the maximum line length, which is typically set to 79 characters for Python code. To resolve this issue, you can break the long lines into multiple lines. | [StackOverFlow](<https://stackoverflow.com/questions/53158284/python-giving-a-e501-line-too-long-error>) |
+| 5   | Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentSlide, i) | Yes | To resolve this, I useD const instead of let for the loop variables, and create a new variable to capture the current value of i within the event listener function. | [StackOverflow](<https://stackoverflow.com/questions/46027262/functions-declared-within-loops-referencing-an-outer-scoped-variable-may-lead-to>) |
+| 6   | "Imported style sheets are not checked in direct input and file upload modes" | Yes | The CSS validator I was using is not able to fetch and check the imported stylesheets from restricted URLs. Must sign in before testing.  |  |
+| 7   | RuntimeError: Model class choosemug.models.Mom doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS. | Yes | After deleting the Chosemug app, I forgot to migrate.  |  |
+| 8   | add_review page - Error: End tag main seen, but there were open elements. | Yes | Closing div was missing  |  |
+| 9   | article page - Error: The font element is obsolete. Use CSS instead. | Yes | Add @import rules at the top of the CSS file  | [StackOverFlow](https://stackoverflow.com/questions/10036977/best-way-to-include-css-why-use-import) |
+
+### Known Bugs
+
+*Post Deleted Successfully!* Django message doesn't show up most of the times.
+
+### Unknown Bugs
+I am not aware of any remaining bugs.
 
 ## Known / Unresolved Bugs
 
