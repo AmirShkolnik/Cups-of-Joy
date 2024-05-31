@@ -16,13 +16,12 @@ Return back to the [README.md](README.md) file.
       	- [Navbar](#navbar)
         - [Home](#home)
 	    - [Articles List Page](#articles-list-page)
+        - [Singel Article Page](#singel-article-page)        
         - [Reviews List Page](#reviews-list-page)
         - [Singel Review Page](#singel-review-page)
     	- [Sign Up Page](#sign-up-page)
         - [Sign In Page](#sign-in-page)
 	    - [Footer](#footer)
-        - [Reviews List Page](#reviews-list-page)
-        - [Singel Review Page](#singel-review-page)
 	    - [About Us](#about-us)
      - [As a logged in User](#as-a-logged-in-user)
       	- [My Reviews Page](#my-reviews-page)
@@ -40,19 +39,13 @@ Return back to the [README.md](README.md) file.
     - [Importance of Testing](#importance-of-testing)  
 - [Chrome Developer Tools](#chrome-developer-tools)
 - [Browser Testing](#browser-testing)
+- [Responsiveness](#responsiveness)
 - [Validation](#validation)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [JavaScript Validation](#javascript-validation)
     - [Python Validation](#python-validation)
     - [Lighthouse Scores](#lighthouse-scores)
-    - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
-- [Manual Testing](#manual-testing)
-    - [User Input/Form Validation](#user-inputform-validation)
-    - [Browser Compatibility](#browser-compatibility)
-    - [Django Messages Implementation Testing](#django-messages-implementation-testing)
-    - [User Story Testing](#user-story-testing)
-    - [Responsiveness - Dev Tools/Real World Device Testing](#responsiveness---dev-toolsreal-world-device-testing)
 - [Bugs](#bugs)
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
@@ -315,31 +308,43 @@ Automated testing plays a critical role in the Software Stacks development proce
 
 ### Running the Tests
 
-To run the automated tests for Software Stacks, follow these steps:
+To ensure the robustness and reliability of the Software Stacks project, it is essential to run automated tests regularly. Follow these simple steps to execute the test suite:
 
-1. Open your terminal or command prompt.
-2. Navigate to the root directory of the project where the `manage.py` file is located.
-3. Execute the following command:
-   ```bash
-   python manage.py test
-   ```
-   This command will initiate the Django test runner, which will find and run tests written throughout the project.
+### Step 1: Open Terminal or Command Prompt
+
+Launch your preferred terminal application or command prompt window. This will provide you with a command-line interface to interact with your system.
+
+### Step 2: Navigate to Project Root Directory
+
+Using the terminal or command prompt, navigate to the root directory of the Cups Of Joy project. This is the location where the `manage.py` file resides. You can use the `cd` (change directory) command to traverse the file system until you reach the desired location.
+
+### Step 3: Execute Test Runner Command
+
+Once you are in the project's root directory, execute the following command:
+
+```bash
+python manage.py test
+```
+
+This command invokes the Django test runner, which is responsible for discovering and running all the test cases defined throughout the Cups Of Joy project.
+
+Upon executing the command, the test runner will scan the project's directories, identify the test files, and systematically execute each test case. The output in the terminal will provide detailed information about the test results, including the number of tests run, any failures or errors encountered, and a summary of the overall test suite performance.
+
+By following these steps, you can ensure that the Cups Of Joy project adheres to the expected behavior and functionality, catching any regressions or issues early in the development cycle. Regular execution of the automated tests is a crucial practice in maintaining code quality and ensuring a robust and reliable software solution.
+
+![Auto Test Results](documentation/automated-tests-images/auto-test.png)
 
 ### Test Database
 
-During testing, Django creates a separate database to ensure that the tests do not interfere with the production or development database. This test database is created before the tests run and is destroyed once the tests have completed. This process ensures that the testing environment is isolated and consistent.
+When running tests in Django, the framework creates a dedicated test database to maintain separation from the production and development databases. This temporary test database is provisioned before the test suite execution begins, ensuring a pristine and isolated testing environment. Once the tests have completed, Django automatically destroys the test database, leaving no residual data or impact on the other environments. This meticulous process guarantees that the testing activities remain self-contained and do not interfere with or corrupt the data in the production or development databases, thereby preserving the integrity of those critical environments.
 
 ### Importance of Testing
 
-Automated tests help us to:
-- Quickly detect and fix bugs.
-- Ensure that new features integrate seamlessly without breaking existing functionality.
-- Improve code quality and maintainability.
-- Build confidence in the stability of the application.
-
-### Continuous Integration
-
-Our project integrates these tests into a continuous integration (CI) system, which automatically runs the tests on every push to the repository. This ensures that all changes are validated and meet our quality standards before they are merged into the main codebase.
+Automated Tests Benefits:
+- Rapid bug detection and resolution
+- Seamless integration of new features without breaking existing code
+- Enhanced code quality and maintainability
+- Increased confidence in application stability
 
 ### Chrome Developer Tools
 
@@ -356,6 +361,28 @@ During the development of the webpage the testing was done using Google Chrome. 
 - Microsoft Edge
 - Mozilla Firefox
 - Opera
+Responsiveness and interactive elements were tested on various devices and through browser developer tools.
+
+| Browser           | Features Tested | Pass/Fail |
+|-------------------------|-----------------|-----------|
+| Google Chrome      | All            | Pass      |
+| Microsoft Edge | All            | Pass      |
+| Mozilla Firefox          | All | Pass |
+| Opera               | All | Pass |
+
+### Responsiveness
+
+#### Dev Tools/Real World Device Testing
+
+Responsiveness and interactive elements were tested on various devices and through browser developer tools.
+
+| Device/Method           | Features Tested | Pass/Fail |
+|-------------------------|-----------------|-----------|
+| Chrome DevTools         | All            | Pass      |
+| Firefox Responsive Mode | All            | Pass      |
+| iPhone         | All | Pass |
+| iPad               | All | Pass |
+| Samsung     | All | Pass |
 
 ## Validation
 
@@ -373,13 +400,13 @@ The table below shows the results of checking the HTML code for different pages 
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
 | **Home Page**                | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/home.pdf) | 0      | 0        |
-| **About & Contact Page**     | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/about.pdf) | 0      | 0        |
-| **Articles Page**            | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/articles.pdf) | 0      | 0        |
+| **About & Contact Page**     | [View PDF](documentation/html-validation-pdf/about.pdf) | 0      | 0        |
+| **Articles Page**            | [View PDF](documentation/html-validation-pdf/articles.pdf) | 0      | 0        |
 | **Reviews Page**             | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/reviews.pdf) | 0      | 0        |
 | **Register Page**            | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/register.pdf) | 0      | 0        |
 | **Login Page**               | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/login.pdf) | 0      | 0        |
 | **My Reviews Page**          | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-reviews.pdf) | 0      | 0        |
-| **Add New Review**           | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/add-new-review.pdf) | 11      | 0        |
+| **Add New Review**           | [View PDF](documentation/html-validation-pdf/add-new-review.pdf) | 11      | 0        |
 | **Edit A Review**           | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/edit-a-review.pdf) | 11     | 0        |
 | **My Favourites Posts**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
 | **My Comments**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
@@ -543,5 +570,6 @@ I am not aware of any remaining bugs.
 
 1. Reviews Page - Slidshow uploads slowly.
 2. Reduce images size for better performance.
+3. Enhance website accessibility by identifying and resolving issues to ensure compliance with web accessibility standards and guidelines, enabling seamless access for users with disabilities.
 
 Back to the [README.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md)
