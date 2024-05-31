@@ -13,13 +13,35 @@ Return back to the [README.md](README.md) file.
 - [Testing](#testing)
   - [Testing Table of Contents](#testing--table-of-contents)
   - [Manual Testing](#manual-testing)
+      - [As a visitor](#as-a-visitor)
+      	- [Navbar](#navbar)
+        - [Home](#home)
+	- [Articles List Page](#articles-list-page)
+        - [Reviews List Page](#reviews-list-page)
+        - [Singel Review Page](#singel-review-page)
+    	- [Sign Up Page](#sign-up-page)
+        - [Sign In Page](#sign-in-page)
+	- [Footer](#footer)
+        - [Reviews List Page](#reviews-list-page)
+        - [Singel Review Page](#singel-review-page)
+	- [About Us](#about-us)
+     - [As a logged in User](#as-a-logged-in-user)
+      	- [My Reviews Page](#my-reviews-page)
+        - [Single Review Page](#single-review-page)
+	- [My Favourites Page](#my-favourites-page)
+        - [My Comments Page](#my-comments-page)
+        - [Singel Article Page](#singel-article-page)
+    	- [Add New Review](#add-new-review)
+        - [Edit a Review](#edit-a-review)
+     - [Notifications and Errors](#notifications-and-errors)
+     - [Layout and Built in Functionality](#Layout-and-built-in-functionality)
+  - [Chrome Developer Tools](#chrome-developer-tools)
+  - [Browser Testing](#browser-testing)
   - [Validation](#validation)
       - [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
       - [JavaScript Validation](#javascript-validation)
       - [Python Validation](#python-validation)
-      - [CSS Validation](#css-validation-1)
-      - [JavaScript Validation](#javascript-validation-1)
       - [Lighthouse Scores](#lighthouse-scores)
       - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
   - [Manual Testing](#manual-testing)
@@ -59,7 +81,7 @@ We tested this webpage very carefully many times while we were making it. We did
 | Login - Click on the "Login" Button | Redirect to the relevant pages | Passed |
 | Logout - Click on the "Logout" Button | Redirect to the relevant pages | Passed |
 
-### Home - Fisrt LP Page
+### Home
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -111,7 +133,7 @@ We tested this webpage very carefully many times while we were making it. We did
 | Review - Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
 
-### Register - Sign Up Page
+### Sign Up Page
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -121,7 +143,7 @@ We tested this webpage very carefully many times while we were making it. We did
 | Email| Email address is only optional to create an account | Passed |
 | After Sign Up| Redirect to Articles page and success message is prompt| Passed |
 
-### Login - Sign In Page
+### Sign In Page
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -138,6 +160,13 @@ We tested this webpage very carefully many times while we were making it. We did
 | About Us - Click | Redirect to about/ | Passed |
 | Coffee Shops Reviews - Click | Redirect to coffeeshop/index | Passed |
 | For Coffee Lovers - Click | Redirect to home page - blog/index | Passed |
+
+### About Us
+
+| What was tested | Expected Result | Outcome |
+|------------------------------|--------------------------------------|--------|
+| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
+| Click Submit - missing fields | Notification: "Fill this field." | Passed |
 
 ### As a logged in User 
 
@@ -230,13 +259,6 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | Edit Status to Draft | Review's status has been changed at the Admin back office for approval with status draft, display "This review is awaiting approval." under article headline both on the review and reviews list page | Passed |
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
 
-### About Us
-
-| What was tested | Expected Result | Outcome |
-|------------------------------|--------------------------------------|--------|
-| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
-| Click Submit - missing fields | Notification: "Fill this field." | Passed |
-
 ### Notifications and Errors
 
 | What was tested | Expected Result | Outcome |
@@ -267,7 +289,7 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
 | Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND | Passed |
 
-### Layout and built in functionality
+### Layout and Built in Functionality
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -306,9 +328,7 @@ During the development of the webpage the testing was done using Google Chrome. 
 
 ### [W3C HTML Validator](https://validator.w3.org/)
 
-### HTML Validatoin
-
-#### HTML Validation
+### HTML Validation
 - **Tool Used:** [HTML W3C Markup Validator](https://validator.w3.org/)
 - **Purpose:** It checks the application's HTML code to make sure it has no writing mistakes and follows the rules made by the World Wide Web Consortium (W3C).
 - **Process:** Every web page of the Software Stacks website is checked using the W3C validator tool. This tool helps identify and fix any errors or warnings in the HTML code.
@@ -337,8 +357,10 @@ The table below shows the results of checking the HTML code for different pages 
 | **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **404 Page**                 | [View PDF](documentation/html-validation-pdf/404.pdf) | 0      | 0        |
 
-### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-
+### CSS Validation
+- **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- **Purpose:** Checks that the CSS code used on the website follows the rules set by the W3C and does not contain any mistakes.
+- **Process:** The CSS files (which control the styling and layout of the website) are checked using the W3C CSS Validator tool. Any issues or problems found are then fixed. Making these fixes helps the website look and work better on different web browsers.
 <details>
 <summary> CSS validator test
 </summary>
@@ -375,10 +397,10 @@ The table below shows the results of checking the HTML code for different pages 
 ![slideshow](documentation/js-validator-images/slideshow.png)
 </details>
 
-#### JavaScript Validation
+### JavaScript Validation
 - **Tool Used:** [JSLint/JSHint](https://jshint.com/)
-- **Purpose:** To detect errors and potential problems in the JavaScript code, making sure that all scripts run efficiently and are error-free.
-- **Process:** JavaScript code is run through JSLint/JSHint to identify issues related to syntax, deprecated methods, and other inefficiencies.
+- **Purpose:** To find mistakes and possible issues in the JavaScript code, making sure that all the scripts work properly and do not have any errors.
+- **Process:** The JavaScript code is checked by special tools called JSLint and JSHint. These tools look for mistakes in the way the code is written, find any outdated methods being used, and point out parts of the code that could be improved to work better.
 
 Below is a table summarizing the JavaScript validation results for specific files within the Software Stacks website. 
 
@@ -391,18 +413,72 @@ Below is a table summarizing the JavaScript validation results for specific file
 
 - No errors were found
 
-### [CI Python Linter](https://jshint.com/)
+### Python Validation
+- **Tool Used:** [CI Python Linter](https://pep8ci.herokuapp.com/#)
+- **Purpose:** Checks the Python code to find any mistakes, make sure it follows a set of coding rules, and look for parts of the code that could be improved or written in a better way."
+- **Process:** The Python code used in Cups Of Joy is checked with a tool called Pylint. This tool makes sure the code follows the correct rules and standards for writing good quality code.
 
-<details>
-<summary> CI Python Linter
-</summary>
+**Cups of Joy - Project Module Python Validation Results**
+| Python File   | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **settings.py**            | ![screenshot](documentation/py-validation-images/cupsofjoy/settings.py.png) | 0      | 0        |
+| **manage.py**            | ![screenshot](documentation/py-validation-images/cupsofjoy/manage.py.png) | 0      | 0        |
+| **urls.py**                | ![screenshot](documentation/py-validation-images/cupsofjoy/urls.py.png)     | 0      | 0        |
+| **views.py**                | ![screenshot](documentation/py-validation-images/cupsofjoy/views.py.png)     | 0      | 0        |
+| **wsgi.py**                | ![screenshot](documentation/py-validation-images/cupsofjoy/wsgi.py.png)     | 0      | 0        |
+| **asgi.py**                | ![screenshot](documentation/py-validation-images/cupsofjoy/asgi.py.png)     | 0      | 0        |
 
-![CI Python Linter](./assets/docs/python-validator.png)
+**Blog Module Python Validation Results**
 
-</details>
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **views.py**               | ![screenshot](documentation/py-validation-images/blog/views.py.png)   | 0      | 0        |
+| **models.py**              | ![screenshot](documentation/py-validation-images/blog/models.py.png)  | 0      | 0        |
+| **forms.py**               | ![screenshot](documentation/py-validation-images/blog/forms.py.png)   | 0      | 0        |
+| **urls.py**                | ![screenshot](documentation/py-validation-images/blog/urls.py.png)| 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/py-validation-images/blog/admin.py.png)   | 0      | 0       |
+| **apps.py**              | ![screenshot](documentation/py-validation-images/blog/apps.py.png)  | 0      | 0        |
 
-- All Python files were tested, no errors or warnings were found. An example on the views.py file can be seen.
+**Coffee Shop Module Python Validation Results**
 
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **views.py**               | ![screenshot](documentation/py-validation-images/coffeeshop/views.py.png)   | 0      | 0        |
+| **models.py**              | ![screenshot](documentation/py-validation-images/coffeeshop/models.py.png)  | 0      | 0        |
+| **forms.py**               | ![screenshot](documentation/py-validation-images/coffeeshop/forms.py.png)   | 0      | 0        |
+| **urls.py**                | ![screenshot](documentation/py-validation-images/coffeeshop/urls.py.png)     | 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/py-validation-images/coffeeshop/admin.py.png)   | 0      | 0        |
+| **apps.py**              | ![screenshot](documentation/py-validation-images/coffeeshop/apps.py.png)  | 0      | 0        |
+
+**About Module Python Validation Results**
+
+| Python File                | Results Screenshots                        | Errors | Warnings |
+|----------------------------|--------------------------------------------|--------|----------|
+| **views.py**               | ![screenshot](documentation/py-validation-images/about/views.py.png)   | 0      | 0        |
+| **models.py**              | ![screenshot](documentation/py-validation-images/about/models.py.png)  | 0      | 0        |
+| **forms.py**               | ![screenshot](documentation/py-validation-images/about/forms.py.png)   | 0      | 0        |
+| **urls.py**                | ![screenshot](documentation/py-validation-images/about/urls.py.png)     | 0      | 0        |
+| **admin.py**               | ![screenshot](documentation/py-validation-images/about/admin.png)   | 0      | 0        |
+| **apps.py**              | ![screenshot](documentation/py-validation-images/about/apps.py.png)  | 0      | 0        |
+
+### Lighthouse Scores
+- **Tool Used:** [Google Lighthouse](https://en.wikipedia.org/wiki/Google_Lighthouse)
+- **Purpose:** To evaluate how well the web pages work in terms of speed, ease of use for people with disabilities, mobile-friendliness, ability to be found by search engines, and following recommended best practices.
+- **Process:** Cups Of Joy is tested using Google Lighthouse. This tool checks how well the website performs in different areas and gives suggestions on how to make it better.
+
+| HTML Page / Source           |     Lighthouse Report Screenshot     | 
+|------------------------------|--------------------------------------|
+| **Home Page**                | ![screenshot](documentation/Lighthouse/home.png) |  
+| **About & Contact Page**     | ![screenshot](documentation/Lighthouse/about-us.png) | 
+| **Register Page**            | ![screenshot](documentation/Lighthouse/sign-up.png) | 
+| **Login Page**               | ![screenshot](documentation/Lighthouse/login.png) | 
+| **Logout Page**              | ![screenshot](documentation/Lighthouse/logout.png) | 
+| **Single Review**            | ![screenshot](documentation/Lighthouse/single-review.png) | 
+| **Add new Review**           | ![screenshot](documentation/Lighthouse/add.png) | 
+| **My Favourites Page**       | ![screenshot](documentation/Lighthouse/my-favourites.png) | 
+| **My Comments Page**         | ![screenshot](documentation/Lighthouse/my-comments.png) |
+| **Articles Page**            | ![screenshot](documentation/Lighthouse/articles.png) |
+| **Reviews Page**            | ![screenshot](documentation/Lighthouse/reviews.png) |
 
 ## Fixed Bugs
 
