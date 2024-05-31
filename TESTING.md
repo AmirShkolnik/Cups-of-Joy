@@ -49,34 +49,39 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### As a visitor
 
-| What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
 ### Navbar
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Links - Click to open links | Redirect to each page | Passed |
 | Logo - Click on the Logo | Redirect to the home page | Passed|
 | Register - Click on the "Register" Button | Redirect to the relevant pages | Passed |
 | Login - Click on the "Login" Button | Redirect to the relevant pages | Passed |
 | Logout - Click on the "Logout" Button | Redirect to the relevant pages | Passed |
+
 ### Home - Fisrt LP Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Click on the clickable "Login" box | Redirect to the relevant pages | Passed|
 | Click on the clickable "Coffee Shops Reviews" box | Redirect to the relevant pages | Passed|
 | Click on the clickable "Articles" box| Redirect to the relevant pages | Passed|
 | Click on the clickable "Home" box | Redirect to the relevant pages | Passed|
+
 ### Articles List Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Navbar - Click on Articles | Redirect to the correct Articles list with with images, text, author and date | Passed |
 | Click on the "next" or "back" buttons below the articles | Redirect to the next/prev page | Passed |
 | Click on an Article from Articles page | Redirect to the correct Article | Passed |
 | Likes - Heart icon and numbers | Should display - NOT clickable | Passed |
 | Date - Article published date | Should display | Passed |
+
 ### Singel Article Page 
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:| 
+|------------------------------|--------------------------------------|--------|
 | Written by Author and published date | Should display | Passed |
 | Likes - Click on the "Like" button | No action should take place | Passed |
 | Likes - Heart icon and numbers | Should display | Passed |
@@ -85,9 +90,11 @@ We tested this webpage very carefully many times while we were making it. We did
 | Comments - comments icon and numbers | Should display | Passed |
 | Comments - Comments and published date | Should display at the end of the article | Passed |
 | Comments - Message "Log in to leave a comment" | Should display at the end of the article | Passed |
+
 ### Reviews List Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Navbar - Click on "Reviews" button | Redirect to the Reviews page | Passed |
 | No Reviews | Show a message "There are no reviews yet. Please log in or register to add a review." bg image | Passed |
 | Reviews Page - Empty - Click on the "lon in" link| Redirect to accounts/login/ | Passed |
@@ -95,69 +102,89 @@ We tested this webpage very carefully many times while we were making it. We did
 | Reviews Page - Atleast one review | Redirect to the correct reviews list with images, text, author and date| Passed |
 | Reviews Page - Atleast one review | Slideshow above reviews list with rotating, fading images | Passed |
 | Reviews Page - Atleast one review | Clickable dots under slideshow | Passed |
+
 ### Singel Review Page 
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Review - Click on a Review from Reviews list page | Redirect to the correct Review page | Passed |
 | Review - Written by Author and published date | Should display | Passed |
 | Review status| Should NOT display | Passed |
+
 ### Register - Sign Up Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Navbar - Click on Register | Redirect to Sign Up page | Passed |
 | Creating an account | Username and Password are required | Passed |
 | Password | Auto password creation | Passed |
 | Email| Email address is only optional to create an account | Passed |
 | After Sign Up| Redirect to Articles page and success message is prompt| Passed |
+
 ### Login - Sign In Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Navbar - Click on Login | Redirect to Login page - accounts/login | Passed |
 | Sign In | Username and Password are required, remember me is optional | Passed |
 | Sign In with wrong name or password | Warning message - The username and/or password you specified are not correct | Passed |
 | Register link | Redirect to the correct Page | Passed |
+
 ### Footer
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Social Media  Buttons- Click on the social media links in the footer | Redirects to the relevant social media page in a new tab | Passed |
 | About Us - Click | Redirect to about/ | Passed |
 | Coffee Shops Reviews - Click | Redirect to coffeeshop/index | Passed |
 | For Coffee Lovers - Click | Redirect to home page - blog/index | Passed |
+
 ### As a logged in User 
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Login - Click on the "Sign in" button | Message should prompt "Successfully signed in as user." | Passed |
 | Click on the "User Name" button | Display dropdown menu | Passed |
+
 ### My Reviews Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "My Reviews" link | Redirect to coffeeshop/add_review | Passed |
 | Dropdown Menu - Click on the "My Reviews" link | If the user wrote a review it should display | Passed |
 | Dropdown Menu - Click on the "My Reviews" link | If the user didn't write a review it should display "You haven't added any reviews yet." | Passed |
 | Click on the "My Reviews" link | click on "Add Review" button redirect to coffeeshop/add | Passed |
 | Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
+
 ### Single Review Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | View - Single Review - click View | Should redirect to the single review page | Passed |
 | View - Single Review - click View | Should display, image, text, author and review status - limited for user only | Passed |
 | Edit - Single Review - click Edit | Should redirect to the single review edit page | Passed |
 | Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
+
 ### My Favourites Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
 | Dropdown Menu - Click on the "My Favourites" link | If the user didn't save any Favourites it should display "You don't have any favorites yet." | Passed |
 | Remove - Click on the "Remove" button | Should redirect to favourite/article-name/remove/ | Passed |
+
 ### My Comments Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
 | Dropdown Menu - Click on the "My Comments" link | Should display article headline, comment and published date | Passed |
 | Click on the "My Comments" link | Headline should be clickable | Passed |
+
 ### Singel Article Page
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Add Like - Click on the "Like" heart icon | Add 1 to the number of likes and the heart turns red, green message "Added to likes." | Passed |
 | Remove Like - Click on the "Like" heart icon | Should redirect to like/article-slug/confirm/ | Passed |
 | Remove Like - Click on the "Cancel" button | Should redirect back to the article | Passed |
@@ -170,9 +197,11 @@ We tested this webpage very carefully many times while we were making it. We did
 | Edit - Comments after approval - Click on "Edit" Button | comment display on window and an "Update" button display. After updating a message should display - "Comment updated and is awaiting approval." | Passed |
 | Add to Favourites - Click on the "Bookmark" icon | Icon should turns red and a green message display "Added to favorites." | Passed |
 | Remove from Favourites - Click on the "Bookmark" icon | Should redirect to favourite/article-name/remove/ with 2 optins Confirm and Cancel, Cancel redirect back to the article, Confirm remove from favourites and redirect back to the article. Green message display "Removed from favorites." | Passed |
+
 ### Add New Review
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "Add New Review" link | Redirect to coffeeshop/add | Passed |
 | Populated all the fields in the add a review detail page, click on the "Add Review" button| User is redirected to coffeeshop/add_review/ reviews list page | Passed |
 | Cancel - click on the "Cancel" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
@@ -185,9 +214,11 @@ We tested this webpage very carefully many times while we were making it. We did
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
 | Status - Admin not approvd YET- User - published | Display "Status: This review is awaiting approval." under article headline. | Passed |
 | Status - Admin Rejected | Display "Status: This review got rejected, please follow our guidelines" under article headline. | Future Feature |
+
 ### Edit a Review 
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | coffeeshop/add_review/ - Click on the "Edit" button | Redirect to coffeeshop/edit/review-number | Passed |
 | Edit relevant fields, check the box and click on the "Save Changes" button| User is redirected to coffeeshop/relevant-review, image, status, author and contnet should display, Green message "Review Update" display | Passed |
 | Cancel - click on the "Discard Changes" button at any stage | Javascript message prompt, asking the user to confirm canceling, display 2 message buttons - click cancle: user stay on page and no changes are lost, click ok: user redirect to coffeeshop/add_review/ - User's Reviews list page | Passed |
@@ -198,16 +229,18 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 | No image uploaded | Display default coffee image | Passed |
 | Edit Status to Draft | Review's status has been changed at the Admin back office for approval with status draft, display "This review is awaiting approval." under article headline both on the review and reviews list page | Passed |
 | Status - Admin approved- User - published | Display "Status: This review is published." under article headline. | Passed |
+
 ### About Us
+
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
 | Click Submit - missing fields | Notification: "Fill this field." | Passed |
 
 ### Notifications and Errors
 
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Login | Notification: "Successfully signed in as {username}." | Passed |
 | Logout | Notification: "You have signed out." | Passed |
 | Register - Sign-up | Notification: "Successfully signed in as {username}." | Passed |
@@ -237,7 +270,7 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 ### Layout and built in functionality
 
 | What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
+|------------------------------|--------------------------------------|--------|
 | Home | Background image with interactice navigation with the user name after login | Passed |
 | Articles | Views as newest articles to oldest on the articles page | Passed |
 | Time stamps on articles, reviews and comments | Views the time a post or comment is created | Passed |
@@ -277,14 +310,12 @@ During the development of the webpage the testing was done using Google Chrome. 
 
 #### HTML Validation
 - **Tool Used:** [HTML W3C Markup Validator](https://validator.w3.org/)
-- **Purpose:** Validates the HTML code of the application to ensure it is free from syntax errors and adheres to the standards set by the World Wide Web Consortium (W3C).
-- **Process:** All HTML pages of the Software Stacks are checked through the W3C validator to identify and fix any markup errors or warnings.
-
-![HTML Screenshot](documentation/screenshots/html.JPG)
+- **Purpose:** It checks the application's HTML code to make sure it has no writing mistakes and follows the rules made by the World Wide Web Consortium (W3C).
+- **Process:** Every web page of the Software Stacks website is checked using the W3C validator tool. This tool helps identify and fix any errors or warnings in the HTML code.
 
 **HTML Validation Results**
 
-Below is a table summarizing the HTML validation results for various pages of the Software Stacks website. This validation ensures that the HTML is up to standards, improving cross-browser compatibility, and enhancing SEO performance.
+The table below shows the results of checking the HTML code for different pages of the Software Stacks website. This check makes sure the HTML follows the proper rules and standards. Following these rules helps the website work well on different web browsers and also helps search engines find the website more easily.
 
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
@@ -321,12 +352,42 @@ Below is a table summarizing the HTML validation results for various pages of th
 ### [JSHint JavaScript Validator](https://jshint.com/)
 
 <details>
-<summary> JSHint JavaScript Validator
+<summary> Add A Review Page - Checkbox JavaScript Validator
 </summary>
-
-![html error](./assets/docs/js-validator.png)
-
+![add checkbox](documentation/js-validator-images/add - checkbox.png)
 </details>
+
+<details>
+<summary> Edit A Review Page - Checkbox JavaScript Validator
+</summary>
+![edit checkbox](documentation/js-validator-images/edit - checkbox.png)
+</details>
+
+<details>
+<summary> Comments JavaScript Validator
+</summary>
+![comments](documentation/js-validator-images/comments.png)
+</details>
+
+<details>
+<summary> Reviews Page - Slideshow JavaScript Validator
+</summary>
+![slideshow](documentation/js-validator-images/slideshow.png)
+</details>
+
+#### JavaScript Validation
+- **Tool Used:** [JSLint/JSHint](https://jshint.com/)
+- **Purpose:** To detect errors and potential problems in the JavaScript code, making sure that all scripts run efficiently and are error-free.
+- **Process:** JavaScript code is run through JSLint/JSHint to identify issues related to syntax, deprecated methods, and other inefficiencies.
+
+Below is a table summarizing the JavaScript validation results for specific files within the Software Stacks website. 
+
+| JavaScript File              | Results Screenshots               | Errors | Warnings |
+|------------------------------|--------------------------------------|--------|----------|
+| **comments.js**                  | ![screenshot](documentation/js-validator-images/comments.png)  | 0      | 19      |
+| **slideshow**            | ![screenshot](documentation/js-validator-images/slideshow.png) | 0  | 10       |
+| **add review**         | ![screenshot](documentation/js-validator-images/add-checkbox.png) | 0 | 3       |
+| **edit review**         | ![screenshot](documentation/js-validator-images/edit-checkbox.png) | 0 | 3        |
 
 - No errors were found
 
