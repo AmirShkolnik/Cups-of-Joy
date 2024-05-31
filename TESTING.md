@@ -295,8 +295,8 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Register Page**            | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/register.pdf) | 0      | 0        |
 | **Login Page**               | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/login.pdf) | 0      | 0        |
 | **My Reviews Page**          | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-reviews.pdf) | 0      | 0        |
-| **Add New Review**           | [View PDF]() | 0      | 0        |
-| **Edit A Review**           | [View PDF]() | 0      | 0        |
+| **Add New Review**           | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/add-new-review.pdf) | 11      | 0        |
+| **Edit A Review**           | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/edit-a-review.pdf) | 11     | 0        |
 | **My Favourites Posts**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
 | **My Comments**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **Logout Page**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/sign-out.pdf) | 0      | 0        |
@@ -304,51 +304,7 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **Single Article Page**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/single-article.pdf) | 0      | 0        |
 | **My Favourites Page**        | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
 | **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
-| **404 Page**                 | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/404.pdf) | 0      | 0        |
-
-| What was tested | Expected Result | Outcome |
-|:---|:---|:---:|
-| about |  | Passed |
-| add_review |  | Passed |
-| add |  | Passed |
-| confirm-delete | Passed |
-| edit | Passed |
-| footer | Passed |
-| single | Passed |
-| articles | Passed |
-| comments | Passed |
-| confirm_like_removal | Passed |
-| confirm_remove_favorite | Passed |
-| favourites | Passed |
-| index | Passed |
-| post_detail | Passed |
-| test | Passed |
-| user_comments | Passed |
-| single | Passed |
-| base | Passed |
-| base_home | Passed |
-
-Some html pages do contain comments for ease of navigation through sections
-
-<details>
-<summary> First html validator test - FIXED
-</summary>
-
-![html error](./assets/docs/html-error.png)
-
-</details>
-
-- Error: Element p not allowed as child of element span - Fixed
-
-<details>
-<summary> Second html validator test
-</summary>
-
-![html error](./assets/docs/html-no-errors.png)
-
-</details>
-
-- No errors and no warnings were found on the second test
+| **404 Page**                 | [View PDF](documentation/html-validation-pdf/404.pdf) | 0      | 0        |
 
 ### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
@@ -356,7 +312,7 @@ Some html pages do contain comments for ease of navigation through sections
 <summary> CSS validator test
 </summary>
 
-![html error](./assets/docs/css-validator.png)
+![html error](documentation/css-validator-images/css.png)
 
 </details>
 
