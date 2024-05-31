@@ -436,13 +436,13 @@ The table below shows the results of checking the HTML code for different pages 
 <details>
 <summary> Add A Review Page - Checkbox JavaScript Validator
 </summary>
-![add checkbox](documentation/js-validator-images/add - checkbox.png)
+![add checkbox](documentation/js-validator-images/add-checkbox.png)
 </details>
 
 <details>
 <summary> Edit A Review Page - Checkbox JavaScript Validator
 </summary>
-![edit checkbox](documentation/js-validator-images/edit - checkbox.png)
+![edit checkbox](documentation/js-validator-images/edit-checkbox.png)
 </details>
 
 <details>
