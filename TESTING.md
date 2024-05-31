@@ -1,12 +1,18 @@
 # Testing
 
+During the creation of CupsofJoy, thorough testing was done to make sure each new feature worked properly before adding it to the main version of the website.
+
+Different tests were sent to new users to try out. The goal was to get feedback from a variety of users on different devices and web browsers. This helped identify and fix any problems while the website was still being built.
+
+
 This is the TESTING file for the [CupsOfJoy](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) website.
 
 Return back to the [README.md](README.md) file.
 
 ## Testing  Table of Contents  
 - [Testing](#testing)
-  - [Testing  Table of Contents](#testing--table-of-contents)
+  - [Testing Table of Contents](#testing--table-of-contents)
+  - [Manual Testing](#manual-testing)
   - [Validation](#validation)
       - [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
@@ -33,7 +39,7 @@ Return back to the [README.md](README.md) file.
     - [Unknown Bugs](#unknown-bugs)
 
 
-# Cup Of Joy | Testing
+# Testing
 
 Back to the [README.md](/workspace/job-finder/README.md)
 
@@ -282,7 +288,6 @@ Below is a table summarizing the HTML validation results for various pages of th
 
 | HTML Source Code/Page        | Validation Results PDF                | Errors | Warnings |
 |------------------------------|---------------------------------------|--------|----------|
-| **Base Page**                | [View PDF]() | 0      | 0        |
 | **Home Page**                | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/home.pdf) | 0      | 0        |
 | **About & Contact Page**     | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/about.pdf) | 0      | 0        |
 | **Articles Page**            | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/articles.pdf) | 0      | 0        |
@@ -292,14 +297,12 @@ Below is a table summarizing the HTML validation results for various pages of th
 | **My Reviews Page**          | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-reviews.pdf) | 0      | 0        |
 | **Add New Review**           | [View PDF]() | 0      | 0        |
 | **My Favourites Posts**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
-| **My Comments**              | [View PDF]() | 0      | 0        |
-| **Logout Page**              | [View PDF]() | 0      | 0        |
-| **Post Detail**              | [View PDF]() | 0      | 0        |
-| **Add Post Page**            | [View PDF]() | 0      | 0        |
-| **My Bookmarks Page**        | [View PDF]() | 0      | 0        |
-| **My Likes Page**            | [View PDF]() | 0      | 0        |
-| **My Comments Page**         | [View PDF]() | 0      | 0        |
-| **My Posts Page**            | [View PDF]() | 0      | 0        |
+| **My Comments**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
+| **Logout Page**              | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/sign-out.pdf) | 0      | 0        |
+| **Single Review Page**       | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/single-review.pdf) | 0      | 0        |
+| **Single Article Page**      | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/single-article.pdf) | 0      | 0        |
+| **My Favourites Page**        | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-favourites.pdf) | 0      | 0        |
+| **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **404 Page**                 | [View PDF]() | 0      | 0        |
 
 | What was tested | Expected Result | Outcome |
