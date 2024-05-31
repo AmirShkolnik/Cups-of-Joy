@@ -1,3 +1,38 @@
+# Testing
+
+This is the TESTING file for the [CupsOfJoy](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) website.
+
+Return back to the [README.md](README.md) file.
+
+## Testing  Table of Contents  
+- [Testing](#testing)
+  - [Testing  Table of Contents](#testing--table-of-contents)
+  - [Validation](#validation)
+      - [HTML Validation](#html-validation)
+      - [CSS Validation](#css-validation)
+      - [JavaScript Validation](#javascript-validation)
+      - [Python Validation](#python-validation)
+      - [CSS Validation](#css-validation-1)
+      - [JavaScript Validation](#javascript-validation-1)
+      - [Lighthouse Scores](#lighthouse-scores)
+      - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
+  - [Manual Testing](#manual-testing)
+    - [User Input/Form Validation](#user-inputform-validation)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Django Messages Implementation Testing](#django-messages-implementation-testing)
+    - [User Story Testing](#user-story-testing)
+    - [Responsiveness - Dev Tools/Real World Device Testing](#responsiveness---dev-toolsreal-world-device-testing)
+  - [Automated Testing](#automated-testing)
+    - [Running the Tests](#running-the-tests)
+    - [Test Database](#test-database)
+    - [Importance of Testing](#importance-of-testing)
+    - [Continuous Integration](#continuous-integration)
+  - [Bugs](#bugs)
+    - [Solved Bugs](#solved-bugs)
+    - [Known Bugs](#known-bugs)
+    - [Unknown Bugs](#unknown-bugs)
+
+
 # Cup Of Joy | Testing
 
 Back to the [README.md](/workspace/job-finder/README.md)
