@@ -417,6 +417,13 @@ The table below shows the results of checking the HTML code for different pages 
 | **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **404 Page**                 | [View PDF](documentation/html-validation-pdf/404.pdf) | 0      | 0        |
 
+#### Add New Review
+![Add New Review](documentation/html-validation-images/add-new-review.png)
+
+#### Edit a Review
+![Edit a Review](documentation/html-validation-images/edit-new-review.png)
+
+
 ### CSS Validation
 - **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 - **Purpose:** Checks that the CSS code used on the website follows the rules set by the W3C and does not contain any mistakes.
