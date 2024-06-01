@@ -565,6 +565,7 @@ As this was my first Django/Database project, most of the bugs that I encountere
 | 8   | add_review page - Error: End tag main seen, but there were open elements. | Yes | Closing div was missing  |  |
 | 9   | article page - Error: The font element is obsolete. Use CSS instead. | Yes | Add @import rules at the top of the CSS file  | [StackOverFlow](https://stackoverflow.com/questions/10036977/best-way-to-include-css-why-use-import) |
 | 10  | About Us - Automated Testing - AssertionError: b'About Me' not found  | Yes | Changed About Me to About Us  | CI testing tutorials |
+| 11  | Home Page - Not responsive for mobile  | Yes | Removed conflicting divs | CI bootstrap tutorials |
 
 ### Known Bugs
 
