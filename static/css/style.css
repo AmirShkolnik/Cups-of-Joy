@@ -173,7 +173,6 @@ main {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(112, 175, 226);
-    padding-top: 15px;
     top: 0;
     left: 0;
     width: 100%;
@@ -187,7 +186,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
 }
 
 .navbar .navbar-toggler {
