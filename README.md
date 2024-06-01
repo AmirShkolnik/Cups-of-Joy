@@ -256,12 +256,14 @@ Here is an example of how story points are managed and allocated across differen
     - Must-have: 32 points
     - Should-have: 48 points
 
-### MoSCoW Prioritization: 
-To effectively manage project scope, Software Stacks will implement the MoSCoW prioritization method:
-- **Must Haves**: Core functionalities that include article browsing, user registration/login, and interactive forums.
-- **Should Haves**: Enhanced features like user profiles, article bookmarking, and advanced search capabilities.
-- **Could Haves**: Additional functionalities such as personalized learning paths, user badges for engagement, and API integrations for pulling in external content.
-- **Won't Haves**: Features that are not essential for the initial launch phase, such as a full-fledged online course module or third-party advertising.
+### MoSCoW Prioritization:
+
+Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and efficient development approach:
+
+- **Must Haves**: Fundamental features enabling users to read articles, create accounts, save favorites, and contribute reviews and comments about coffee shops and flavors.
+- **Should Haves**: Enhancing the platform with personalization options, advanced search capabilities, and community engagement tools like following fellow enthusiasts.
+- **Could Haves**: Additional functionalities such as integration with external coffee communities, gamification elements to encourage participation, and advanced analytics.
+- **Won't Haves**: Features deemed non-essential for the initial launch, like a dedicated e-commerce platform or third-party advertising integrations.
 
 ### User Stories, Milestones and Epics
 

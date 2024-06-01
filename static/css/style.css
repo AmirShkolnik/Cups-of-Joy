@@ -177,7 +177,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
 }
 
 .navbar-container {
