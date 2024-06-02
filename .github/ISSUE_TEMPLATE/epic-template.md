@@ -1,11 +1,12 @@
 ---
 name: Epic template
 about: Epic template
-title: ''
+title: 'EPIC :'
 labels: ''
 assignees: ''
 
 ---
 
-This Epic covers:
-Associated User Stories:
+## This Epic covers:
+
+## Associated User Stories:

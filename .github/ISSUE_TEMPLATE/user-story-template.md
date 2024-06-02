@@ -1,7 +1,7 @@
 ---
 name: User Story Template
 about: Default user story template
-title: ''
+title: 'USER STORY:'
 labels: ''
 assignees: ''
 
@@ -9,7 +9,7 @@ assignees: ''
 
 #1 
 
-USER STORY: 
+**USER STORY:**
 
 ## Acceptance Criteria
 **AC1:** 
@@ -17,7 +17,7 @@ USER STORY:
 
 ## Tasks
 
-**Task 2:**
+**Task 1:**
 **Task 2:**
 
 **Belonging to**:  []()
