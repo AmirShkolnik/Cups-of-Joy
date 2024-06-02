@@ -12,7 +12,12 @@ assignees: ''
 USER STORY: 
 
 ## Acceptance Criteria
-AC1: 
-AC2: 
+**AC1:** 
+**AC2:** 
+
+## Tasks
+
+**Task 2:**
+**Task 2:**
 
 **Belonging to**:  []()
