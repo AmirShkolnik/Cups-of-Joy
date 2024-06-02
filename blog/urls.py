@@ -22,5 +22,6 @@ urlpatterns = [
     path('blog/user_comments/', views.user_comments, name='user_comments'),
     path('favourite/<slug:slug>/remove/',
          views.favourite_remove, name='favourite_remove'),
+    path('comments/', views.comments_view, name='comments'),
 
 ]
