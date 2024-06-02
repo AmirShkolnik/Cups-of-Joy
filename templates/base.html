@@ -62,12 +62,9 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add_review' %}">My Reviews</a></li>
                                 <li><a class="dropdown-item {% if request.path == coffeeshop_url %}active" aria-current="page{%endif%}" href="{% url 'coffeeshop:add' %}">Add New Review</a></li>
-                                <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourite Posts</a></li>
-                                <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'comments_list' %}">My Comments</a></li>
-                                <li>
-                                    <a class="dropdown-item {% if request.path == logout_url %}active" aria-current="page{%endif%}"
-                                       href="{% url 'account_logout' %}">Logout</a>
-                                </li>
+                                <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'favourite_list' %}">My Favourites</a></li>
+                                <li><a class="dropdown-item {% if request.path == blog_url %}active" aria-current="page{%endif%}" href="{% url 'user_comments' %}">My Comments</a></li>
+                                <li><a class="dropdown-item {% if request.path == logout_url %}active" aria-current="page{%endif%}" href="{% url 'account_logout' %}">Logout</a></li>
                             </ul>
                         </li>
                         {% else %}
