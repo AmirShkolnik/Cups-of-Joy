@@ -271,34 +271,36 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 **User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
 
-| Title | User Story | MoSCoW Priority | Milestone |
-|-------|------------|----------|-----------|
-| Comment on a Post | As a **user**, I want to **comment on a post** so that I can **engage with the content**. | **MUST HAVE** | Core Functionality |
-| Bookmark Blog Posts | As a **user**, I want to **bookmark blog posts** so that I can **easily find them later**. | **SHOULD HAVE** | Core Functionality |
-| Like Blog Posts | As a **user**, I want to **like blog posts** so that I can **express my appreciation for the content**. | **MUST HAVE** | Core Functionality |
-| Account Registration | As a **user**, I want to **register an account** so that I can **interact with the site's features**. | **MUST HAVE** | Core Functionality |
-| Browse Without Logging In | As a **user**, I want to **browse without logging in** so that I can **view content without an account**. | **MUST HAVE** | Core Functionality |
-| 'Register' and 'Login' Buttons Disappear After 'Login' | As a **user**, I want **'Register' and 'Login' buttons to disappear after 'Login'** so that I can **know I'm logged in**. | **MUST HAVE** | Core Functionality |
-| Manage My Posts | As a **user**, I want to **manage my posts** so that I can **control the content I have created**. | **MUST HAVE** | Core Functionality |
-| Create Drafts | As a **user**, I want to **create drafts** so that I can **save my content before publishing**. | **MUST HAVE** | Core Functionality |
-| Search Blog Posts | As a **user**, I want to **search blog posts** so that I can **find content relevant to my interests**. | **SHOULD HAVE** | Enhanced User Experience |
-| View Paginated List of Posts | As a **user**, I want to **view a paginated list of posts** so that I can **easily navigate through content**. | **SHOULD HAVE** | Enhanced User Experience |
-| Browse Categories | As a **user**, I want to **browse categories** so that I can **filter the posts by topics of interest**. | **SHOULD HAVE** | Enhanced User Experience |
-| Enhance Data Validation | As a **user**, I want **to enhance data validation** so that I can **ensure the integrity of my inputs**. | **SHOULD HAVE** | Enhanced User Experience |
-| Edit Existing Blog Post | As a **user**, I want to **edit my existing blog post** so that I can **update or correct information**. | **MUST HAVE** | Content Management |
-| Implement Comprehensive Testing | As a **user**, I want to **implement comprehensive testing** so that I can **ensure the application functions correctly**. | **MUST HAVE** | Content Management |
-| Delete Existing Blog Posts | As a **user**, I want to **delete existing blog posts** so that I can **remove outdated or incorrect content**. | **SHOULD HAVE** | Content Management |
-| Submit Contact Form | As a **user**, I want to **submit a contact form and see it marked as 'read' by site owner** so that I can **know my inquiry has been acknowledged**. | **COULD HAVE** | Community Interaction |
-| Modify or Delete My Comment on a Post | As a **user**, I want to **modify or delete my comment on a post** so that I can **manage my interactions**. | **COULD HAVE** | Community Interaction |
-| Create Comprehensive Documentation | As a **developer**, I want to **create comprehensive documentation** so that **users and other developers can understand and use the site effectively**. | **MUST HAVE** | Future Considerations |
+| Epic                                               | Title                                    | User Story                                                                                                                                                                        |  MoSCoW Priority |  Milestone                   |
+|----------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------------------|
+| EPIC 1 : Website Content   Creation and Publishing | Manage and Publish Articles              | As an admin, I want to manage   and publish articles, so that I can control the website's content.                                                                                | **Must Have**    | Core Features Development    |
+| EPIC 1 : Website Content   Creation and Publishing | Moderate User-Submitted Reviews          | As an admin, I want to moderate user-submitted reviews, so   that I can maintain the quality and appropriateness of the content.                                                  | **Must Have**    | Core Features Development    |
+| EPIC 1 : Website Content   Creation and Publishing | Create and Manage User Profile           | As a registered user, I want to create and manage my account   profile, so that I can personalize my experience and save preferences.                                             | **Must Have**    | Core Features Development    |
+| EPIC 1 : Website Content   Creation and Publishing | Like, Save Favorite Articles and Reviews | As a registered user, I want to   comment, like and save articles as favorites, so that I can easily access   them later.                                                         | **Must Have**    | Core Features Development    |
+| EPIC 1 : Website Content   Creation and Publishing | Write Article Comments                   | As a registered user, I want to add and manage comments on   articles, so that I can actively participate in discussions and share my   thoughts.                                 | **Must Have**    | User Experience Enhancements |
+| EPIC 1 : Website Content   Creation and Publishing | Moderate Article Comments                | As an admin, I want to manage and moderate comments on   articles, so that I can maintain the quality and appropriateness of the   content.                                       | **Must Have**    | Core Features Development    |
+| EPIC 1 : Website Content   Creation and Publishing | Write Coffee Shop Reviews                | As a registered user, I want to write, edit, and delete my own   coffee shop reviews, so that I can contribute to the community and share my   experiences.                       | **Should Have**  | User Experience Enhancements |
+| EPIC 1 : Website Content   Creation and Publishing | Moderate Coffee Shop Reviews             | As an admin, I want to manage and moderate coffee shop   reviews, so that I can maintain the quality and appropriateness of the   content.                                        | **Must Have**    | User Experience Enhancements |
+| EPIC 2: Website Usability and   Navigation         | Intuitive Website Navigation             | As a visitor, I want to easily navigate through the website's   content and find relevant information, so that I can explore coffee-related   topics efficiently.                 | **Must Have**    | Core Features Development    |
+| EPIC 2: Website Usability and   Navigation         | Account Features Navigation              | As a registered user, I want to   personalize my website experience and access my account-related features   easily, so that I can efficiently manage my content and preferences. | **Must Have**    | Content Administration       |
+| EPIC 2: Website Usability and   Navigation         | Administrative Dashboard Access          | As an admin, I want to access and navigate the website's   administrative features efficiently, so that I can manage content and user   accounts effectively.                     | **Must Have**    | Content Administration       |
+| EPIC 2: Website Usability and   Navigation         | Search Function                          | As   a visitor, I want to easily search through the website's content by keywords,   tags, or categories.                                                                         | **Must Have**    | User Experience Enhancements |
+| EPIC 2: Website Usability and   Navigation         | Filter Coffee Shop Reviews               | As a visitor, I want to easily filter and discover reviews and   comments about different coffee shops, so that I can make informed decisions   about where to visit.             | **Must Have**    | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | Browse and Read Articles                 | As   a visitor, I want to browse and read articles on the website, so that I can   learn about coffee culture and explore different topics.                                       | **Must Have**    | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | View Coffee Shop Reviews                 | As   a visitor, I want to view coffee shop reviews, so that I can make informed   decisions about where to visit.                                                                 | **Must Have**    | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | Favorite and Manage Articles             | As a registered user, I want to favorite articles and manage   my favorite list, so that I can easily access and revisit content that   interests me.                             | **Should Have**  | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | Read Article Comments                    | As a visitor, I want to read comments on articles, so that I   can gain additional insights and perspectives from the community.                                                  | **Must Have**    | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | View Article Likes                       | As a visitor, I want to see the number of likes on articles,   so that I can gauge the popularity and engagement of the content.                                                  | **Should Have**  | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | Like and Unlike Articles                 | As a registered user, I want to like or unlike articles, so   that I can express my interest and engagement with the content.                                                     | **Should Have**  | User Experience Enhancements |
+| EPIC 3: Content Discovery and   Exploration        | Read Coffee Shop Reviews                 | As a visitor, I want to read reviews about coffee shops, so   that I can make informed decisions about where to visit.                                                            | **Must Have**    | User Experience Enhancements |
 
-[Software Stacks GitHub Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4)
+[Cups Of Joy GitHub Link](https://github.com/AmirShkolnik/Cups-of-Joy)
 
-[Software Stacks Kanban Board Link](https://github.com/users/SwathiKeshavamurthy/projects/9)
+[Cups Of Joy Kanban Board Link](https://github.com/users/AmirShkolnik/projects/8)
 
-[Software Stacks User Stories Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/issues?q=is%3Aissue+is%3Aclosed)
+[Cups Of Joy User Stories Link](https://github.com/AmirShkolnik/Cups-of-Joy/issues)
 
-[Software Stacks Milestones Link](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/milestones)
+[Cups Of Joy Milestones Link](https://github.com/AmirShkolnik/Cups-of-Joy/milestones)
 
 #### Milestones
 
