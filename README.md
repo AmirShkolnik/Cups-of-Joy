@@ -311,7 +311,7 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 **An epic** is a large feature or goal that is divided into smaller tasks or user stories to be completed over multiple sprints.
 
-##### EPIC 1 : Website Content Creation and Publishing
+##### EPIC 1: Website Content Creation and Publishing
 - **Goal:** This epic focuses on creating engaging and informative website content to attract, educate, and retain visitors on the Cups of Joy platform.
 - **Associated User Stories:**
   - Manage and Publish Articles
