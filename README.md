@@ -56,17 +56,18 @@ Join **Cups of Joy** today and immerse yourself in a world where coffee is more 
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
     - [Wireframes](#wireframes)
       - [Home Page Wireframes](#home-page-wireframes)
-      - [Categories Page Wireframes](#categories-page-wireframes)
-      - [Post Detail Page Wireframes](#post-detail-page-wireframes)
+      - [Articles Page Wireframes](#articles-page-wireframes)
+      - [Reviews Page Wireframes](#reviews-page-wireframes)
       - [About \& Contact Page Wireframes](#about--contact-page-wireframes)
-      - [Add Post Page Wireframes](#add-post-page-wireframes)
+      - [Single Article Page Wireframes](#single-article-page-wireframes)
       - [Register Page Wireframes](#register-page-wireframes)
       - [Login Page Wireframes](#login-page-wireframes)
       - [Logout Page Wireframes](#logout-page-wireframes)
-      - [My Bookmarks Page Wireframes](#my-bookmarks-page-wireframes)
-      - [My Likes Page Wireframes](#my-likes-page-wireframes)
+      - [My Favourites Page Wireframes](#my-reviews-page-wireframes)
+      - [My Reviews Page Wireframes](#my-likes-page-wireframes)
       - [My Comments Page Wireframes](#my-comments-page-wireframes)
-      - [My Posts Page Wireframes](#my-posts-page-wireframes)
+      - [Single Review Page Wireframes](#single-page-wireframes)
+      - [Add and Edit Review Page Wireframes](#add-and-edit-review-page-wireframes)
     - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
       - [Database Schema](#database-schema)
       - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
@@ -306,118 +307,141 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 #### Milestones
 
-**A milestone**, here from above table represents a significant checkpoint or goal in a project's timeline. Milestones are used to signify the completion of a key phase of work, the achievement of a major objective, or the meeting of a significant deadline. They are critical for tracking progress, setting deadlines, and aligning the team and stakeholders around key project events or achievements. Unlike tasks or user stories, milestones don't involve work themselves but are markers indicating that a specific set of work has been completed.
+**A milestone**, is a major checkpoint or goal in a project's timeline that signifies the completion of a key phase or the achievement of a significant objective.
 
 #### Epics
 
-**An epic** in software development and project management is a large body of work that can be broken down into smaller tasks or stories, often referred to as user stories. Epics are used to organize related tasks that contribute toward a significant, unified objective within a project. They help teams to focus on bigger-picture goals and ensure that all the smaller tasks (user stories) are aligned towards achieving that overarching aim. Epics typically span across multiple sprints or iterations and can take several weeks or months to complete.
+**An epic** is a large feature or goal that is divided into smaller tasks or user stories to be completed over multiple sprints.
 
-##### Epic 1: User Engagement and Interaction
-- **Goal:** Enhance user engagement and community interaction through posts, comments, and social features.
+##### EPIC 1 : Website Content Creation and Publishing
+- **Goal:** This epic focuses on creating engaging and informative website content to attract, educate, and retain visitors on the Cups of Joy platform.
 - **Associated User Stories:**
-  - Comment on a post
-  - Bookmark Blog Posts
-  - Like Blog Posts
-  - View paginated list of posts
-  - Search Blog Posts
-  - View comments
-  - Navigate easily
-  - Modify or delete comment on a post
-  - Inquiry via Contact Section
+  - Manage and Publish Articles
+  - Moderate User-Submitted Reviews
+  - Like, Save Favorite Articles and Reviews
+  - Write Article Comments
+  - Moderate Article Comments
+  - Write Coffee Shop Reviews
+  - Moderate Coffee Shop Reviews
+  
 
-##### Epic 2: User Account Management
-- **Goal:** Provide a seamless and secure user experience from account registration through to content management.
+##### EPIC 2: Website Usability and Navigation
+- **Goal:** The Website Usability and Navigation epic aims to deliver an intuitive and enjoyable experience through optimized design, layout, and navigation elements for all user roles.
 - **Associated User Stories:**
-  - Account Registration
-  - 'Register' and 'Login' buttons disappear after 'Login'.
-  - Manage posts
-  - Create drafts
-  - Edit Existing Blog Post
-  - Approve comments
-  - Delete Existing Blog Post
-  - Add Post USER STORY: Allow Registered user to Create New Posts
+  - Intuitive Website Navigation
+  - Account Features Navigation
+  - Administrative Dashboard Access
+  - Search Function
+  - Filter Coffee Shop Reviews
+  
 
-##### Epic 3: Core Platform Development
-- **Goal:** Establish the foundational elements of the Software Stacks platform, including database creation, deployment, and basic functionalities.
+##### EPIC 3: Content Discovery and Exploration
+- **Goal:** This epic enables easy content discovery and exploration for all users, including browsing articles, reviews, likes, and comments, through user-friendly features that surface relevant and engaging information.
 - **Associated User Stories:**
-  - Creating the Database in ElephantSQL
-  - Deploying the Django Project on Heroku
-  - Software Stacks Blog
-  - Create Project App
-  - Open a Post
-  - Browse without Logging in
+  - Browse and Read Articles
+  - View Coffee Shop Reviews
+  - Favorite and Manage Articles
+  - Read Article Comments
+  - View Article Likes
+  - Like and Unlike Articles
+  - Read Coffee Shop Reviews
+  
 
-##### Epic 4: Content Management and Administration
-- **Goal:** Empower authors with comprehensive tools for content creation, modification, and management.
+##### EPIC 4: User Account
+- **Goal:** The User Account epic covers account creation, management, and personalization features.
 - **Associated User Stories:**
-  - EDIT POST USER STORY: Enable Post Modifications by Author/Post Owner.
-  - DELETE POST USER STORY: Facilitate Removal of Outdated or Incorrect Posts
-  - ADD POST USER STORY: Allow Registered user to Create New Posts
-  - TESTING: Implement Comprehensive Testing
-  - VALIDATION: Enhance Data Validation
-
-##### Epic 5: Community Building and Feedback
-- **Goal:** Foster community interaction and feedback through enhanced contact form functionalities and about page updates.
-- **Associated User Stories:**
-  - CONTACT FORM USER STORY: Marking Contact Requests as "Read"
-  - CONTACT FORM USER STORY: Contact Form Submission Feature(Site Owner)
-  - CONTACT FORM USER STORY: Contact Form Submission Feature (Registered User)
-  - ABOUT APP USER STORY: Add and update the about text
-  - ABOUT APP USER STORY: Read about the site
-
-##### Epic 6: Documentation and Quality Assurance
-- **Goal:** Ensure the platform's reliability and ease of use through comprehensive documentation, testing, and data validation.
-- **Associated User Stories:**
-  - DOCUMENTATION: Create Comprehensive Documentation
-  - VALIDATION: Enhance Data Validation
-  - TESTING: Implement Comprehensive Testing
-
-Each epic captures a significant area of functionality or development goal, providing a roadmap for progressing from initial platform setup to a fully-featured, user-engaged community platform.
+  - Create and Manage User Profile
+  - User Registration
+  - User Management
+  
+Every epic represents a major feature area, guiding development from initial setup to a full-fledged, engaging community platform
 
 ## Scope Plane
 
 **Purpose:**
-Software Stacks aims to educate and engage users interested in various software technologies, focusing on Front-End Development, E-Commerce, and Predictive Analysis. It serves as a platform for both novice and experienced developers to explore articles, tutorials, and community insights.
+
+The purpose of the "Cups of Joy" website is to provide a comprehensive platform for coffee enthusiasts and casual drinkers alike. For random visitors, it serves as a valuable resource for exploring the world of coffee, discovering new cafes, and gaining insights into the coffee culture. For registered users, the website offers a personalized experience, enabling them to contribute to the community, share their experiences, and connect with like-minded individuals.
 
 **Goals:**
-- Provide comprehensive guides and articles on key software development topics.
-- Offer a community-driven platform where users can interact, and learn from each other.
-- Enable users to stay updated with the latest trends and best practices in software technology.
+
+- Create a vibrant online community for coffee lovers to connect, share, and learn.
+- Establish a trusted source of information and reviews for coffee shops and cafes.
+- Foster a collaborative environment where users can contribute content and engage in discussions.
 
 **Target Audience:**
-- Novice to experienced software developers.
-- Individuals interested in the practical applications of software technology in business.
-- Educators and students looking for resources on software development and technology trends.
+
+- Coffee enthusiasts who are passionate about exploring different brews and roasts.
+- Casual coffee drinkers seeking recommendations and insights into local cafes.
+- Travelers and tourists looking for highly-rated coffee shops in various locations.
+- Coffee shop owners and baristas interested in connecting with their customer base.
 
 **User Needs:**
-- Access to reliable and up-to-date information.
-- Ability to interact with other community members.
-- Tools to navigate content based on specific interests or needs.
+- Access to comprehensive and up-to-date information about coffee shops, including menus, pricing, and ambiance.
+- Ability to read and contribute reviews, ratings, and comments about coffee shops and their offerings.
+- Personalized features for registered users, such as saving favorite cafes, creating lists, and managing their contributions.
+- Engaging content and resources related to coffee culture, brewing methods, and industry trends.
 
 **Features:**
-- Detailed articles and blog posts categorized by technology themes.
-- Regular updates and new content notifications.
-- User profiles for personalized experiences and content tracking.
+
+- Comprehensive directory of coffee shops with detailed information and user-generated reviews.
+- User registration and profile management for personalized experiences.
+- Ability for registered users to contribute reviews, ratings, and comments on coffee shops.
+- Content management system for admins to publish articles, guides, and resources related to coffee.
+- Interactive features like forums, events, and meetups for the coffee community.
+Search and filtering capabilities to easily find relevant coffee shops and content.
+
 
 ## Structural Plane
 
 **Information Architecture:**
-- **Home Page:** Overview of the site, featured articles, and direct access to major categories.
-- **Category Pages:** Dedicated pages for each major topic (Front-End Development, E-Commerce, Predictive Analysis) featuring articles.
-- **Post Detail Pages:** Comprehensive content on chosen topics, including images, and more information.
-- **About & Contact Pages:** Organized by category to facilitate discussions and interactions among users.
-- **Registration and SignIn Page:** Users can signup and signin to more interactions.
-- **User Profile:** Personalized area where users can manage their preferences, saved articles, and contributions to discussions.
 
-**Navigation:**
-- **Primary Navigation:** Direct links to each major category from every page.
-- **Secondary Navigation:** Links to user profiles, contact information, and about page.
-- **Footer Navigation:** Links to privacy policy, terms of use,  and social media.
+**Home Page**
+- Welcome message
+- Quick links to articles, reviews about us and Registration/sign-in pages
 
-**Interaction Design:**
-- Responsive design to ensure usability across devices.
-- Interactive elements such as buttons, links, and forms are designed for ease of use.
-- Visual cues (icons, color changes) for interactive elements to enhance user experience.
+**Articles Page**
+- List of articles
+- Links to individual article pages
+- Display number of likes
+
+**Single Article Page**
+- Article title, author, date
+- Article content (text, images, etc.)
+- Comments section
+- Like and favourites for registered users
+
+**Single Review Page**
+- Review title, author, date
+- Review content (text, images etc.)
+
+**Reviews List Page**
+- List of all reviews
+- Links to individual review pages
+
+**About & Contact Pages**
+- Information about the website and its purpose
+- Contact form
+
+**Registration and Sign-In Page**
+- User registration form
+- User sign-in form
+
+**User Profile**
+- User information (name, avatar, bio)
+- Saved articles and reviews
+- User comments and contributions
+- Personalization settings
+
+**Navigation**
+- Primary Navigation: Links to category pages, about page, contact page
+- Registered Users: Links to user profile, favorites, reviews, comments
+- Secondary Navigation: Links to registration/sign-in, user profile
+- Footer Navigation: Links to home page, reviews, about us, social media
+
+**Interaction Design**
+- Responsive design for optimal viewing across devices
+- Interactive elements (buttons, links, forms) with visual cues (icons, color changes)
+- Intuitive navigation and user flows
 
 ## Skeleton & Surface Planes
 
@@ -429,34 +453,27 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <details>
 <summary>Click to View Home Page wireframes</summary>
 
-**Mobile**
-![wireframes](documentation/wireframes/home.JPG)
-
-**Tablet**
-![wireframes](documentation/wireframes/tab.JPG)
-
-**Desktop**
-![wireframes](documentation/wireframes/phone.JPG)
+![wireframes](documentation/wireframes/home.png)
 
 </details>
 
-#### Categories Page Wireframes
+#### Articles Page Wireframes
 <details>
 
-<summary>Click to View Categories Page wireframes</summary>
+<summary>Click to View Articles Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/categories.JPG)
+![wireframes](documentation/wireframes/articles-list-page.png)
 
 </details>
 
-#### Post Detail Page Wireframes
+#### Reviews Page Wireframes
 <details>
 
-<summary>Click to View Post Detail Page wireframes</summary>
+<summary>Click to View Reviews Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/post_detail.JPG)
+![wireframes](documentation/wireframes/reviews-list-page.png)
 
 </details>
 
@@ -466,17 +483,17 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary>Click to View About & Contact Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/about.JPG)
+![wireframes](documentation/wireframes/about-us.png)
 
 </details>
 
-#### Add Post Page Wireframes
+#### Single Article Page Wireframes
 <details>
 
-<summary>Click to View Add Post Page wireframes</summary>
+<summary>Click to View Single Article Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/add_stack.JPG)
+![wireframes](documentation/wireframes/single-article.png)
 
 </details>
 
@@ -486,7 +503,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary>Click to View Register Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/register.JPG)
+![wireframes](documentation/wireframes/sign-up.png)
 
 </details>
 
@@ -496,7 +513,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary>Click to View Login Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/login.JPG)
+![wireframes](documentation/wireframes/sign-in.png)
 
 </details>
 
@@ -506,27 +523,27 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary>Click to View Logout Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/logout.JPG)
+![wireframes](documentation/wireframes/sign-out.png)
 
 </details>
 
-#### My Bookmarks Page Wireframes
+#### My Favourites Page Wireframes
 <details>
 
-<summary>Click to View My Bookmarks Page wireframes</summary>
+<summary>Click to View My Favourites Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/bookmarked.JPG)
+![wireframes](documentation/wireframes/my-favourites.png)
 
 </details>
 
-#### My Likes Page Wireframes
+#### My Reviews Page Wireframes
 <details>
 
-<summary>Click to View My Likes Page wireframes</summary>
+<summary>Click to View My Reviews Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/liked.JPG)
+![wireframes](documentation/wireframes/my-reviews.png)
 
 </details>
 
@@ -536,17 +553,25 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary>Click to View My Comments Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/comments.JPG)
+![wireframes](documentation/wireframes/my-comments.png)
 
 </details>
 
-#### My Posts Page Wireframes
+#### Single Review Page Wireframes
 <details>
 
-<summary>Click to View My Posts Page wireframes</summary>
+<summary>Click to View Single Review Page wireframes</summary>
 
 **Desktop**
-![wireframes](documentation/wireframes/posts.JPG)
+![wireframes](documentation/wireframes/single-review.png)
+
+#### Add and Edit Review Page Wireframes
+<details>
+
+<summary>Click to View Add and Edit Review Page wireframes</summary>
+
+**Desktop**
+![wireframes](documentation/wireframes/add-review.png)
 
 </details>
 
