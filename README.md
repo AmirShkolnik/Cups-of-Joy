@@ -659,33 +659,34 @@ Security is a paramount concern for a platform like Cups Of Joy, which handles u
 
 Software Stacks is a dynamic web application that allows users to engage with content across various technology domains. Below is a table highlighting its features, detailing the level of access for unregistered and registered users, and the CRUD (Create, Read, Update, Delete) functionalities available:
 
-| Feature | Visitor | Registered User | CRUD Functionality |
-|---------|---------|-----------------|---------------------|
-| View Coffee Shop Reviews | Read | Read | Read |
-| Create New Coffee Shop Review | - | Create | Create |
-| Update Existing Coffee Shop Review | - | Update | Update |
-| Delete Coffee Shop Review | - | Delete | Delete |
-| Like/Unlike Coffee Shop Reviews | - | Create, Delete | Create, Delete |
-| Leave Comments on Reviews | - | Create | Create |
-| Update/Delete Comments | - | Update, Delete | Update, Delete |
-| View User Profile | Read | Read, Update | Read, Update |
-| Manage Favorite Reviews | - | Create, Read, Delete | Create, Read, Delete |
-| Search Functionality | Read | Read | Read |
+| Feature           | User | Registered and Logged-in User           | CRUD Functionality        |
+|-------------------|------|---------------------------|---------------------------|
+| Navigation Bar   | |  |  |
+| User register, log in, and log out  | create |  | Read/Create/Update/Delete |
+| Single Article    | View | Read/Create/Update/Delete | Read/Create/Update/Delete |
+| Reviews           | View | View                      | View                      |
+| Single Review     | View | Read/Create/Update/Delete | Read/Create/Update/Delete |
+| Like              | View | Create, Delete            | Create, Delete            |
+| Comments          | View | Read/Create/Update/Delete | Read/Create/Update/Delete |
+| View User Profile | Read | Read, Update              | Read, Update              |
+| Favorite          | -    | Read/Create/Delete        | Read/Create/Delete        |
+| Footer   | |  |  |
+| Django Messages   | |  |  |
 
 ---
 
 ### CRUD Functionality
 
-The table below describes the CRUD operations that can be performed on Software Stacks' main features by a registered, logged-in user.
+The table below describes the CRUD operations that can be performed on Cups Of Joy main features by a registered, logged-in user.
 
 | Feature               | Create                    | Read                        | Update               | Delete                 |
 |-----------------------|---------------------------|-----------------------------|----------------------|------------------------|
-| **User Accounts**     | Sign up for a new account | View own and others' profiles | Edit own profile     | Deactivate/Delete account |
-| **Posts**             | Publish new posts         | Browse and read all posts  | Edit own posts       | Remove own posts       |
-| **Comments**          | Comment on posts          | View comments              | Edit own comments    | Delete own comments    |
-| **Likes**             | Like posts and comments   | See likes on posts/comments | -                    | Unlike posts/comments  |
-| **Bookmarks**         | Bookmark posts            | View bookmarked posts      | -                    | Remove bookmarks       |
-| **Search**            | -                         | Search posts/users         | -                    | -                      |
+| **User Account**     | Sign up for a new account | View own content | Edit own content     | Deactivate/Delete account |
+| **Reviews**             | Publish new reviews        | Browse and read all articles and reviews  | Edit own reviews       | Remove own reviews       |
+| **Comments**          | Comment on articles          | View comments              | Edit own comments    | Delete own comments    |
+| **Likes**             | Like articles   | See likes on articles | -                    | Unlike articles  |
+| **Favourites**         | Add a favourite            | View bookmarked posts      | -                    | Remove bookmarks       |
+|  **Articles**     | -                         | -        | -                    | -                      |
 
 Certainly, here's a detailed existing features section for Software Stacks using the provided template:
 
