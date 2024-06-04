@@ -64,14 +64,13 @@ Join **Cups of Joy** today and immerse yourself in a world where coffee is more 
       - [My Favourites Page Wireframes](#my-reviews-page-wireframes)
       - [My Reviews Page Wireframes](#my-likes-page-wireframes)
       - [My Comments Page Wireframes](#my-comments-page-wireframes)
-      - [Single Review Page Wireframes](#single-page-wireframes)
-      - [Add and Edit Review Page Wireframes](#add-and-edit-review-page-wireframes)
+      - [Single Review Page Wireframes](#single-review-page-wireframes)
+      - [Add \& Edit Review Page Wireframes](#add--edit-review-page-wireframes)
     - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
       - [Database Schema](#database-schema)
       - [Entity Relationship Diagram (ERD)](#entity-relationship-diagram-erd)
       - [Tables Overview](#tables-overview)
       - [Relationships](#relationships)
-      - [Design Considerations](#design-considerations)
     - [Security](#security)
       - [Data Encryption](#data-encryption)
       - [CSRF Tokens](#csrf-tokens)
@@ -445,11 +444,15 @@ Search and filtering capabilities to easily find relevant coffee shops and conte
 
 ### Wireframes
 
+**Desktop, Mobile and Tablet**
+
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 #### Home Page Wireframes
 <details>
 <summary>Click to View Home Page wireframes</summary>
+
+**Desktop, Mobile and Tablet**
 
 ![wireframes](documentation/wireframes/home.png)
 
@@ -460,7 +463,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Articles Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/articles-list-page.png)
 
 </details>
@@ -470,7 +474,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Reviews Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/reviews-list-page.png)
 
 </details>
@@ -480,7 +485,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View About & Contact Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/about-us.png)
 
 </details>
@@ -490,7 +496,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Single Article Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/single-article.png)
 
 </details>
@@ -500,7 +507,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Register Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/sign-up.png)
 
 </details>
@@ -510,7 +518,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Login Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/sign-in.png)
 
 </details>
@@ -520,7 +529,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Logout Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/sign-out.png)
 
 </details>
@@ -530,7 +540,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View My Favourites Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/my-favourites.png)
 
 </details>
@@ -540,7 +551,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View My Reviews Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/my-reviews.png)
 
 </details>
@@ -550,7 +562,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View My Comments Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/my-comments.png)
 
 </details>
@@ -560,15 +573,19 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 <summary>Click to View Single Review Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/single-review.png)
 
-#### Add and Edit Review Page Wireframes
+</details>
+
+#### Add & Edit Review Page Wireframes
 <details>
 
 <summary>Click to View Add and Edit Review Page wireframes</summary>
 
-**Desktop**
+**Desktop, Mobile and Tablet**
+
 ![wireframes](documentation/wireframes/add-review.png)
 
 </details>
@@ -583,9 +600,9 @@ I've used [dbdiagram](https://dbdiagram.io/home) to design my site's ERD.
 
 ![Entity Relationship Diagram](documentation/erd/entity-relationship-diagram.png)
 
-## Entity Relationship Diagram (ERD) for Cups Of Joy
-
 The Entity Relationship Diagram (ERD) is a visual representation of the database structure for the Cups Of Joy project. It illustrates the relationships between different entities (tables) and their attributes (columns). The ERD helps in understanding the data organization and facilitates efficient database design.
+
+#### Tables Overview
 
 In the Cups Of Joy project, the ERD consists of the following entities:
 
@@ -605,7 +622,7 @@ In the Cups Of Joy project, the ERD consists of the following entities:
 
 7. **Contact**: This entity stores contact information submitted by users through a contact form. It may include attributes like name, email, message, and date.
 
-### Relationships
+#### Relationships
 
 The relationships between these entities are as follows:
 
@@ -618,46 +635,21 @@ The relationships between these entities are as follows:
 
 The ERD provides a clear understanding of the data structure and relationships within the Cups Of Joy project, facilitating efficient database design and development.
 
-#### Tables Overview
-
-- **User**: Stores information about the users of the platform, including username, email, and password. The `is_staff` field indicates whether a user has administrative privileges.
-
-- **Profile**: Contains extended user information such as name, join date, and bookmarks. This table extends the `User` table by associating profiles with user accounts.
-
-- **Blog**: Central to the application, the `Blog` table holds data about blog posts including title, content, and metadata like creation date and whether the post is approved for public viewing.
-
-- **Comment**: Enables the community aspect of the blog by storing user comments on blog posts. Each comment is linked to a specific post and user.
-
-- **Category**: Categories allow for the organization of blog posts into topics, making it easier for users to find content related to specific subjects.
-
-- **About**: This table likely contains static information about the application, such as the company's background, mission statement, and contact details.
-
-- **Contact**: Presumably used for storing user inquiries submitted through the platform's contact form.
-
-#### Relationships
-
-- A **one-to-many** relationship exists between `User` and `Blog`, where one user can author many blog posts.
-- A similar **one-to-many** relationship is set between `Blog` and `Comment`, allowing multiple comments to be associated with a single blog post.
-- The `Profile` table has a **one-to-one** relationship with the `User` table, extending it with additional personal information.
-- The `Category` table is linked to the `Blog` table in a **many-to-one** relationship, categorizing each blog post.
-  
-#### Design Considerations
-
-The schema was designed with scalability in mind, ensuring that as the platform grows, new features and data types can be easily incorporated. For example, the separation of the `User` and `Profile` tables allows for flexible user management and the possibility to include additional user attributes in the future without altering the core user authentication system.
-
 ### Security
 
-Security is a critical aspect, especially for a platform like Software Stacks that handles user-generated content and personal data.
+Security is a paramount concern for a platform like Cups Of Joy, which handles user-generated content and personal data.
 
 #### Data Encryption
-- All sensitive data, including user passwords and personal information, are encrypted using robust encryption methods to protect against unauthorized access and breaches.
+
+- All sensitive information, including user passwords and personal details, is encrypted using robust encryption methods to safeguard against unauthorized access and potential breaches.
 
 #### CSRF Tokens
-- CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
 
-#### AllAuth  
+- CSRF (Cross-Site Request Forgery) tokens are included in every form to authenticate requests with the server during form submission. The absence of these tokens could leave the site vulnerable to attackers attempting to steal user data.
 
-- Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on **SoftwareStacks**
+#### AllAuth 
+
+- Django AllAuth, an installable framework, handles user registration and authentication processes. Authentication is crucial for determining registered and unregistered users, controlling access to specific content on Cups Of Joy.
 
 # Features
 
