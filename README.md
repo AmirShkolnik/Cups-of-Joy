@@ -579,13 +579,44 @@ I've used [dbdiagram](https://dbdiagram.io/home) to design my site's ERD.
 
 #### Database Schema
 
-The Software Stacks application is structured on a robust database schema designed to facilitate the efficient organization and retrieval of data. Below is an overview of the database schema and the relationships between the different entities.
-
 #### Entity Relationship Diagram (ERD)
 
-The Entity Relationship Diagram (ERD) represents the database schema of Software Stacks, detailing the system's tables, the data fields within them, and the relationships between the tables.
+![Entity Relationship Diagram](documentation/erd/entity-relationship-diagram.png)
 
-![ERD of Software Stacks](documentation/screenshots/erd.JPG)
+## Entity Relationship Diagram (ERD) for Cups Of Joy
+
+The Entity Relationship Diagram (ERD) is a visual representation of the database structure for the Cups Of Joy project. It illustrates the relationships between different entities (tables) and their attributes (columns). The ERD helps in understanding the data organization and facilitates efficient database design.
+
+In the Cups Of Joy project, the ERD consists of the following entities:
+
+### Entities
+
+1. **User**: This entity stores user information such as username, email, password, and other relevant details.
+
+2. **Post**: This entity represents the posts or content created by users. It may include attributes like post title, content, date, and author (linked to the User entity).
+
+3. **Like**: This entity tracks the likes given by users on posts. It may have attributes like the user who liked the post and the post that was liked.
+
+4. **Favorite**: This entity stores the posts marked as favorites by users. It may have attributes like the user who favorited the post and the post that was favorited.
+
+5. **Review**: This entity represents the reviews or ratings given by users for posts. It may include attributes like the review text, rating score, and the user who wrote the review.
+
+6. **Comment**: This entity stores the comments made by users on posts. It may have attributes like the comment text, date, and the user who posted the comment.
+
+7. **Contact**: This entity stores contact information submitted by users through a contact form. It may include attributes like name, email, message, and date.
+
+### Relationships
+
+The relationships between these entities are as follows:
+
+- **User** has a one-to-many relationship with **Post**, **Like**, **Favorite**, **Review**, and **Comment**, meaning a user can have multiple posts, likes, favorites, reviews, and comments.
+- **Post** has a one-to-many relationship with **Like**, **Favorite**, **Review**, and **Comment**, meaning a post can have multiple likes, favorites, reviews, and comments.
+- **Like** has a many-to-one relationship with **User** and **Post**, indicating that a like is associated with one user and one post.
+- **Favorite** has a many-to-one relationship with **User** and **Post**, indicating that a favorite is associated with one user and one post.
+- **Review** has a many-to-one relationship with **User** and **Post**, indicating that a review is associated with one user and one post.
+- **Comment** has a many-to-one relationship with **User** and **Post**, indicating that a comment is associated with one user and one post.
+
+The ERD provides a clear understanding of the data structure and relationships within the Cups Of Joy project, facilitating efficient database design and development.
 
 #### Tables Overview
 
