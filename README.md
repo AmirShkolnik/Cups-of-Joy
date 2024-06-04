@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/images/mug-white.png" alt="Software Stacks Logo">
+  <img src="static/images/mug-white.png" alt="Cups Of Joy Logo">
 </p>
 <h1 align="center">Cups Of Joy</h1>
 
@@ -659,24 +659,18 @@ Security is a paramount concern for a platform like Cups Of Joy, which handles u
 
 Software Stacks is a dynamic web application that allows users to engage with content across various technology domains. Below is a table highlighting its features, detailing the level of access for unregistered and registered users, and the CRUD (Create, Read, Update, Delete) functionalities available:
 
-| Feature                   | Unregistered User Access | Registered User Access         | CRUD Functionality               |
-|---------------------------|--------------------------|--------------------------------|----------------------------------|
-| **Landing Page**          | Viewable                 | Viewable                       | Read                             |
-| **Registration**          | Available                | N/A                            | Create                           |
-| **Login**                 | Available                | N/A                            | Create/Read                      |
-| **Browse Posts**          | Viewable                 | Viewable                       | Read                             |
-| **View Categories**       | Viewable                 | Viewable                       | Read                             |
-| **Post Details**          | Limited Interaction      | Full Interaction (like, comment, bookmark) | Read/Create/Update/Delete    |
-| **Profile Management**    | Not Available            | Available                      | Create/Read/Update/Delete        |
-| **Create New Post**       | Not Available            | Available                      | Create                           |
-| **Edit/Delete Post**      | Not Available            | Available (Own Posts)          | Update/Delete                    |
-| **Like Posts**            | Not Available            | Available                      | Create/Delete                    |
-| **Bookmark Posts**        | Not Available            | Available                      | Create/Delete                    |
-| **Comment on Posts**      | Not Available            | Available                      | Create/Update/Delete             |
-| **Search Functionality**  | Available                | Enhanced (user-specific results) | Read                             |
-| **User Interaction**      | Not Available            | Follow/Unfollow Users, Interact with Community | Create/Read/Delete             |
-| **About & Contact**       | Viewable                 | Viewable                       | Read                             |
-| **Search**            | Available                    | Available        | Not Available                    |                 |
+| Feature | Visitor | Registered User | CRUD Functionality |
+|---------|---------|-----------------|---------------------|
+| View Coffee Shop Reviews | Read | Read | Read |
+| Create New Coffee Shop Review | - | Create | Create |
+| Update Existing Coffee Shop Review | - | Update | Update |
+| Delete Coffee Shop Review | - | Delete | Delete |
+| Like/Unlike Coffee Shop Reviews | - | Create, Delete | Create, Delete |
+| Leave Comments on Reviews | - | Create | Create |
+| Update/Delete Comments | - | Update, Delete | Update, Delete |
+| View User Profile | Read | Read, Update | Read, Update |
+| Manage Favorite Reviews | - | Create, Read, Delete | Create, Read, Delete |
+| Search Functionality | Read | Read | Read |
 
 ---
 
