@@ -1025,24 +1025,57 @@ The following blogs/tutorials complemented my learning for this project:
 - [StackOverflow](<https://stackoverflow.com/questions/11754877/troubleshooting-related-field-has-invalid-lookup-icontains>)
 - [Very Academy](<https://www.youtube.com/watch?v=H4QPHLmsZMU>)
 - [StackOverflow for Pagination ](<https://stackoverflow.com/questions/30864011/display-only-some-of-the-page-numbers-by-django-pagination>)
+- [How TO - Slideshow](https://www.w3schools.com/howto/howto_js_slideshow.asp)
+- [Manage images](https://cloudinary.com/documentation/django_helper_methods_tutorial)
+- [Bootstrap 4 Simple Landing Page](https://www.youtube.com/watch?v=evSgm1bKdxU)
+- [Create Blog Like Button](https://www.youtube.com/watch?v=PXqRPqDjDgc)
+- [Am I Responsive](https://ui.dev/amiresponsive)
+- [ Creating a User Bookmark / Favourites Features](https://www.youtube.com/watch?v=H4QPHLmsZMU)
 
 ## Media
 
 The following sites were used to gather the photographic media used:
-- [Freepik](https://www.freepik.com/)
+
+- [Reviews Page by Arshad Sutar](https://www.pexels.com/sv-se/foto/bonor-koffein-kaffe-kopp-1749303/)
+- [Home Page Image by Pixabay](https://www.pexels.com/sv-se/foto/koffein-kaffe-kopp-latte-459489/)
+- [Default Image by Frank Leuderalbert](https://www.pexels.com/sv-se/foto/koffein-kaffe-cappuccino-dryck-9188611/)
+- [Review Image by Quang Nguyen Vinh](https://www.pexels.com/sv-se/foto/2159065/)
+- [About Page Image by cottonbro studio](https://www.pexels.com/sv-se/foto/man-kaffe-kafe-loft-4790061/)
+- [Slideshow Image by Afta Putta Gunawan](https://www.pexels.com/sv-se/foto/683039/)
+- [Slideshow Image by Quark Studio](https://www.pexels.com/sv-se/foto/man-manniskor-kvinna-kafe-2506993/)
+- [Slideshow Image by Alina](https://www.pexels.com/sv-se/foto/konst-kopp-oskarpa-latte-420754/)
+- [Article by Chevanon Photography](https://www.pexels.com/sv-se/foto/302899/)
+- [Article by Chevanon Photography](https://www.pexels.com/sv-se/foto/302901/)
+- [Article Image by Lukas](https://www.pexels.com/sv-se/foto/942732/)
+- [Article Image by Aleksandar Pasaric](https://www.pexels.com/sv-se/foto/mat-bonor-koffein-kaffe-2711959/)
+- [Article Image by Barcelona Albertus](https://www.pexels.com/sv-se/foto/man-hander-kaffe-rana-1924951/)
+- [Article Image by Livier Garcia](https://www.pexels.com/sv-se/foto/1459339/)
+- [Article Image by Lukas](https://www.pexels.com/sv-se/foto/942736/)
+- [Article Image by cottonbro studio](https://www.pexels.com/sv-se/foto/man-bonor-kaffe-arbetssatt-4820817/)
+- [Article Image by Pixabay](https://www.pexels.com/sv-se/foto/koffein-kaffe-kopp-rana-164653/)
+- [Article Image by Pixabay](https://www.pexels.com/sv-se/foto/halsosam-hav-solnedgang-man-414012/)
+- [Article Image by Bia Santana](https://www.pexels.com/sv-se/foto/gata-gaende-flicka-vagg-16162211/)
+- [Article Image by Pixabay](https://www.pexels.com/sv-se/foto/man-manniskor-hatt-ansikte-59858/)
+- [Logo & Favicon by icons8.com](https://icons8.com/icon/set/drinks/laces)
 
 ## Additional reading/tutorials/books/blogs
 
 - [Dee Mc](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) for Django
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/?ref=ghm) for additional Python learning.
+- [User Stories](https://storiesonboard.com/blog/epics-and-user-stories)
+- [Epics](https://www.youtube.com/watch?v=ogV2r9579WI)
+- [CI PP4](https://www.youtube.com/watch?v=Q5cdZXomzVg&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=44)
+- [Portfolio Project 4: The guide to MVP](https://www.youtube.com/watch?v=vIv1c6RLBac&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=34)
 - PP4 walkthrough projects.
-- Used Google for website text and post content.
+- Used Google and Bing Search for website text and post content. 
+- I used Perplexity.ai and Grammarly for checking my writing for mistakes in grammar, spelling, and punctuation.
+
+## Readme
+- [Readme](https://github.com/ShizukaDonaghue/happy-beans)
+- [Readme and Testing](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/)
+- [Readme](https://github.com/ShizukaDonaghue/happy-beans)
+- [Readme](https://github.com/g-omarsdottir/helping-hands-happy-hearts)
+
 
 ## Acknowledgements
 
-- Many thanks to **my husband and son** for their continued support.
-- Thank you to my Code Institute mentor **Jack Wachira** for his positive support, guidance and advice.
-- Thanks to **Kristyna**, Cohort facilitator at Code Institute how she always there to give all the infromation needed and for keeping positive the energy up.
-- Thanks to my **fellow students** for constantly inspiring on slack and being there for each other to help in trouble.
-
-**Due to time constraints, I was unable to add more features and functionality. However, I am happy and satisfied with my project and its current learning outcomes.** *"Putting a lot of time and effort into this project feels GREAT!"*
