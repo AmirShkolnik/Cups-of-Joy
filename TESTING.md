@@ -365,10 +365,10 @@ Responsiveness and interactive elements were tested on various devices and throu
 
 | Browser           | Features Tested | Pass/Fail |
 |-------------------------|-----------------|-----------|
-| Google Chrome      | All            | Pass      |
-| Microsoft Edge | All            | Pass      |
-| Mozilla Firefox          | All | Pass |
-| Opera               | All | Pass |
+| <details> <summary>**Click to View Google Chrome**</summary> ![features](documentation/browser/home-chrom-desk.png)</details>   | All            | Pass      |
+| <details> <summary>**Click to View Microsoft Edge**</summary> ![features](documentation/browser/home-explorer-desk.png)</details>  | All            | Pass      |
+| <details> <summary>**Click to View Mozilla Firefox**</summary> ![features](documentation/browser/home-mozila-desk.png)</details>         | All | Pass |
+| <details> <summary>**Click to View Opera**</summary> ![features](documentation/browser/home-opera-desk.png)</details>            | All | Pass |
 
 ### Responsiveness
 
@@ -575,6 +575,7 @@ As this was my first Django/Database project, most of the bugs that I encountere
 ![errors](documentation/errors/review-status.png)
 
 ### Unknown Bugs
+
 I am not aware of any remaining bugs.
 
 ### Must Improve
