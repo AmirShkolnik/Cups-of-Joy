@@ -6,24 +6,14 @@
 <div class="container">
     <section class="jumbotron text-center bg-white">
         <div class="container">
-{% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
-<div class="container pt-5">
-    <form method="post">
-        {% csrf_token %}
-        <h2>Confirm Delete Your Review</h2>
-        <p>Are you sure you want to delete "{{ review.title }}"?</p>
-        <button type="submit" class="btn btn-primary hover">Confirm</button>
-<a href="{% url 'coffeeshop:add_review' %}" class="btn btn-secondary">Cancel</a>
-    </form>
-</div>    
-</div>
-</section>
+            <h2>Confirm to Delete Your Review</h2>
+            <p>Are you sure you want to permanently delete the review "<strong>{{ post.title }}</strong>"?</p>
+            <form method="post" action="{% url 'coffeeshop:delete_review' post.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary hover">Confirm</button>
+                <a href="{% url 'coffeeshop:add_review' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </section>
 </div>
 {% endblock %}

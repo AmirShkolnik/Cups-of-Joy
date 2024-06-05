@@ -129,6 +129,15 @@ class Delete(DeleteView):
         context['messages'] = messages.get_messages(self.request)
         return context
 
+@login_required
+def delete_review(request, pk):
+    review = get_object_or_404(Review, pk=pk, author=request.user)
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, "Your review was deleted successfully.")
+        return redirect('coffeeshop:index')
+    return render(request, 'coffeeshop/confirm-delete.html', {'post': review})
+
 
 @login_required
 def publish_review(request, pk):

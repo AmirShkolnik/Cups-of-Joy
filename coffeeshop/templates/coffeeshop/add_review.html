@@ -44,7 +44,7 @@
                     <p class="card-text">{{ review.excerpt }}</p>
                     <a href="{% url 'coffeeshop:single' review.slug %}" class="btn btn-sm btn-outline-primary">View</a>
                     <a href="{% url 'coffeeshop:edit' review.pk %}" class="btn btn-sm btn-outline-primary">Edit</a>
-                    <a href="{% url 'coffeeshop:delete' review.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                    <a href="{% url 'coffeeshop:delete_review' review.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
                 </div>
             </div>
         </div>
