@@ -570,11 +570,9 @@ As this was my first Django/Database project, most of the bugs that I encountere
 
 ### Known Bugs
 
-When a user is logged-in he can see other users review status. This should be for author only.
+**Author review ststus** - When a user is logged-in he can see other users review status. This should be for author only.
 
 ![errors](documentation/errors/review-status.png)
-
-
 
 ### Unknown Bugs
 I am not aware of any remaining bugs.
