@@ -23,9 +23,6 @@ Join [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) today and 
 
 # Table of Contents
 - [Introduction](#introduction)
-  - [Cups Of Joy](#cups-of-joy)
-    - [Our Website Features](#our-website-features)
-    - [Get Involved](#get-involved)
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [UX - User Experience](#ux---user-experience)
@@ -116,11 +113,13 @@ Live Version: [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/)
 - Discovering the latest trends, techniques, and best practices in the world of coffee.
 - Facilitating discussions and exchanges within a supportive coffee-loving community.
 
-Accessible across various devices and browsers, Cups of Joy aims to demystify the complexities of coffee, making the art of brewing and appreciation accessible to a diverse audience. Whether you're a seasoned barista, a coffee connoisseur, or a curious newcomer, the platform offers tailored resources to support your journey into the world of coffee.
+Accessible across various devices and browsers, [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) aims to demystify the complexities of coffee, making the art of brewing and appreciation accessible to a diverse audience. Whether you're a seasoned barista, a coffee connoisseur, or a curious newcomer, the platform offers tailored resources to support your journey into the world of coffee.
 
-Cups of Joy envisions fostering a collaborative ecosystem where members can learn, share, and grow together in their love for coffee. By engaging with the platform, users can stay ahead of coffee trends, enhance their brewing skills, and connect with like-minded individuals. As the platform evolves, future enhancements will include advanced interactive features, further enriching the user experience and community engagement around the shared passion for coffee.
+[**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) envisions fostering a collaborative ecosystem where members can learn, share, and grow together in their love for coffee. By engaging with the platform, users can stay ahead of coffee trends, enhance their brewing skills, and connect with like-minded individuals. As the platform evolves, future enhancements will include advanced interactive features, further enriching the user experience and community engagement around the shared passion for coffee.
 
 # UX - User Experience
+
+![Home Page](documentation/Features/home.png)
 
 The UX design of Cups Of Joy revolves around creating an immersive and engaging experience for coffee enthusiasts. With a focus on community, personalization, and seamless navigation, we aim to provide a delightful journey through the world of coffee. Here's a breakdown of our user experience:
 
@@ -134,6 +133,8 @@ The UX design of Cups Of Joy revolves around creating an immersive and engaging 
 - **Seamless Contribution:** Our platform empowers users to contribute their own content, whether it's writing reviews, sharing personal coffee stories, or offering tips and recommendations to fellow enthusiasts.
 
 Overall, the UX design of Cups Of Joy aims to create an immersive and inclusive environment where coffee lovers can explore, learn, and connect, all while savoring the rich flavors and experiences that the world of coffee has to offer.
+
+![Articles Page](documentation/Features/articles-page.png)
 
 # Design
 
