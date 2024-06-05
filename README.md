@@ -685,9 +685,9 @@ Security is a paramount concern for a platform like Cups Of Joy, which handles u
 | Add a Review                     | A logged-in user can add a new coffee shop review by filling out a form with details such as an image, headline, excerpt, and choosing between draft or publish status. The review is then submitted for approval by the admin through the Django dashboard. For a non-logged-in user, they will be redirected to the sign-in page when attempting to access the "Add New Review" page, as authentication is required to create a new review. When a logged-in user successfully submits a review for approval, a success message can be displayed, such as "Your review has been submitted for approval." If a logged-in user attempts to navigate away from the "Add New Review" page without submitting, a confirmation dialog display, asking if they want to discard their changes. <details> <summary>**Click to View The Add a Review Page**</summary> ![features](documentation/Features/add-a-review.png)</details> <details> <summary>**Click to View The Add a Review Message**</summary> ![features](documentation/messages/add-review-message.png)</details>                                                                                                                                                                                                   | Logged-in User |
 | Review Removal Confirmation Page | For a logged-in user, the Review Removal Confirmation Page allows them to confirm the deletion of their own review before it is permanently removed. For a non-logged-in user, they will be redirected to the sign-in page since they cannot delete reviews they did not create. <details> <summary>**Click to View The Delete a Review Page**</summary> ![features](documentation/Features/delete-a-review.png)</details> <details> <summary>**Click to View The Delete a Review Message**</summary> ![features](documentation/Features/delete-a-review-message.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Logged-in User |
 | Edit a Review                    | Logged-in users who are the authors of a review can edit and update their existing reviews. Only the author of a review or a superuser can access and modify the review details through this page. <details> <summary>**Click to View The Edit a Review Page**</summary> ![features](documentation/Features/edit-a-review.png)</details> <details> <summary>**Click to View The Edit a Review Message**</summary> ![features](documentation/messages/edit-a-review-message.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Logged-in User |
-| 404 Page                         | The 404 error page is displayed when the requested URL or page cannot be found on the server. It provides a user-friendly message indicating that the requested resource is unavailable, along with a button to return to the homepage. <details> <summary>**Click to View The 404 Page**</summary> ![features](documentation/Features/404-page.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Everyone       |
-| 403 Page                         | The 403 error page is shown when the user does not have permission to access the requested resource. It informs the user that access to the requested page is forbidden, likely due to insufficient permissions or authentication issues. A button is provided to return to the homepage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Everyone       |
-| 500 Page                         | The 500 error page is displayed when an internal server error occurs, indicating that the server encountered an unexpected condition that prevented it from fulfilling the request. It provides a user-friendly message stating that the requested page cannot be found, along with a button to return to the homepage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Everyone       |
+| Error - 404 Page                         | The 404 error page is displayed when the requested URL or page cannot be found on the server. It provides a user-friendly message indicating that the requested resource is unavailable, along with a button to return to the homepage. <details> <summary>**Click to View The 404 Page**</summary> ![features](documentation/Features/404-page.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Everyone       |
+| Error - 403 Page                         | The 403 error page is shown when the user does not have permission to access the requested resource. It informs the user that access to the requested page is forbidden, likely due to insufficient permissions or authentication issues. A button is provided to return to the homepage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Everyone       |
+| Error - 500 Page                         | The 500 error page is displayed when an internal server error occurs, indicating that the server encountered an unexpected condition that prevented it from fulfilling the request. It provides a user-friendly message stating that the requested page cannot be found, along with a button to return to the homepage.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Everyone       |
 | Admin Panel                        | The Django admin panel allows administrators to manage the application's data through a user-friendly interface. <details> <summary>**Click to View The Admin Panel**</summary> ![features](documentation/Features/admin.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Admin       |
 ---
 
@@ -704,168 +704,40 @@ The table below describes the CRUD operations that can be performed on Cups Of J
 | **Favourites**         | Add a favourite            | View bookmarked posts      | -                    | Remove bookmarks       |
 |  **Articles**     | -                         | -        | -                    | -                      |
 
-Certainly, here's a detailed existing features section for Software Stacks using the provided template:
-
-### All Existing Features with Screenshots
-
-#### Home Page
-
-  - The initial point of contact with Software Stacks, where users can understand the platform's offerings. Featured articles, latest stacks, and prominent categories are displayed here.
-
-  ![Home Page Screenshot](documentation/screenshots/home.JPG)
-
-#### User Registration, Login, and Logout
-
-  - New users can sign up by providing their username, email, and password. Existing users can log in using their credentials to access personalized features.
-
-  **Registration/SignUp**
-      ![Sign Up Screenshot](documentation/screenshots/signup.JPG)
-
-  **Login/SignIn**  
-    ![Login Screenshot](documentation/screenshots/signin.JPG)
-
-  **Logout/Signout**
-    ![Logout Screenshot](documentation/screenshots/signout.JPG)
-
-#### User Profile
-
-  - Upon logging in, users can view and edit their profiles, see their published stacks, and manage bookmarks and likes.
-
-  ![Profile Screenshot](documentation/screenshots/login2.JPG)
-  ![Profile Screenshot](documentation/screenshots/profile.JPG)
-
-#### Add Post
-
-  - Registered users can contribute by creating their own stacks. They can include a title, content, images, and select categories for their Post.
-
-  ![Add Post Screenshot](documentation/screenshots/add_stack.JPG)
-
-#### Search Functionality
-
-  - Both registered and unregistered users can search for specific stacks or browse categories using the search bar on the navigation menu.
-
-  ![Search Screenshot](documentation/screenshots/search.JPG)
-
-#### Post Details
-
-  - Users can read detailed views of each post, engage with content through likes, bookmarks, and comments.
-
-  ![Post Details Screenshot](documentation/screenshots/postdetail.JPG)
-
-#### Comments and Interactions
-
-  - Users can leave comments on stacks, engage in discussions, and provide feedback to authors. They can also like and bookmark stacks for future reference.
-
-  ![Comments Screenshot](documentation/screenshots/leavecomment.JPG)
-  ![Comments Screenshot](documentation/screenshots/posting_comment-as.JPG)
-  ![Comments Screenshot](documentation/screenshots/approvedcomment.JPG)
-  ![Comments Screenshot](documentation/screenshots/unapprovedcomments.JPG)
-
-#### Responsive Navigation Bar
-
-  - The navigation bar provides easy access to all sections of the site, adjusts for different screen sizes, and includes user authentication options.
-
-  ![Navigation Bar Screenshot](documentation/screenshots/navbar2.JPG)
-  ![Navigation Bar Screenshot](documentation/screenshots/navbar.JPG)
-
-#### Categories
-
-  - Users can browse stacks by categories, such as Front-End Development, E-Commerce, and Predictive Analytics, to find content tailored to their interests.
-
-  ![Categories Screenshot](documentation/screenshots/categories.JPG)
-  ![Categories Screenshot](documentation/screenshots/cat_fed.JPG)
-  ![Categories Screenshot](documentation/screenshots/cat_ecom.JPG)
-  ![Categories Screenshot](documentation/screenshots/cat_pa.JPG)
-
-#### My Bookmarks
-
-  - Logged-in users have a personal bookmarks section where they can save stacks for later reading or reference. This personalized list helps users quickly access their favorite content.
-
-  ![My Bookmarks Screenshot](documentation/screenshots/bookmarkedposts.JPG)
-  ![My Bookmarks Screenshot](documentation/screenshots/empty-bookmark.JPG)
-
-#### My Likes
-
-    - The 'My Likes' feature allows users to revisit stacks they have liked. This feature encourages users to engage with content and authors they appreciate.
-
-  ![My Likes Screenshot](documentation/screenshots/likedposts.JPG)
-  ![My Likes Screenshot](documentation/screenshots/empty-liked.JPG)
-
-#### My Comments
-
-  - Users can review and manage their comments across different stacks. This section provides users with an overview of their contributions and engagements within the community.
-  
-  ![My Comments Screenshot](documentation/screenshots/commentedposts.JPG)
-  ![Comments Screenshot](documentation/screenshots/nocommentempty.JPG)
-
-#### My Posts
-
-  - Content creators can manage their stacks through 'My Posts'. They can view all their contributions, edit existing stacks, or delete any content they no longer wish to share.
-
-  ![My Posts Screenshot](documentation/screenshots/yourposts.JPG)
-  ![My Posts Screenshot](documentation/screenshots/noposts_empty.JPG)
-
-#### Pagination
-
-  - Users can navigate through multiple pages of content seamlessly with pagination controls. This feature ensures that the website remains uncluttered and enhances user experience by dividing content into manageable and orderly sections. Users can easily move between pages using 'Previous', 'Next', or direct page number links.
-
-  ![My Pagination Screenshot](documentation/screenshots/pagination.JPG)
-  
-
-#### Footer
-
-  - The footer is consistent across the platform and offers additional navigation options, social media links, and legal information.
-
-  ![Footer Screenshot](documentation/screenshots/footer.JPG)
-
-#### Admin Panel
-
-  - Administrators have access to a backend panel where they can manage users, stacks, categories, and comments.
-
-  ![Admin Panel Screenshot](documentation/screenshots/allauth.JPG)
-
-#### Error Handling
-
-  - Custom error pages are designed to inform users of various errors such as 404 Not Found or 403 Forbidden, along with a user-friendly message and a link to navigate back home.
-
-  ![404 Error Page Screenshot](documentation/screenshots/404.JPG)
-  ![403 Error Page Screenshot](documentation/screenshots/403.JPG)
 
 ## Future Features
 
-**Advanced Search Capabilities**
-- **Description**: Implement advanced search options to allow users to filter posts by date, popularity, and specific tags or categories.
-- **Benefit**: Helps users find the content they are interested in more efficiently.
+Here are some future feature suggestions for the "Cups of Joy" project:
 
-**User Profile Customization**
-- **Description**: Allow users to customize their profiles with themes, profile pictures, and bio information.
-- **Benefit**: Enhances user engagement and personalization on the platform.
+### Search Bar Enhancements
 
-**Real-time Notifications**
-- **Description**: Introduce real-time notifications for likes, comments, and new posts from followed categories or authors.
-- **Benefit**: Keeps users informed and engaged with the content they care about most.
+- **Description:** Implement an advanced search bar that allows users to filter coffee shops based on various criteria such as location, price range, amenities, and user ratings.
+- **Benefit:** An enhanced search bar will provide users with a more personalized and efficient way to find their desired coffee shops, improving the overall user experience and increasing engagement with the platform.
 
-**Mobile App**
-- **Description**: Develop a mobile application for iOS and Android to access Software Stacks on the go.
-- **Benefit**: Increases accessibility and user engagement by providing a convenient way to browse and interact with content from mobile devices.
+### Interactive Maps Integration
 
-**API for Developers**
-- **Description**: Offer a public API that allows developers to access and integrate Software Stacks content into their own applications.
-- **Benefit**: Expands the platform’s reach and utility, fostering an ecosystem around Software Stacks content.
+- **Description:** Integrate interactive maps that display the locations of coffee shops, along with additional information such as operating hours, contact details, and user reviews.
+- **Benefit:** Interactive maps will make it easier for users to visualize the locations of coffee shops and plan their visits accordingly, enhancing the overall usability and convenience of the platform.
 
-**Multi-language Support**
-- **Description**: Add support for multiple languages to cater to a global audience.
-- **Benefit**: Makes the platform accessible to non-English speaking users, expanding the user base.
+### Comprehensive Review Rating System
 
-**Dark Mode**
-- **Description**: Introduce a dark mode feature to enhance visual ergonomics by reducing eye strain in low-light conditions.
-- **Benefit**: Improves user comfort and accessibility, particularly during night-time browsing.
+- **Description:** Implement a comprehensive review rating system that allows users to rate coffee shops based on various aspects such as ambiance, service, coffee quality, and value for money.
+- **Benefit:** A comprehensive review rating system will provide users with more detailed and insightful information about coffee shops, helping them make informed decisions and encouraging more engagement with the platform.
 
-**Forums and Discussion Boards**
-- **Description**: Implement forums and discussion boards where users can engage in deeper discussions and build community.
-- **Benefit**: Strengthens the community aspect of Software Stacks, making it a hub for like-minded enthusiasts to share and learn.
+### Social Engagement Features
 
-These features are designed to enhance the functionality and user experience of Software Stacks, driving greater user engagement and expanding the platform’s capabilities.
+- **Description:** Introduce features that allow users to like, comment on, and favorite reviews, as well as share their experiences on social media platforms.
+- **Benefit:** Social engagement features will foster a sense of community among users, encourage user-generated content, and increase the platform's visibility and reach on social media.
+
+### Community Forum and Discussion Boards
+
+- **Description:** Develop a dedicated forum or discussion board where users can share their thoughts, experiences, and recommendations related to coffee shops and the coffee culture.
+- **Benefit:** A community forum will create a space for users to connect, engage in discussions, and share their passion for coffee, fostering a strong sense of community and increasing user loyalty to the platform.
+
+### Personalized Newsletter and Updates
+
+- **Description:** Implement a personalized newsletter and update system that delivers relevant information, such as new coffee shop openings, special events, and promotions, based on users' preferences and location.
+- **Benefit:** A personalized newsletter will keep users informed and engaged with the latest happenings in the coffee scene, ensuring they stay up-to-date and increasing their likelihood of returning to the platform.
 
 # Technology Used
 
