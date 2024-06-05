@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/images/mug-white.png" alt="Cups Of Joy Logo">
+  <img src="static/images/mug-black.png" alt="Cups Of Joy Logo">
 </p>
 <h1 align="center">Cups Of Joy</h1>
 
@@ -1079,3 +1079,8 @@ The following sites were used to gather the photographic media used:
 
 ## Acknowledgements
 
+- My mentor, Antonio Rodriguez, for his guidance and encouragement.
+- My fellow student at Code Institute, especially [Gudrun Omarsdottir](https://github.com/g-omarsdottir), for guidance, inspiration, testing and proofreading.
+- My Code Institute class facilitator, Kristyna Wach, for her cheerful motivation and encouragement.
+- Slack community for support and advice.
+- Stackoverflow community for information.
