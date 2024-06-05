@@ -30,8 +30,6 @@ Join [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) today and 
   - [Colour Scheme](#colour-scheme)
   - [Fonts](#fonts)
     - [Google Fonts](#google-fonts)
-      - [Roboto](#roboto)
-      - [Lato](#lato)
 - [Project Planning](#project-planning)
   - [Strategy Plane](#strategy-plane)
   - [Agile Methodologies - Project Management:](#agile-methodologies---project-management)
@@ -105,6 +103,8 @@ Join [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) today and 
 
 Live Version: [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/)
 
+![Home Page](documentation/Features/home.png)
+
 **Cups of Joy**is a vibrant online platform celebrating the art of coffee and fostering a sense of community. It serves as a communal hub for:
 
 - Joining a passionate community of coffee enthusiasts and professionals.
@@ -118,8 +118,6 @@ Accessible across various devices and browsers, [**Cups of Joy**](https://cupsof
 [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) envisions fostering a collaborative ecosystem where members can learn, share, and grow together in their love for coffee. By engaging with the platform, users can stay ahead of coffee trends, enhance their brewing skills, and connect with like-minded individuals. As the platform evolves, future enhancements will include advanced interactive features, further enriching the user experience and community engagement around the shared passion for coffee.
 
 # UX - User Experience
-
-![Home Page](documentation/Features/home.png)
 
 The UX design of Cups Of Joy revolves around creating an immersive and engaging experience for coffee enthusiasts. With a focus on community, personalization, and seamless navigation, we aim to provide a delightful journey through the world of coffee. Here's a breakdown of our user experience:
 
@@ -142,7 +140,7 @@ Overall, the UX design of Cups Of Joy aims to create an immersive and inclusive 
 
 The color scheme for Cups Of Joy is carefully crafted to evoke a warm, inviting, and coffee-inspired atmosphere. Here's a detailed breakdown:
 
-[Coolors](https://color.romanuke.com/tsvetovaya-palitra-1160/) - Colour Scheme for Cups Of Joy website
+[Colors by romanuke.com](https://color.romanuke.com/tsvetovaya-palitra-1160/) - Colour Scheme for Cups Of Joy website
 
 ![Palette](documentation/colour/colorscheme.png)
 
@@ -254,6 +252,8 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 **User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
 
+![Kanban Board](documentation/Features/kanban-board.png)
+
 | Epic                                               | Title                                    | User Story                                                                                                                                                                        |  MoSCoW Priority |  Milestone                   |
 |----------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------------------|
 | EPIC 1 : Website Content   Creation and Publishing | Manage and Publish Articles              | As an admin, I want to manage   and publish articles, so that I can control the website's content.                                                                                | **Must Have**    | Core Features Development    |
@@ -289,6 +289,8 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 #### Milestones
 
+![issues](documentation/Features/issues.png)
+
 **A milestone**, is a major checkpoint or goal in a project's timeline that signifies the completion of a key phase or the achievement of a significant objective.
 
 #### Epics
@@ -297,6 +299,7 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 ##### EPIC 1: Website Content Creation and Publishing
 - **Goal:** This epic focuses on creating engaging and informative website content to attract, educate, and retain visitors on the Cups of Joy platform.
+![Epic 1](documentation/Features/epic-1.png)
 - **Associated User Stories:**
   - Manage and Publish Articles
   - Moderate User-Submitted Reviews
@@ -309,6 +312,7 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 ##### EPIC 2: Website Usability and Navigation
 - **Goal:** The Website Usability and Navigation epic aims to deliver an intuitive and enjoyable experience through optimized design, layout, and navigation elements for all user roles.
+![Epic 2](documentation/Features/epic-2.png)
 - **Associated User Stories:**
   - Intuitive Website Navigation
   - Account Features Navigation
@@ -319,6 +323,7 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 ##### EPIC 3: Content Discovery and Exploration
 - **Goal:** This epic enables easy content discovery and exploration for all users, including browsing articles, reviews, likes, and comments, through user-friendly features that surface relevant and engaging information.
+![Epic 3](documentation/Features/epic-3.png)
 - **Associated User Stories:**
   - Browse and Read Articles
   - View Coffee Shop Reviews
@@ -331,6 +336,7 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 ##### EPIC 4: User Account
 - **Goal:** The User Account epic covers account creation, management, and personalization features.
+![Epic 4](documentation/Features/epic-4.png)
 - **Associated User Stories:**
   - Create and Manage User Profile
   - User Registration
