@@ -65,6 +65,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Navbar
 
+![Navbar](documentation/Features/navigation-user.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Links - Click to open links | Redirect to each page | Passed |
@@ -75,6 +77,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Home
 
+![Home](documentation/Features/home.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Click on the clickable "Login" box | Redirect to the relevant pages | Passed|
@@ -83,6 +87,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on the clickable "Home" box | Redirect to the relevant pages | Passed|
 
 ### Articles List Page
+
+![Articles List Page](documentation/Features/articles-page.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -93,6 +99,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Date - Article published date | Should display | Passed |
 
 ### Singel Article Page 
+
+![Singel Article Page ](documentation/Features/single-article-page-user.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -107,6 +115,10 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Reviews List Page
 
+![Reviews List Page](documentation/Features/reviews-page-empty.png)
+
+![NReviews List Page](documentation/Features/reviews-page-slide.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Navbar - Click on "Reviews" button | Redirect to the Reviews page | Passed |
@@ -119,6 +131,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Singel Review Page 
 
+![Singel Review Page](documentation/Features/reviews-page-slide.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Review - Click on a Review from Reviews list page | Redirect to the correct Review page | Passed |
@@ -126,6 +140,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Review status| Should NOT display | Passed |
 
 ### Sign Up Page
+
+![Sign Up Page](documentation/Features/sign-up.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -137,6 +153,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Sign In Page
 
+![Sign In Page](documentation/Features/sign-in.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Navbar - Click on Login | Redirect to Login page - accounts/login | Passed |
@@ -145,6 +163,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Register link | Redirect to the correct Page | Passed |
 
 ### Footer
+
+![Footer](documentation/Features/footer.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -155,12 +175,18 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### About Us
 
+![About Us](documentation/Features/about.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
 | Click Submit - missing fields | Notification: "Fill this field." | Passed |
 
 ### As a logged in User 
+
+![Sign In](documentation/messages/sign-in-message.png)
+
+![Navbar](documentation/Features/navigation-logged-in-drop.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -187,6 +213,10 @@ We tested this webpage very carefully many times while we were making it. We did
 | Delete - Single Review - click Delete | Should redirect to coffeeshop/delete/review-id-number for confirmation | Passed |
 
 ### My Favourites Page
+
+![My Favourites Page](documentation/Features/my-favourites.png)
+
+![Add Favourite](documentation/messages/add-favourites-message.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -304,7 +334,7 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 
 Automated testing plays a critical role in the Software Stacks development process, ensuring the integrity and functionality of the application as new features are added or existing features are modified. This screenshot below provides an overview of our automated test suite's execution.
 
-![screenshot](documentation/screenshots/autotest.JPG)
+![Auto Test Results](documentation/automated-tests-images/auto-test.png)
 
 ### Running the Tests
 
@@ -331,8 +361,6 @@ This command invokes the Django test runner, which is responsible for discoverin
 Upon executing the command, the test runner will scan the project's directories, identify the test files, and systematically execute each test case. The output in the terminal will provide detailed information about the test results, including the number of tests run, any failures or errors encountered, and a summary of the overall test suite performance.
 
 By following these steps, you can ensure that the Cups Of Joy project adheres to the expected behavior and functionality, catching any regressions or issues early in the development cycle. Regular execution of the automated tests is a crucial practice in maintaining code quality and ensuring a robust and reliable software solution.
-
-![Auto Test Results](documentation/automated-tests-images/auto-test.png)
 
 ### Test Database
 
