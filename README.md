@@ -693,16 +693,16 @@ Security is a paramount concern for a platform like Cups Of Joy, which handles u
 
 ### CRUD Functionality
 
-The table below describes the CRUD operations that can be performed on Cups Of Joy main features by a registered, logged-in user.
+The table below describes the CRUD operations that can be performed on Cups Of Joy main features by a registered, logged-in user and admin.
 
 | Feature               | Create                    | Read                        | Update               | Delete                 |
 |-----------------------|---------------------------|-----------------------------|----------------------|------------------------|
 | **User Account**     | Sign up for a new account | View own content | Edit own content     | Deactivate/Delete account |
 | **Reviews**             | Publish new reviews        | Browse and read all articles and reviews  | Edit own reviews       | Remove own reviews       |
 | **Comments**          | Comment on articles          | View comments              | Edit own comments    | Delete own comments    |
-| **Likes**             | Like articles   | See likes on articles | -                    | Unlike articles  |
-| **Favourites**         | Add a favourite            | View bookmarked posts      | -                    | Remove bookmarks       |
-|  **Articles**     | -                         | -        | -                    | -                      |
+| **Likes**             | Like articles   | View likes on articles | Like/Unlike - Update amount                    | Unlike articles  |
+| **Favourites**         | Add a favourite            | View favourites articles      |       Add/Remove - change color              | Remove own favourites       |
+| **Articles**     | Add an article                         | View articles        | Edit own articles                    | Delete own articles                     |
 
 
 ## Future Features
