@@ -80,19 +80,8 @@ Join [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) today and 
   - [Others](#others)
 - [Testing](#testing)
 - [Deployment](#deployment)
-  - [GitHub](#github)
-  - [Gitpod](#gitpod)
-  - [Heroku](#heroku)
-  - [ElephantSQL](#elephantsql)
-  - [Cloudinary](#cloudinary)
 - [Cloning and Forking](#cloning-and-forking)
-  - [Cloning the Repository](#cloning-the-repository)
-  - [Forking the Repository](#forking-the-repository)
 - [Credits](#credits)
-  - [Code](#code)
-  - [Media](#media)
-  - [Additional reading/tutorials/books/blogs](#additional-readingtutorialsbooksblogs)
-  - [Acknowledgements](#acknowledgements)
 
 # Overview
 
@@ -687,6 +676,9 @@ By using Bootstrap's smart design, the "Cups of Joy" website can be easily viewe
 ## Existing Features
 
 ### All Existing Features with Screenshots
+
+Features descriptions, feedback messages and images
+
 | Feature                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Who            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | Logo                             | The logo consists of an image of a white mug and the text "CUP of JOY" in a stylized font. The word "CUP" is in a bold blue color, the word "of" is in white, and the word "JOY" is in a thin blue font.<details> <summary>**Click to View The Logo**</summary> ![features](documentation/Features/logo.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |    Everyone            |
@@ -957,17 +949,7 @@ echo web: gunicorn app_name.wsgi > Procfile
 replace app_name with the name of your primary Django app name; the folder where settings.py is located
 
 ## CI database
-- **Database Hosting:** The Code Institute (CI) database systems are employed to store and manage the application's data during development and deployment phases.
-
-This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
-
-To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
-- Click **Create New Instance** to start a new database.
-- Provide a name (this is commonly the name of the project: tribe).
-- Select the **Tiny Turtle (Free)** plan.
-- You can leave the **Tags** blank.
-- Select the **Region** and **Data Center** closest to you.
-- Once created, click on the new database name, where you can view the database URL and Password.
+- **Database Hosting:** The Code Institute (CI) database systems are employed to store and manage the application's data during development and deployment phases. For Code Institute students only.
 
 ## Cloudinary
 
@@ -1090,11 +1072,10 @@ The following sites were used to gather the photographic media used:
 - Used Google and Bing Search for website text and post content. 
 - I used Perplexity.ai and Grammarly for checking my writing for mistakes in grammar, spelling, and punctuation.
 
-## Readme
-- [Readme](https://github.com/ShizukaDonaghue/happy-beans)
-- [Readme and Testing](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/)
-- [Readme](https://github.com/ShizukaDonaghue/happy-beans)
-- [Readme](https://github.com/g-omarsdottir/helping-hands-happy-hearts)
+## Readme and Testing Inspiration
+- [Readme by Shizuka Donaghue](https://github.com/ShizukaDonaghue/happy-beans)
+- [Readme and Testing by Swathi Keshavamurthy](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4/)
+- [Readme by Gudrun Omarsdottir](https://github.com/g-omarsdottir/helping-hands-happy-hearts)
 
 
 ## Acknowledgements
