@@ -441,6 +441,8 @@ Search and filtering capabilities to easily find relevant coffee shops and conte
 
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
+![wireframes](documentation/wireframes/home.png)
+
 #### Home Page Wireframes
 <details>
 <summary>Click to View Home Page wireframes</summary>
