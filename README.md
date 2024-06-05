@@ -764,25 +764,64 @@ Here are some future feature suggestions for the "Cups of Joy" project:
 
 ## Libraries and Frameworks
 
-- **asgiref (3.8.1)**: Supports asynchronous capabilities in Django, enabling better performance for asynchronous apps.
-- **cloudinary (1.36.0)**: Manages cloud-based image and video storage and optimizations, integrating seamlessly with web applications for media management.
-- **crispy-bootstrap5 (0.7)**: Allows Django forms to be styled effortlessly with Bootstrap 5, enhancing form presentation without extensive front-end coding.
-- **dj-database-url (0.5.0)**: Simplifies database configuration using a URL scheme, which is especially useful for deployments on platforms like Heroku.
-- **dj3-cloudinary-storage (0.0.6)**: Integrates Django projects with Cloudinary for handling static and media files storage.
-- **Django (4.2.11)**: The main web framework for the project, providing the necessary tools to build a secure, scalable, and maintainable web application.
-- **django-allauth (0.57.2)**: Adds authentication, registration, and account management capabilities, supporting both traditional and social authentication methods.
-- **django-bootstrap4 (24.1)**: Facilitates the use of Bootstrap 4 in Django templates for consistent and responsive design across the application.
-- **django-crispy-forms (2.1)**: Helps in rendering Django forms in a DRY (Don't Repeat Yourself) manner, allowing form styling through template packs.
-- **django-summernote (0.8.20.0)**: Provides a rich text editor for Django forms, enhancing text input fields with WYSIWYG editing capabilities.
-- **gunicorn (20.1.0)**: Serves as a Python WSGI HTTP Server for UNIX, enabling Django apps to handle more concurrent traffic.
-- **oauthlib (3.2.2)**: A generic implementation of OAuth for sharing authentication across services, used in conjunction with django-allauth.
-- **psycopg2 (2.9.9)**: Acts as a PostgreSQL database adapter for Python, essential for database operations in Django projects using PostgreSQL.
-- **PyJWT (2.8.0)**: A Python library for encoding, decoding, and verifying JSON Web Tokens (JWT), useful for stateless authentication mechanisms.
-- **python3-openid (3.2.0)**: Supports Python 3 applications in implementing OpenID authentication, often used in conjunction with django-allauth.
-- **requests-oauthlib (2.0.0)**: Combines the power of the `requests` library with `oauthlib` for OAuth 1 and OAuth 2 authentication of requests.
-- **sqlparse (0.4.4)**: A non-validating SQL parser for Python, which provides formatting and syntax analysis for SQL scripts used within Django.
-- **urllib3 (1.26.18)**: A powerful HTTP client for Python, used for making HTTP requests in various parts of the application.
-- **whitenoise (5.3.0)**: Simplifies static file management in Django by allowing the app to serve its own static files, improving performance and reducing complexity in production setups.
+Here are short descriptions for the libraries and frameworks used, following the provided formula:
+
+- **asgiref**: A Python package that provides a sync and async-compatible ASGI (Asynchronous Server Gateway Interface) specification implementation.
+
+- **black**: A Python code formatter that enforces a consistent code style by parsing Python syntax and re-printing it with a standard set of rules.
+
+- **click**: A Python package for creating command-line interfaces with options, arguments, and commands.
+
+- **cloudinary**: A cloud-based service that provides an end-to-end image and video management solution for websites and mobile applications.
+
+- **crispy-bootstrap5**: A Django extension that provides a way to easily render Django forms using Bootstrap 5 styles.
+
+- **dj-database-url**: A Django utility that allows you to parse database connection URLs.
+
+- **dj3-cloudinary-storage**: A Django package that facilitates the integration of Cloudinary with Django's file storage system.
+
+- **Django**: A high-level Python web framework that follows the Model-View-Template architectural pattern.
+
+- **django-allauth**: A set of Django applications that handle account authentication, registration, and third-party account integration.
+
+- **django-crispy-forms**: A Django application that provides a way to easily render Django forms using various CSS frameworks.
+
+- **django-js-asset**: A Django application that allows you to include JavaScript files in your templates using Django's static file handling.
+
+- **django-resized**: A Django application that provides a template tag for rendering resized versions of images.
+
+- **django-summernote**: A Django application that integrates the Summernote WYSIWYG editor into Django's admin interface.
+
+- **django-widget-tweaks**: A Django application that provides a set of template tags and filters for tweaking form field rendering.
+
+- **gunicorn**: A Python WSGI HTTP server for running Python web applications.
+
+- **oauthlib**: A Python library that provides a way to interact with various OAuth service providers.
+
+- **pathspec**: A Python library for pattern matching of file paths.
+
+- **pillow**: A Python Imaging Library (PIL) fork that adds support for opening, manipulating, and saving many different image file formats.
+
+- **psycopg2**: A Python package that provides a database adapter for the PostgreSQL database server.
+
+- **PyJWT**: A Python library for encoding and decoding JSON Web Tokens (JWT).
+
+- **python3-openid**: A Python library that provides support for the OpenID decentralized authentication protocol.
+
+- **requests-oauthlib**: A Python library that provides an easy-to-use implementation of the OAuth request-signing logic.
+
+- **sqlparse**: A Python library that provides non-validating SQL parser for Python.
+
+- **urllib3**: A Python library that provides a user-friendly HTTP client.
+
+- **whitenoise**: A Python package that provides a way to serve static files from a Django application.
+
+Citations:
+[1] https://developer.mozilla.org/en-US/docs/Web/CSS
+[2] https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[3] https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+[4] https://www.slideshare.net/slideshow/coffee-shop-management-systempptx/255161865
+[5] https://www.beliveweb.com/coffee-shop-website-design.html
 
 ## Validation Tools
 - [**W3C Markup Validation Service**](https://validator.w3.org/): For validating HTML5 code.
