@@ -704,6 +704,43 @@ The table below describes the CRUD operations that can be performed on Cups Of J
 | **Favourites**         | Add a favourite            | View favourites articles      |       Add/Remove - change color              | Remove own favourites       |
 | **Articles**     | Add an article                         | View articles        | Edit own articles                    | Delete own articles                     |
 
+## Responsiveness
+
+Responsiveness on all screensizes was obtained using minimal code and no mediaqueries using Bootstrap 5 grid system. Since this project is to showcase coding abilities using Django and less emphasis is layed on frontend styling, I took advantage of being able to further practise my Bootstrap skills and achieve for maximum responsiveness with minimum amount of code.
+
+## Security
+
+The "Cups of Joy" coffee project takes keeping your information safe very seriously. The developers have put in place strong protections to guard against bad people trying to access or misuse your data.
+
+Only authorized users with the proper permissions can view or make changes to sensitive information within the application. The code that runs the app is also written in a secure way to prevent any vulnerabilities or weaknesses that could be exploited by hackers.
+
+The team behind "Cups of Joy" understands how important it is to protect the privacy and personal details of all users. That's why they have made data security one of their top priorities throughout the development process.
+
+- **CRUD functunalities:** Django has special tools that make sure only the right people can view, add, change or delete information on a website. These tools work together to keep everything safe and secure.
+
+First, there are "class-based views" that handle the basic actions like viewing, editing, and deleting information. These views make it easy to write code for common tasks.
+
+Next, Django has an "authentication system" that checks if a user is logged in or not. If they are not logged in, it won't let them do certain things like edit or delete information.
+
+This authentication system has special mixins called "LoginRequiredMixin" and "UserPassesTestMixin". These mixins work with the class-based views to make sure that only logged-in users can perform certain actions.
+
+If a user tries to do something they are not allowed to do, like edit someone else's information, the mixins will stop them. Instead of letting them do the wrong thing, the mixins will redirect the user to the login page.
+
+This way, Django's tools work together to keep the website secure and prevent people from doing things they shouldn't be doing. It's like having a security guard that only lets the right people through the door.
+
+- **Authentication and Authorization:** The "Cups of Joy" coffee project makes it very simple for new users to create accounts and existing users to log in. This is possible thanks to a special tool called "Django Allauth." With "Django Allauth," signing up and logging in happens smoothly and without any problems. Users don't have to worry about complicated steps or confusing instructions. They can easily become part of the "Cups of Joy" community and start exploring all the fun features right away!
+
+- **Data Validation and Sanitization:** Checking the information people type into forms is very important. It helps make sure the data is correct and safe. This way, no one can put in bad or harmful information by mistake or on purpose. Validating forms protects the project and keeps everything working properly.
+
+- **Error Handling:** When something goes wrong with the website, special pages are shown. These pages help explain the problem in a friendly way. They use simple words and pictures to make it easy for everyone to understand what happened. This way, if there is an issue, users won't feel lost or confused. The special pages will guide them and let them know what's going on in a clear and helpful manner.
+
+xxxxxx
+
+- **Environment Security:** Secure handling of sensitive data is prioritized throughout the development and deployment phases. This involves storing critical information such as database URLs, secret keys, and Cloudinary URLs securely. During development, these details are stored in a private .env.py file, excluded from version control via .gitignore. In production, they are managed as configurable variables, enhancing security by disabling debug mode.
+
+- **CSRF Protection:** The application employs CSRF protection measures to safeguard against unauthorized activities. CSRF tokens are seamlessly integrated into every form submission, bolstering the security posture.
+
+- **Handling RichTextFields:** While adhering to standard security protocols, I encountered a nuanced challenge with RichTextFields in forms intended for posting content. Without explicitly marking the form field as safe, the user's desired styling cannot be applied. Addressing this issue elegantly remains a learning curve for me as a novice web developer.
 
 ## Future Features
 
