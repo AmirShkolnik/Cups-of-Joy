@@ -885,11 +885,40 @@ The respective URLs for these platforms and services are as follows:
 - **Application Hosting:** For hosting and running the application, Heroku, a cloud platform as a service (PaaS), is utilized. It enables seamless deployment, automatic scaling, and management tools for monitoring and maintaining the application.
 [Heroku](https://www.heroku.com)
   - **Setting up on Heroku:**
-    1. Create a new app on Heroku.
-    2. Connect the Heroku app to the GitHub repository.
-    3. Set up Config Vars in Heroku including `DATABASE_URL`, `SECRET_KEY`, `CLOUDINARY_URL`, `DISABLE_COLLECTSTATIC`, 	1 (this is temporary, and can be removed for the final deployment) etc.
-    4. Deploy the main branch using the Heroku dashboard or enable automatic deployments for every push to the main branch.
-    5. 
+Here's a simplified 10-step explanation on how to use Heroku's cloud server to deploy your "Cups of Joy" coffee project, written in easy-to-understand language for non-coders:
+
+1. **Sign up for Heroku**: Go to heroku.com and create an account.
+
+2. **Create a new app**: After logging in, click on the "New" button in the top right corner and select "Create New App". Give your app a unique name and choose your preferred region.
+
+3. **Connect to GitHub**: In the "Deploy" section, select "GitHub" as the deployment method. Search for your "Cups of Joy" repository and connect it to Heroku.
+
+4. **Set up environment variables**: In the "Settings" section, click on "Reveal Config Vars". Here, you'll need to add some important variables:
+   - `SECRET_KEY`: A secret key for your Django project (you can generate one online).
+   - `DATABASE_URL`: The URL for your database (e.g., Heroku Postgres).
+   - `CLOUDINARY_URL`: The URL for your Cloudinary account (for storing images and media).
+
+5. **Enable automatic deploys**: In the "Deploy" section, you can choose to enable automatic deploys from your GitHub repository. This means Heroku will automatically update your app whenever you push new changes to GitHub.
+
+6. **Deploy your app**: If you didn't enable automatic deploys, you can manually deploy your app by scrolling down to the "Manual Deploy" section and clicking "Deploy Branch".
+
+7. **Open your app**: After a successful deployment, Heroku will provide you with a unique URL where your "Cups of Joy" app is now live! You can click the "View" button to open it.
+
+8. **Set up a database**: If your app requires a database, you'll need to provision one. Heroku recommends using Heroku Postgres, which you can set up through the "Resources" section of your app's dashboard.
+
+9. **Update your code**: If you need to make changes to your app, simply commit and push the updates to your GitHub repository. If you enabled automatic deploys, Heroku will automatically update your live app. Otherwise, you'll need to manually re-deploy.
+
+10. **Monitor your app**: Heroku provides tools to monitor your app's performance, logs, and other metrics. You can access these through the "More" menu in your app's dashboard.
+
+By following these steps, you'll be able to deploy your "Cups of Joy" coffee project to Heroku's cloud server, making it accessible to anyone with the app's URL. Remember to consult Heroku's documentation or seek help if you encounter any issues during the deployment process.
+
+Citations:
+[1] https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[2] https://developer.mozilla.org/en-US/docs/Web/CSS
+[3] https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+[4] https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
+[5] https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide/
+
 **For deployment Heroku needs two additional files in order to deploy properly.**
 - requirements.txt
 - Procfile
