@@ -566,11 +566,15 @@ As this was my first Django/Database project, most of the bugs that I encountere
 | 9   | article page - Error: The font element is obsolete. Use CSS instead. | Yes | Add @import rules at the top of the CSS file  | [StackOverFlow](https://stackoverflow.com/questions/10036977/best-way-to-include-css-why-use-import) |
 | 10  | About Us - Automated Testing - AssertionError: b'About Me' not found  | Yes | Changed About Me to About Us  | CI testing tutorials |
 | 11  | Home Page - Not responsive for mobile  | Yes | Removed conflicting divs | CI bootstrap tutorials |
-| 1  | Delete a Review Confirmation Page   | Yes | Add LoginRequiredMixin to views |  |
+| 1  | Delete a review protection missing  | Yes | Add def delete_review with login_required to coffeeshop views|  |
 
 ### Known Bugs
 
-I am not aware of any remaining bugs.
+When a user is logged-in he can see other users review status. This should be for author only.
+
+![errors](documentation/errors/review-status.png)
+
+
 
 ### Unknown Bugs
 I am not aware of any remaining bugs.
