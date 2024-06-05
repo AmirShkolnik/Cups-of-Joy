@@ -742,24 +742,25 @@ Here are some future feature suggestions for the "Cups of Joy" project:
 # Technology Used
 
 ## Frontend
-- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5): Structure of the web pages.
-- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS): Styling of the web content.
-- [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Enhancements of interactivity and web behaviors.
-- [**Bootstrap**](https://getbootstrap.com/): Responsive design and layout framework.
+
+- [**HTML5**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5): The latest version of the Hypertext Markup Language, used to structure and define the content of web pages. It introduced new elements and capabilities to enhance the language, improving accessibility, multimedia integration, and offline capabilities.
+- [**CSS3**](https://developer.mozilla.org/en-US/docs/Web/CSS): The latest evolution of Cascading Style Sheets, a stylesheet language used to describe the presentation and styling of web content, including layout, colors, fonts, and animations. It provides more advanced styling features and better browser support compared to previous versions.
+- [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): A high-level, dynamic programming language used to add interactivity, effects, and behaviors to web pages. It allows developers to manipulate web page content, respond to user events, and make asynchronous requests to servers.
+- [**Bootstrap**](https://getbootstrap.com/): A popular open-source front-end framework for building responsive, mobile-first websites and web applications. It provides a collection of HTML, CSS, and JavaScript components and utilities for creating consistent and visually appealing user interfaces across different devices and screen sizes.
 
 ## Backend
-- [**Django**](https://www.djangoproject.com/): A high-level Python web framework.
-- [**Python**](https://www.python.org/): Backend programming language.
-- [**SQLite**](https://www.sqlite.org/index.html) (Development) / [**PostgreSQL**](https://www.postgresql.org/) (Production): Database systems.
+- [**Django**](https://www.djangoproject.com/): A high-level Python web framework that follows the Model-View-Template architectural pattern. It promotes rapid development and clean, pragmatic design by providing built-in features for handling common web development tasks, such as URL routing, database integration, and user authentication.
+- [**Python**](https://www.python.org/): A versatile, high-level programming language known for its simplicity, readability, and extensive standard library. It is widely used for backend development, data analysis, machine learning, and automation tasks.
+- **CI database**: The database systems provided by Code Institute for storing and managing application data during the development and deployment process.
 
 ## Deployment and Version Control
-- [**Git**](https://git-scm.com/): Used for version control.
-- [**GitHub**](https://github.com/): Hosts the repository and facilitates version control and collaboration.
-- [**Heroku**](https://www.heroku.com/): Platform as a service (PaaS) for deploying applications.
+- [**Git**](https://git-scm.com/): A distributed version control system that tracks changes in source code files and facilitates collaboration among multiple developers. It allows developers to manage and merge code changes efficiently, revert to previous versions, and maintain a detailed history of modifications.
+- [**GitHub**](https://github.com/): A web-based hosting service for Git repositories, providing a platform for version control, collaboration, and code sharing. It offers features like issue tracking, pull requests, and project management tools to streamline the development workflow.
+- [**Heroku**](https://www.heroku.com/): A cloud platform that enables developers to build, run, and operate applications entirely in the cloud. It supports various programming languages and provides a seamless deployment process, automatic scaling, and management tools for monitoring and maintaining applications.
 
 ## Development Tools
-- [**GitPod**](https://www.gitpod.io/): Preferred IDE for writing and editing code.
-- [**Django Extensions**](https://github.com/django-extensions/django-extensions): Provides custom management extensions for Django.
+- [**GitPod**](https://www.gitpod.io/): A cloud-based integrated development environment (IDE) that allows developers to write, edit, and run code directly from their web browser. It provides a preconfigured development environment with all the necessary tools and dependencies installed, enabling a consistent and efficient coding experience across different projects and teams.
+- [**Django Extensions**](https://github.com/django-extensions/django-extensions): A collection of custom management extensions for the Django web framework. It provides additional commands and utilities to enhance the development workflow, such as generating model diagrams, executing raw SQL queries, and generating fixtures for testing purposes.
 
 ## Libraries and Frameworks
 
