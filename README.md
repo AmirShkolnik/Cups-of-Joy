@@ -252,7 +252,13 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 **User stories** are a brief statement of intent that captures what a user does or needs to do as part of their job function. They are written in non-technical language and focus on the value or outcome that the user
 
+[Cups Of Joy Kanban Board Link](https://github.com/users/AmirShkolnik/projects/8)
+
 ![Kanban Board](documentation/Features/kanban-board.png)
+
+[Cups Of Joy User Stories Link](https://github.com/AmirShkolnik/Cups-of-Joy/issues?q=is%3Aissue+is%3Aclosed)
+
+![issues](documentation/Features/issues.png)
 
 | Epic                                               | Title                                    | User Story                                                                                                                                                                        |  MoSCoW Priority |  Milestone                   |
 |----------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------------------|
@@ -281,17 +287,13 @@ Cups Of Joy follows the MoSCoW prioritization method to ensure a structured and 
 
 [Cups Of Joy GitHub Link](https://github.com/AmirShkolnik/Cups-of-Joy)
 
-[Cups Of Joy Kanban Board Link](https://github.com/users/AmirShkolnik/projects/8)
+#### Milestones
 
-[Cups Of Joy User Stories Link](https://github.com/AmirShkolnik/Cups-of-Joy/issues)
+**A milestone**, is a major checkpoint or goal in a project's timeline that signifies the completion of a key phase or the achievement of a significant objective.
 
 [Cups Of Joy Milestones Link](https://github.com/AmirShkolnik/Cups-of-Joy/milestones)
 
-#### Milestones
-
-![issues](documentation/Features/issues.png)
-
-**A milestone**, is a major checkpoint or goal in a project's timeline that signifies the completion of a key phase or the achievement of a significant objective.
+![Cups Of Joy Milestones](documentation/Features/milestone.png)
 
 #### Epics
 
