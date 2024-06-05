@@ -77,7 +77,7 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Home
 
-![Home](documentation/Features/home.png)
+![Home](documentation/Features/home-user.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
