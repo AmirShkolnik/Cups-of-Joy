@@ -13,13 +13,13 @@ Link to live website: [CLICK HERE!](https://cupsofjoy-c2c917eb3f59.herokuapp.com
 
 ## Cups of Joy
 
-Welcome to [**Cups of Joy**](documentation/amireponsive/cupsofjoy.png), a vibrant online platform dedicated to celebrating the art of coffee and fostering a sense of community. Our mission is to create a warm and inviting space where coffee enthusiasts can explore the rich world of artisanal brews, share their passion, and connect with like-minded individuals.
+Welcome to [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/), a vibrant online platform dedicated to celebrating the art of coffee and fostering a sense of community. Our mission is to create a warm and inviting space where coffee enthusiasts can explore the rich world of artisanal brews, share their passion, and connect with like-minded individuals.
 
-At Cups of Joy, we believe that every cup tells a story – one of craftsmanship, culture, and the pursuit of pure indulgence. Through our engaging content, we aim to inspire and educate, unveiling the secrets behind exceptional coffee experiences. Join us on this flavorful journey as we savor the finest beans, unravel brewing techniques, and uncover the tales behind each sip.
+At [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/), we believe that every cup tells a story – one of craftsmanship, culture, and the pursuit of pure indulgence. Through our engaging content, we aim to inspire and educate, unveiling the secrets behind exceptional coffee experiences. Join us on this flavorful journey as we savor the finest beans, unravel brewing techniques, and uncover the tales behind each sip.
 
 ### Get Involved
 
-Join **Cups of Joy** today and immerse yourself in a world where coffee is more than just a beverage – it's a passion, a culture, and a way of life. Our vibrant community welcomes coffee enthusiasts of all levels, from seasoned aficionados to curious explorers. Whether you're here to expand your knowledge, share your love for the perfect brew, or simply indulge in the rich aromas and flavors, our platform is your gateway to a vast and captivating landscape of coffee experiences. Let's embark on this flavorful journey together, savoring each sip, exchanging stories, and uncovering the secrets that make every cup a true masterpiece.
+Join [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/) today and immerse yourself in a world where coffee is more than just a beverage – it's a passion, a culture, and a way of life. Our vibrant community welcomes coffee enthusiasts of all levels, from seasoned aficionados to curious explorers. Whether you're here to expand your knowledge, share your love for the perfect brew, or simply indulge in the rich aromas and flavors, our platform is your gateway to a vast and captivating landscape of coffee experiences. Let's embark on this flavorful journey together, savoring each sip, exchanging stories, and uncovering the secrets that make every cup a true masterpiece.
 
 # Table of Contents
 - [Introduction](#introduction)
@@ -106,7 +106,9 @@ Join **Cups of Joy** today and immerse yourself in a world where coffee is more 
 
 # Overview
 
-Cups of Joy is a vibrant online platform celebrating the art of coffee and fostering a sense of community. It serves as a communal hub for:
+Live Version: [**Cups of Joy**](https://cupsofjoy-c2c917eb3f59.herokuapp.com/)
+
+**Cups of Joy**is a vibrant online platform celebrating the art of coffee and fostering a sense of community. It serves as a communal hub for:
 
 - Joining a passionate community of coffee enthusiasts and professionals.
 - Creating personalized profiles to share coffee experiences and insights.
