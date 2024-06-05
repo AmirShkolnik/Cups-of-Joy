@@ -1,7 +1,7 @@
 <p align="center">
   <img src="static/images/mug-black.png" alt="Cups Of Joy Logo">
 </p>
-<h1 align="center">Cups Of Joy</h1>
+<h1 align="center">Cups of Joy</h1>
 
 <h2>Welcome</h2>
 
