@@ -965,29 +965,53 @@ By adopting this approach, the project benefits from a dedicated and optimized i
 
 ## Cloning the Repository
 - **Local Setup:**
-  1. Clone the repository: [GitHub repository](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4). 
- `git clone https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4`.
+  1. Clone the repository: [GitHub repository](https://github.com/AmirShkolnik/Cups-of-Joy). 
+ `git clone https://github.com/AmirShkolnik/Cups-of-Joy`.
   2. Navigate into the project directory: `cd software-stacks-p4`
   3. Install dependencies: `pip install -r requirements.txt`
   4. Set up local environment variables in a `.env` file.
   5. Run migrations: `python manage.py migrate`
   6. Start the development server: `python manage.py runserver`
 
-Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+1. **Open Your Preferred Code Editor**: Launch the code editor or integrated development environment (IDE) you typically use for your coding projects.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://swathikesha-softwaresta-yuwx4g4ondz.ws-eu110.gitpod.io/)
+2. **Navigate to the Repository URL**: Visit the following URL in your web browser: https://github.com/AmirShkolnik/Cups-of-Joy
 
-Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
-A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+3. **Locate the Clone Button**: On the repository page, you'll find a green-colored button labeled "Code". Click on this button to reveal the cloning options.
 
+4. **Copy the Repository URL**: Depending on your preferred cloning method, copy the repository URL provided. You can choose either the HTTPS, SSH URL or GitHub CLI based on your setup and preferences.
+
+5. **Open a Terminal or Command Prompt**: In your code editor or operating system, open a terminal or command prompt window. This will allow you to execute Git commands.
+
+6. **Navigate to Your Desired Directory**: Using the terminal or command prompt, navigate to the directory or folder where you want to clone the "Cups of Joy" repository. You can use the `cd` command followed by the path to change directories.
+
+7. **Execute the Clone Command**: Once you're in the desired directory, execute the following Git command, replacing `<repository_url>` with the URL you copied earlier:
+
+   ```
+   git clone <repository_url>
+   ```
+
+   Press Enter, and Git will start cloning the repository to your local machine.
+
+8. **Install requirements**: Install requirements from requirements.txt using the command "pip install -r requirements.txt". If working in a virtual environment, activate the virtual environment before running the command.
+
+9. **Create env.py**: Create a env.py to store database url, secret key and cloudinary url. directory:
 
 ## Forking the Repository
-- **For Contributions:**
-  1. Fork the repository on [GitHub repository](https://github.com/SwathiKeshavamurthy/SoftwareStacks-P4).
-  2. Clone your forked repository to your local machine.
-  3. Follow the local setup steps as above.
-  4. Make changes and push them back to your fork.
-  5. Create a pull request from your fork back to the original repo.
+
+Here's an original step-by-step guide for forking the "Cups of Joy" project from the GitHub repository located at https://github.com/AmirShkolnik/Cups-of-Joy:
+
+1. **Navigate to the Repository**: Open your web browser and visit the "Cups of Joy" repository at https://github.com/AmirShkolnik/Cups-of-Joy.
+
+2. **Locate the Fork Button**: On the top-right corner of the repository page, you'll find a button labeled "Fork". This button allows you to create a copy of the repository under your own GitHub account.
+
+3. **Create Your Fork**: Click on the "Fork" button. GitHub will prompt you to select the destination account for your forked repository. Choose your personal GitHub account or an organization you have access to. click the green button "Create fork". 
+
+4. **Wait for the Forking Process**: GitHub will initiate the forking process, creating a complete copy of the "Cups of Joy" repository under your chosen account or organization. This process may take a few moments, depending on the size of the repository.
+
+5. **Navigate to Your Forked Repository**: Once the forking process is complete, you'll be automatically redirected to the forked repository's page within your account or organization. The URL will reflect the new location of your forked repository.
+
+6. **Customize Your Fork (Optional)**: You now have full control over your forked repository. You can rename it, modify the description, or make any other desired changes to distinguish it from the original repository.
 
 # Credits
 
