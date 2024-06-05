@@ -638,11 +638,12 @@ Only authorized users with the proper permissions can view or make changes to se
 
 The team behind "Cups of Joy" understands how important it is to protect the privacy and personal details of all users. That's why they have made data security one of their top priorities throughout the development process.
 
-- **CRUD functunalities:** Django has special tools that make sure only the right people can view, add, change or delete information on a website. These tools work together to keep everything safe and secure.
+#### CRUD functunalities
 
-First, there are "class-based views" that handle the basic actions like viewing, editing, and deleting information. These views make it easy to write code for common tasks.
+ Django has special tools that make sure only the right people can view add, change or delete information on a website. These tools work together to keep everything safe and secure. First, there are "class-based views" that handle the basic actions like viewing, editing, and deleting information. 
 
-Next, Django has an "authentication system" that checks if a user is logged in or not. If they are not logged in, it won't let them do certain things like edit or delete information.
+These views make it easy to write code for common tasks.
+Next, Django has an "authentication system" that checks if a user is logged in or not. If they are not logged in, it won't let them do certain things like edit or delete information. 
 
 This authentication system has special mixins called "LoginRequiredMixin" and "UserPassesTestMixin". These mixins work with the class-based views to make sure that only logged-in users can perform certain actions.
 
@@ -650,18 +651,29 @@ If a user tries to do something they are not allowed to do, like edit someone el
 
 This way, Django's tools work together to keep the website secure and prevent people from doing things they shouldn't be doing. It's like having a security guard that only lets the right people through the door.
 
-- **Authentication and Authorization:** The "Cups of Joy" coffee project makes it very simple for new users to create accounts and existing users to log in. This is possible thanks to a special tool called "Django Allauth." With "Django Allauth," signing up and logging in happens smoothly and without any problems. Users don't have to worry about complicated steps or confusing instructions. They can easily become part of the "Cups of Joy" community and start exploring all the fun features right away!
+#### Authentication and Authorization
 
-- **Data Validation and Sanitization:** Checking the information people type into forms is very important. It helps make sure the data is correct and safe. This way, no one can put in bad or harmful information by mistake or on purpose. Validating forms protects the project and keeps everything working properly.
+ The "Cups of Joy" coffee project makes it very simple for new users to create accounts and existing users to log in. This is possible thanks to a special tool called "Django Allauth." With "Django Allauth," signing up and logging in happens smoothly and without any problems. Users don't have to worry about complicated steps or confusing instructions. They can easily become part of the "Cups of Joy" community and start exploring all the fun features right away!
 
-- **Error Handling:** When something goes wrong with the website, special pages are shown. These pages help explain the problem in a friendly way. They use simple words and pictures to make it easy for everyone to understand what happened. This way, if there is an issue, users won't feel lost or confused. The special pages will guide them and let them know what's going on in a clear and helpful manner.
+#### Data Validation and Sanitization
 
-- **Environment Security:** Keeping important information safe is very important in this project. This includes things like database addresses, secret codes, and cloud storage links.
+ Checking the information people type into forms is very important. It helps make sure the data is correct and safe. This way, no one can put in bad or harmful information by mistake or on purpose. Validating forms protects the project and keeps everything working properly.
+
+#### Error Handling
+
+ When something goes wrong with the website, special pages are shown. These pages help explain the problem in a friendly way. They use simple words and pictures to make it easy for everyone to understand what happened. This way, if there is an issue, users won't feel lost or confused. The special pages will guide them and let them know what's going on in a clear and helpful manner.
+
+#### Environment Security
+
+ Keeping important information safe is very important in this project. This includes things like database addresses, secret codes, and cloud storage links.
 
 During the building phase, these details are kept in a special file called .env.py. This file is not shared with others to protect the information.
+
 When the project is ready to be used by people, the important information is stored in a different way called configurable variables. This makes it harder for anyone to see or misuse the information. It also turns off a setting called debug mode, which makes the project even more secure.By taking these steps, the project makes sure that sensitive data is well-protected and cannot be easily accessed by anyone who should not have access to it.
 
-- **CSRF Protection:** Keeping Bad People Out: The coffee website has a special way to stop bad people from doing bad things. It uses a secret code called a "CSRF token." This code is like a password that gets sent with every form you fill out on the website. This secret code helps keep the website safe from people trying to do bad things.
+#### CSRF Protection
+
+ Keeping Bad People Out: The coffee website has a special way to stop bad people from doing bad things. It uses a secret code called a "CSRF token." This code is like a password that gets sent with every form you fill out on the website. This secret code helps keep the website safe from people trying to do bad things.
 
 ## Responsiveness
 
