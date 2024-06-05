@@ -816,19 +816,36 @@ Here are short descriptions for the libraries and frameworks used, following the
 
 - **whitenoise**: A Python package that provides a way to serve static files from a Django application.
 
-Citations:
+Citations and sources:
+
 [1] https://developer.mozilla.org/en-US/docs/Web/CSS
+
 [2] https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 [3] https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
 [4] https://www.slideshare.net/slideshow/coffee-shop-management-systempptx/255161865
+
 [5] https://www.beliveweb.com/coffee-shop-website-design.html
 
+
 ## Validation Tools
-- [**W3C Markup Validation Service**](https://validator.w3.org/): For validating HTML5 code.
-- [**W3C CSS Validation Service**](https://jigsaw.w3.org/css-validator/): For validating CSS3 code.
-- [**JSHint**](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code.
-- [**CI Python Linter**](https://pep8ci.herokuapp.com/): Analyzes Python code to look for bugs and signs of poor quality.
-- [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): For auditing performance, accessibility, and search engine optimization of web pages.
+
+- [**W3C Markup Validation Service**](https://validator.w3.org/): This is a free tool provided by W3C that checks the syntax of web documents written in markup languages like HTML, XHTML, SMIL, and MathML against their respective specifications. It helps identify any discrepancies or errors in the markup code, ensuring compliance with web standards.
+- [**W3C CSS Validation Service**](https://jigsaw.w3.org/css-validator/): A tool offered by W3C that validates Cascading Style Sheets (CSS) code against the official CSS specifications. It checks for syntax errors, property value validity, and other potential issues in CSS stylesheets, helping developers ensure their styles are correctly implemented.
+- [**JSHint**](https://jshint.com/): A community-driven tool that detects errors and potential problems in JavaScript code. It performs static code analysis and provides feedback on coding conventions, syntax errors, and other issues that may lead to bugs or performance problems. JSHint helps maintain code quality and consistency across projects.
+- [**CI Python Linter**](https://pep8ci.herokuapp.com/): A code linting tool used in the Code Institute's development environment to analyze Python code for potential errors, stylistic inconsistencies, and adherence to best practices defined by the Python Enhancement Proposals (PEPs). It helps catch issues early in the development process and promotes code quality and maintainability.
+- [**Google Lighthouse**](https://developers.google.com/web/tools/lighthouse): An open-source automated tool developed by Google that audits web pages for performance, accessibility, progressive web app capabilities, and other best practices. It provides a comprehensive report with scores and recommendations to help developers optimize their websites and improve the overall user experience.
+
+Citations and sources:
+
+[1] https://developer.mozilla.org/en-US/docs/Web/CSS
+
+[2] https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+[3] https://validator.w3.org/docs/help
+
+[4] https://validator.w3.org
 
 ## Others
 - [**Cloudinary**](https://cloudinary.com/): An end-to-end image and video management solution.
