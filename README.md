@@ -76,27 +76,9 @@ Join **Cups of Joy** today and immerse yourself in a world where coffee is more 
       - [CSRF Tokens](#csrf-tokens)
       - [AllAuth](#allauth)
 - [Features](#features)
-  - [Existing Features](#existing-features)
+  - [All Existing Features with Screenshots](#all-existing-features-with-screenshots)
     - [Features Functionality](#features-functionality)
     - [CRUD Functionality](#crud-functionality)
-    - [All Existing Features with Screenshots](#all-existing-features-with-screenshots)
-      - [Home Page](#home-page)
-      - [User Registration, Login, and Logout](#user-registration-login-and-logout)
-      - [User Profile](#user-profile)
-      - [Add Post](#add-post)
-      - [Search Functionality](#search-functionality)
-      - [Post Details](#post-details)
-      - [Comments and Interactions](#comments-and-interactions)
-      - [Responsive Navigation Bar](#responsive-navigation-bar)
-      - [Categories](#categories)
-      - [My Bookmarks](#my-bookmarks)
-      - [My Likes](#my-likes)
-      - [My Comments](#my-comments)
-      - [My Posts](#my-posts)
-      - [Pagination](#pagination)
-      - [Footer](#footer)
-      - [Admin Panel](#admin-panel)
-      - [Error Handling](#error-handling)
   - [Future Features](#future-features)
 - [Technology Used](#technology-used)
   - [Frontend](#frontend)
@@ -637,28 +619,54 @@ The ERD provides a clear understanding of the data structure and relationships w
 
 ### Security
 
-Security is a paramount concern for a platform like Cups Of Joy, which handles user-generated content and personal data.
+The "Cups of Joy" coffee project takes keeping your information safe very seriously. The developers have put in place strong protections to guard against bad people trying to access or misuse your data.
 
-#### Data Encryption
+Only authorized users with the proper permissions can view or make changes to sensitive information within the application. The code that runs the app is also written in a secure way to prevent any vulnerabilities or weaknesses that could be exploited by hackers.
 
-- All sensitive information, including user passwords and personal details, is encrypted using robust encryption methods to safeguard against unauthorized access and potential breaches.
+The team behind "Cups of Joy" understands how important it is to protect the privacy and personal details of all users. That's why they have made data security one of their top priorities throughout the development process.
 
-#### CSRF Tokens
+- **CRUD functunalities:** Django has special tools that make sure only the right people can view, add, change or delete information on a website. These tools work together to keep everything safe and secure.
 
-- CSRF (Cross-Site Request Forgery) tokens are included in every form to authenticate requests with the server during form submission. The absence of these tokens could leave the site vulnerable to attackers attempting to steal user data.
+First, there are "class-based views" that handle the basic actions like viewing, editing, and deleting information. These views make it easy to write code for common tasks.
 
-#### AllAuth 
+Next, Django has an "authentication system" that checks if a user is logged in or not. If they are not logged in, it won't let them do certain things like edit or delete information.
 
-- Django AllAuth, an installable framework, handles user registration and authentication processes. Authentication is crucial for determining registered and unregistered users, controlling access to specific content on Cups Of Joy.
+This authentication system has special mixins called "LoginRequiredMixin" and "UserPassesTestMixin". These mixins work with the class-based views to make sure that only logged-in users can perform certain actions.
+
+If a user tries to do something they are not allowed to do, like edit someone else's information, the mixins will stop them. Instead of letting them do the wrong thing, the mixins will redirect the user to the login page.
+
+This way, Django's tools work together to keep the website secure and prevent people from doing things they shouldn't be doing. It's like having a security guard that only lets the right people through the door.
+
+- **Authentication and Authorization:** The "Cups of Joy" coffee project makes it very simple for new users to create accounts and existing users to log in. This is possible thanks to a special tool called "Django Allauth." With "Django Allauth," signing up and logging in happens smoothly and without any problems. Users don't have to worry about complicated steps or confusing instructions. They can easily become part of the "Cups of Joy" community and start exploring all the fun features right away!
+
+- **Data Validation and Sanitization:** Checking the information people type into forms is very important. It helps make sure the data is correct and safe. This way, no one can put in bad or harmful information by mistake or on purpose. Validating forms protects the project and keeps everything working properly.
+
+- **Error Handling:** When something goes wrong with the website, special pages are shown. These pages help explain the problem in a friendly way. They use simple words and pictures to make it easy for everyone to understand what happened. This way, if there is an issue, users won't feel lost or confused. The special pages will guide them and let them know what's going on in a clear and helpful manner.
+
+- **Environment Security:** Keeping important information safe is very important in this project. This includes things like database addresses, secret codes, and cloud storage links.
+
+During the building phase, these details are kept in a special file called .env.py. This file is not shared with others to protect the information.
+When the project is ready to be used by people, the important information is stored in a different way called configurable variables. This makes it harder for anyone to see or misuse the information. It also turns off a setting called debug mode, which makes the project even more secure.By taking these steps, the project makes sure that sensitive data is well-protected and cannot be easily accessed by anyone who should not have access to it.
+
+- **CSRF Protection:** Keeping Bad People Out: The coffee website has a special way to stop bad people from doing bad things. It uses a secret code called a "CSRF token." This code is like a password that gets sent with every form you fill out on the website. This secret code helps keep the website safe from people trying to do bad things.
+
+## Responsiveness
+
+### Screens of All Sizes
+
+![responsiveness](documentation/amireponsive/cupsofjoy.png)
+
+The "Cups of Joy" website works well on different devices like phones, tablets, and computers. This was done by using special code called Bootstrap. Bootstrap helps make websites look good on any screen size without needing too much extra code.
+
+Instead of writing many lines of code for different screen sizes, Bootstrap has a simple way to make the website adjust itself automatically. This means the website will look great whether you're using a small phone screen or a big computer monitor.
+
+By using Bootstrap's smart design, the "Cups of Joy" website can be easily viewed and used on any device. This was an excellent chance to practice using Bootstrap and make the website work smoothly everywhere with just a little bit of code.
 
 # Features
 
 ## Existing Features
 
-### Features Functionality
-
-**All Existing Features with Screenshots and Description**
-
+### All Existing Features with Screenshots
 | Feature                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Who            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | Logo                             | The logo consists of an image of a white mug and the text "CUP of JOY" in a stylized font. The word "CUP" is in a bold blue color, the word "of" is in white, and the word "JOY" is in a thin blue font.<details> <summary>**Click to View The Logo**</summary> ![features](documentation/Features/logo.png)</details>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |    Everyone            |
@@ -703,43 +711,6 @@ The table below describes the CRUD operations that can be performed on Cups Of J
 | **Likes**             | Like articles   | View likes on articles | Like/Unlike - Update amount                    | Unlike articles  |
 | **Favourites**         | Add a favourite            | View favourites articles      |       Add/Remove - change color              | Remove own favourites       |
 | **Articles**     | Add an article                         | View articles        | Edit own articles                    | Delete own articles                     |
-
-## Responsiveness
-
-Responsiveness on all screensizes was obtained using minimal code and no mediaqueries using Bootstrap 5 grid system. Since this project is to showcase coding abilities using Django and less emphasis is layed on frontend styling, I took advantage of being able to further practise my Bootstrap skills and achieve for maximum responsiveness with minimum amount of code.
-
-## Security
-
-The "Cups of Joy" coffee project takes keeping your information safe very seriously. The developers have put in place strong protections to guard against bad people trying to access or misuse your data.
-
-Only authorized users with the proper permissions can view or make changes to sensitive information within the application. The code that runs the app is also written in a secure way to prevent any vulnerabilities or weaknesses that could be exploited by hackers.
-
-The team behind "Cups of Joy" understands how important it is to protect the privacy and personal details of all users. That's why they have made data security one of their top priorities throughout the development process.
-
-- **CRUD functunalities:** Django has special tools that make sure only the right people can view, add, change or delete information on a website. These tools work together to keep everything safe and secure.
-
-First, there are "class-based views" that handle the basic actions like viewing, editing, and deleting information. These views make it easy to write code for common tasks.
-
-Next, Django has an "authentication system" that checks if a user is logged in or not. If they are not logged in, it won't let them do certain things like edit or delete information.
-
-This authentication system has special mixins called "LoginRequiredMixin" and "UserPassesTestMixin". These mixins work with the class-based views to make sure that only logged-in users can perform certain actions.
-
-If a user tries to do something they are not allowed to do, like edit someone else's information, the mixins will stop them. Instead of letting them do the wrong thing, the mixins will redirect the user to the login page.
-
-This way, Django's tools work together to keep the website secure and prevent people from doing things they shouldn't be doing. It's like having a security guard that only lets the right people through the door.
-
-- **Authentication and Authorization:** The "Cups of Joy" coffee project makes it very simple for new users to create accounts and existing users to log in. This is possible thanks to a special tool called "Django Allauth." With "Django Allauth," signing up and logging in happens smoothly and without any problems. Users don't have to worry about complicated steps or confusing instructions. They can easily become part of the "Cups of Joy" community and start exploring all the fun features right away!
-
-- **Data Validation and Sanitization:** Checking the information people type into forms is very important. It helps make sure the data is correct and safe. This way, no one can put in bad or harmful information by mistake or on purpose. Validating forms protects the project and keeps everything working properly.
-
-- **Error Handling:** When something goes wrong with the website, special pages are shown. These pages help explain the problem in a friendly way. They use simple words and pictures to make it easy for everyone to understand what happened. This way, if there is an issue, users won't feel lost or confused. The special pages will guide them and let them know what's going on in a clear and helpful manner.
-
-- **Environment Security:** Keeping important information safe is very important in this project. This includes things like database addresses, secret codes, and cloud storage links.
-
-During the building phase, these details are kept in a special file called .env.py. This file is not shared with others to protect the information.
-When the project is ready to be used by people, the important information is stored in a different way called configurable variables. This makes it harder for anyone to see or misuse the information. It also turns off a setting called debug mode, which makes the project even more secure.By taking these steps, the project makes sure that sensitive data is well-protected and cannot be easily accessed by anyone who should not have access to it.
-
-- **CSRF Protection:** Keeping Bad People Out: The coffee website has a special way to stop bad people from doing bad things. It uses a secret code called a "CSRF token." This code is like a password that gets sent with every form you fill out on the website. This secret code helps keep the website safe from people trying to do bad things.
 
 ## Future Features
 
