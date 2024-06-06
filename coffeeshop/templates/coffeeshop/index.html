@@ -75,8 +75,9 @@
 
 {% block extra_js %}
 <script>
-  const slides = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("dot");
+    const slides = document.getElementsByClassName("mySlides");
+	const dots = document.getElementsByClassName("dot");
+  const dotsArray = Array.from(dots);
   let slideIndex = 0;
   let slideInterval;
 
@@ -114,12 +115,12 @@
     startSlideshow(); // Restart the automatic slideshow
   }
 
-  // Add event listeners to the dots and arrow buttons
-  for (const i of dots.keys()) {
-    dots[i].addEventListener("click", () => {
+  // Add event listeners to the dots
+  dotsArray.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
       currentSlide(i + 1);
     });
-  }
+  });
 </script>
 {% endblock %}
 {% endblock content %}

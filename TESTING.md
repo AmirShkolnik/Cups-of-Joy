@@ -89,6 +89,7 @@ We tested this webpage very carefully many times while we were making it. We did
 ### Articles List Page
 
 ![Articles List Page](documentation/Features/articles-page.png)
+![Next](documentation/Features/article-navigation.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -594,7 +595,8 @@ As this was my first Django/Database project, most of the bugs that I encountere
 | 9   | article page - Error: The font element is obsolete. Use CSS instead. | Yes | Add @import rules at the top of the CSS file  | [StackOverFlow](https://stackoverflow.com/questions/10036977/best-way-to-include-css-why-use-import) |
 | 10  | About Us - Automated Testing - AssertionError: b'About Me' not found  | Yes | Changed About Me to About Us  | CI testing tutorials |
 | 11  | Home Page - Not responsive for mobile  | Yes | Removed conflicting divs | CI bootstrap tutorials |
-| 1  | Delete a review protection missing  | Yes | Add def delete_review with login_required to coffeeshop views|  |
+| 12  | Delete a review protection missing  | Yes | Add def delete_review with login_required to coffeeshop views|  |
+| 13  | FireFox - Uncaught TypeError: dots.keys is not a function  | Yes | convert the dots collection into an array | [StackOverFlow](https://stackoverflow.com/questions/67114312/react-object-throws-keys-is-not-a-function-error) & [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)  |
 
 ### Known Bugs
 
@@ -612,4 +614,4 @@ I am not aware of any remaining bugs.
 2. Reduce images size for better performance.
 3. Enhance website accessibility by identifying and resolving issues to ensure compliance with web accessibility standards and guidelines, enabling seamless access for users with disabilities.
 
-Back to the [README.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md)
+Back to the [README.md](README.md)
