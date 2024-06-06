@@ -597,12 +597,11 @@ As this was my first Django/Database project, most of the bugs that I encountere
 | 11  | Home Page - Not responsive for mobile  | Yes | Removed conflicting divs | CI bootstrap tutorials |
 | 12  | Delete a review protection missing  | Yes | Add def delete_review with login_required to coffeeshop views|  |
 | 13  | FireFox - Uncaught TypeError: dots.keys is not a function  | Yes | convert the dots collection into an array | [StackOverFlow](https://stackoverflow.com/questions/67114312/react-object-throws-keys-is-not-a-function-error) & [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function)  |
+| 14  | Author review ststus - When a user is logged-in he can see other users review status. This should be for author only.  | Yes | add if user == post.author or user.is_superuser to coffeeshop/single.html |  |
 
 ### Known Bugs
 
-**Author review ststus** - When a user is logged-in he can see other users review status. This should be for author only.
-
-![errors](documentation/errors/review-status.png)
+Summernote
 
 ### Unknown Bugs
 

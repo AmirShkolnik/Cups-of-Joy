@@ -14,7 +14,7 @@
                 {% endif %}
             </div>
             <div class="text-left mb-4"><h2>{{ post.title }}</h2></div>
-            {% if user.is_authenticated %}
+            {% if user == post.author or user.is_superuser %}
                 {% if post.status == 0 and post.approved == True %}
                     <p>Your review has been approved. Click the Edit button to change the status to Published. <a href="{% url 'coffeeshop:edit' post.pk %}" class="btn btn-primary btn-sm">Edit Review</a></p>
                 {% elif post.status == 0 %}
