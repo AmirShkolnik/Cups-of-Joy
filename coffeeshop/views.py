@@ -129,6 +129,7 @@ class Delete(DeleteView):
         context['messages'] = messages.get_messages(self.request)
         return context
 
+
 @login_required
 def delete_review(request, pk):
     review = get_object_or_404(Review, pk=pk, author=request.user)
