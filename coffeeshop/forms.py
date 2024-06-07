@@ -4,10 +4,12 @@ from django.utils.translation import gettext_lazy as _
 from django_summernote.widgets import SummernoteWidget
 from .models import Review
 
+
 class PostForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = "__all__"
+
 
 class ReviewForm(forms.ModelForm):
 
