@@ -187,6 +187,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ![Sign In](documentation/messages/sign-in-message.png)
 
+![Home](documentation/Features/home.png)
+
 ![Navbar](documentation/Features/navigation-logged-in-drop.png)
 
 | What was tested | Expected Result | Outcome |
@@ -196,7 +198,7 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### My Reviews Page
 
-![Sign In](documentation/Features/single-review-page-3.png)
+![My Reviews Page](documentation/Features/single-review-page-3.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -208,7 +210,7 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Single Review Page
 
-![Navbar](documentation/Features/single-review-page-2.png)
+![Single Review Page](documentation/Features/single-review-page-2.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -231,7 +233,7 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### My Comments Page
 
-![Navbar](![Navbar](documentation/Features/single-review-page-2.png))
+![My Comments Page](documentation/Features/my-comments.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -240,6 +242,9 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on the "My Comments" link | Headline should be clickable | Passed |
 
 ### Singel Article Page
+
+![Navbar](documentation/Features/single-article-page-logged-in.png)
+![Singel Article Page](documentation/Features/single-article-page-logged-in.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
