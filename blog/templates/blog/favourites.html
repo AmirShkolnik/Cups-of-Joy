@@ -1,39 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{ user }} Favourties{% endblock %}
+<!-- Block to set the title of the page -->
+{% block title %}{{ user }} Favourites{% endblock %}
+
 {% block content %}
 <div class="container">
+    <!-- Section for the page header -->
     <section class="jumbotron text-center bg-white">
         <div class="container">
+            <!-- Display the user's name and a description -->
             <h1>{{ user }}'s saved favourite posts</h1>
-            <p class="lead text-muted">Here you can remove or view the favourites posts you have added</p>
+            <p class="lead text-muted">Here you can remove or view the favourite posts you have added</p>
         </div>
     </section>
     <div>
         <div class="row">
+            <!-- Loop through each post in the 'new' context variable -->
             {% for post in new %}
             <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        {% if "placeholder" in post.featured_image.url %}
-                        <a class="text-dark" href="{% url 'post_detail' post.slug %}">     
-                        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder"></a>
-                        {% else %}
-                        <a class="text-dark" href="{% url 'post_detail' post.slug %}">  <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}"></a>
-                        {% endif %}
-                        <div class="card-body">
-                            <a class="text-dark" href="{% url 'post_detail' post.slug %}"> <h2 class="card-title">{{ post.title|truncatechars:150 }}</h2></a>
-                                <a class="text-dark" href="{% url 'post_detail' post.slug %}"> <p class="fav-text">{{ post.excerpt|truncatechars:150 }}</p></a>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted" >Written by {{ post.author }} | {{ post.created_on|date:"N j, Y" }}
-                                </small>
-                                <div>
-                                    <a href="{% url 'favourite_add' post.slug %}" class="btn btn-outline-primary custom-remove-btn">Remove</a>
-                                </div>
+                <div class="card mb-4 box-shadow">
+                    <!-- Check if the post has a placeholder image -->
+                    {% if "placeholder" in post.featured_image.url %}
+                    <a class="text-dark" href="{% url 'post_detail' post.slug %}">     
+                        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder">
+                    </a>
+                    {% else %}
+                    <a class="text-dark" href="{% url 'post_detail' post.slug %}">  
+                        <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <!-- Link to the post detail page -->
+                        <a class="text-dark" href="{% url 'post_detail' post.slug %}"> 
+                            <h2 class="card-title">{{ post.title|truncatechars:150 }}</h2>
+                        </a>
+                        <a class="text-dark" href="{% url 'post_detail' post.slug %}"> 
+                            <p class="fav-text">{{ post.excerpt|truncatechars:150 }}</p>
+                        </a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Display the author and creation date of the post -->
+                            <small class="text-muted">Written by {{ post.author }} | {{ post.created_on|date:"N j, Y" }}</small>
+                            <div>
+                                <!-- Button to remove the post from favourites -->
+                                <a href="{% url 'favourite_add' post.slug %}" class="btn btn-outline-primary custom-remove-btn">Remove</a>
                             </div>
-
                         </div>
                     </div>
+                </div>
             </div>
             {% endfor %}
         </div>
