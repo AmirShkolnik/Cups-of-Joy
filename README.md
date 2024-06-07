@@ -620,6 +620,8 @@ The "Cups of Joy" coffee project takes keeping your information safe very seriou
 
 Only authorized users with the proper permissions can view or make changes to sensitive information within the application. The code that runs the app is also written in a secure way to prevent any vulnerabilities or weaknesses that could be exploited by hackers.
 
+One such protection is against Cross-Site Request Forgery (CSRF) attacks. CSRF protection ensures that unauthorized commands are not executed on behalf of authenticated users without their knowledge. This safeguard prevents malicious sites from tricking users into performing unwanted actions, thereby keeping your data secure.
+
 The team behind "Cups of Joy" understands how important it is to protect the privacy and personal details of all users. That's why they have made data security one of their top priorities throughout the development process.
 
 #### CRUD functunalities
