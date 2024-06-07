@@ -468,6 +468,12 @@ The table below shows the results of checking the HTML code for different pages 
 | **My Comments Page**         | [View PDF](https://github.com/AmirShkolnik/Cups-of-Joy/blob/main/documentation/html-validation-pdf/my-comments.pdf) | 0      | 0        |
 | **404 Page**                 | [View PDF](documentation/html-validation-pdf/404.pdf) | 0      | 0        |
 
+#### Summernote
+
+The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
+
+![Summernote Tutor](documentation/errors/Tutor-John-2.png)
+
 #### Add New Review
 ![Add New Review](documentation/html-validation-images/add-new-review.png)
 
@@ -624,6 +630,11 @@ As this was my first Django/Database project, most of the bugs that I encountere
 ### Known Bugs
 
 Summernote
+
+The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
+
+![Summernote Tutor](documentation/errors/Tutor-John-2.png)
+![Add Review Validation Errors](documentation/errors/add-review.png)
 
 ### Unknown Bugs
 
