@@ -497,30 +497,6 @@ The add.html and edit.html pages are based on Django Summernote. During the test
 
 ### [JSHint JavaScript Validator](https://jshint.com/)
 
-<details>
-<summary> Add A Review Page - Checkbox JavaScript Validator
-</summary>
-![add checkbox](documentation/js-validator-images/add-checkbox.png)
-</details>
-
-<details>
-<summary> Edit A Review Page - Checkbox JavaScript Validator
-</summary>
-![edit checkbox](documentation/js-validator-images/edit-checkbox.png)
-</details>
-
-<details>
-<summary> Comments JavaScript Validator
-</summary>
-![comments](documentation/js-validator-images/comments.png)
-</details>
-
-<details>
-<summary> Reviews Page - Slideshow JavaScript Validator
-</summary>
-![slideshow](documentation/js-validator-images/slideshow.png)
-</details>
-
 ### JavaScript Validation
 - **Tool Used:** [JSLint/JSHint](https://jshint.com/)
 - **Purpose:** To find mistakes and possible issues in the JavaScript code, making sure that all the scripts work properly and do not have any errors.
@@ -530,10 +506,10 @@ Below is a table summarizing the JavaScript validation results for specific file
 
 | JavaScript File              | Results Screenshots               | Errors | Warnings |
 |------------------------------|--------------------------------------|--------|----------|
-| **comments.js**                  | ![screenshot](documentation/js-validator-images/comments.png)  | 0      | 19      |
-| **slideshow**            | ![screenshot](documentation/js-validator-images/slideshow.png) | 0  | 10       |
-| **add review**         | ![screenshot](documentation/js-validator-images/add-checkbox.png) | 0 | 3       |
-| **edit review**         | ![screenshot](documentation/js-validator-images/edit-checkbox.png) | 0 | 3        |
+| **comments.js**                  | ![scomments](documentation/js-validator-images/comments.png)  | 0      | 19      |
+| **slideshow**            | ![slideshow](documentation/js-validator-images/slideshow.png) | 0  | 10       |
+| **add review**         | ![add-checkbox](documentation/js-validator-images/add-checkbox.png) | 0 | 3       |
+| **edit review**         | ![edit-checkbox](documentation/js-validator-images/edit-checkbox.png) | 0 | 3        |
 
 - No errors were found
 
