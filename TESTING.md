@@ -132,7 +132,9 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Singel Review Page 
 
-![Singel Review Page](documentation/Features/reviews-page-slide.png)
+![Singel Review Page](documentation/Features/single-review-page-3.png)
+
+![Singel Review Page](documentation/Features/single-review-page-2.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -205,6 +207,8 @@ We tested this webpage very carefully many times while we were making it. We did
 | Single Review | Should display 3 buttons - View, Edit, Delete | Passed |
 
 ### Single Review Page
+
+
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
