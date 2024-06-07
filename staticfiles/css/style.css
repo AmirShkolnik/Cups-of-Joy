@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
 
 /*--------------------------------------------Colors*/
+/* Define color variables for different sections */
 .ui-menu-color-home {
     background-color: #4a5060;
 }
@@ -20,6 +21,7 @@
 }
 
 /*--------------------------------------------Body*/
+/* Set the default styles for the body */
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -30,12 +32,14 @@ body {
 }
 
 /*--------------------------------------------Headings*/
+/* Set the font styles for headings */
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 700; /* Bold */
 }
 
 /*--------------------------------------------Text Colors*/
+/* Define text color classes */
 .text-black {
     color: black;
 }
@@ -45,6 +49,7 @@ h1, h2, h3 {
 }
 
 /*--------------------------------------------Buttons*/
+/* Style for secondary buttons */
 .btn-secondary {
     background-color: #70AFE2; /* Set the desired background color */
     color: #ffffff; /* Set the desired text color */
@@ -57,6 +62,7 @@ h1, h2, h3 {
 }
 
 /*--------------------------------------------Layout*/
+/* Set the layout styles */
 .flex-grow-1 {
     flex-grow: 1;
     background-color: whitesmoke;
@@ -67,15 +73,16 @@ main {
 }
 
 /*--------------------------------------------Containers*/
+/* Style for different container sections */
 .callout-container-reviews {
     height: 80vh;
     background: rgba(0, 0, 0, 0.1) url("../images/coffee.jpg") no-repeat center center / cover;
     display: flex;
-    flex-direction: column; /* Add this line */
-    justify-content: center; /* Vertically center the flex items */
-    align-items: center; /* Horizontally center the flex items */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    margin-top: -25px
+    margin-top: -25px;
 }
 
 .opaque-overlay-reviews {
@@ -120,24 +127,26 @@ main {
 }
 
 /*--------------------------------------------Grid Items*/
+/* Style for grid items */
 .grid-item {
-    border: 1px solid #ccc; /* Add a border */
-    padding: 10px; /* Add some padding for spacing */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .grid-item:hover {
-    background-color: #d41818; /* Change the background color on hover */
+    background-color: #d41818;
 }
 
 .grid-item-img {
-    width: 100%; /* Set the width to 100% to match the col-3 width */
-    height: 200px; /* Set a fixed height for the images */
-    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 /*--------------------------------------------Branding*/
+/* Style for branding elements */
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
@@ -145,6 +154,7 @@ main {
 }
 
 /*--------------------------------------------Navbar*/
+/* Style for the navigation bar */
 .fixed-top {
     position: fixed;
     top: 0;
@@ -160,13 +170,13 @@ main {
     font-size: 20px;
     padding-right: 10px;
     position: relative;
-    z-index: 2; /* Increase the z-index value */
+    z-index: 2;
 }
 
 /* Navbar active state */
 .navbar .nav-link.active {
     background-color: transparent !important;
-    font-weight: bold;
+
 }
 
 /* Logo active state */
@@ -182,7 +192,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
 }
 
 .navbar-container {
@@ -192,7 +202,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
 }
 
 .navbar .navbar-toggler {
@@ -218,13 +228,13 @@ main {
 }
 
 /*--------------------------------------------Jumbotron*/
+/* Style for jumbotron sections */
 .jumbotron {
     background-color: transparent;
 }
 
 .jumbotron-header-home {
     color: #f3f3f3;
-    font-weight: bold;
     font-size: 45px;
     opacity: .9;
     text-align: center;
@@ -247,6 +257,7 @@ main {
 }
 
 /*--------------------------------------------Block Dividers*/
+/* Style for block dividers */
 .block-divider-home {
     height: 5px !important;
     border: 0 !important;
@@ -254,6 +265,7 @@ main {
 }
 
 /*--------------------------------------------Page Headers*/
+/* Style for page headers */
 .page-header {
     margin-bottom: 0;
     border-bottom: 0;
@@ -269,6 +281,7 @@ main {
 }
 
 /*--------------------------------------------Branding Colors*/
+/* Define branding colors */
 .blue-o {
     color: #70AFE2;
 }
@@ -278,6 +291,7 @@ main {
 }
 
 /*--------------------------------------------Background Colors*/
+/* Define background color classes */
 .light-bg {
     background-color: #fff;
 }
@@ -291,6 +305,7 @@ main {
 }
 
 /*--------------------------------------------Cards*/
+/* Style for cards */
 .card {
     border: none;
     background-color: transparent;
@@ -301,6 +316,7 @@ main {
 }
 
 /*--------------------------------------------Image Container*/
+/* Style for image containers */
 .image-container {
     position: relative;
     overflow: hidden;
@@ -317,8 +333,9 @@ main {
 }
 
 /*--------------------------------------------Container*/
+/* Style for containers */
 .container {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .image-flash {
@@ -330,12 +347,14 @@ main {
 }
 
 /*--------------------------------------------Scaling*/
+/* Style for scaling elements */
 .scale {
     width: 100%;
     height: auto;
 }
 
 /*--------------------------------------------Author*/
+/* Style for author information */
 .author {
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -344,6 +363,7 @@ main {
 }
 
 /*--------------------------------------------Masthead*/
+/* Style for mastheads */
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -379,6 +399,7 @@ main {
 }
 
 /*--------------------------------------------Post Links*/
+/* Style for post links */
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -405,6 +426,7 @@ main {
 }
 
 /*--------------------------------------------Buttons*/
+/* Style for buttons */
 .btn-signup,
 .btn-edit {
     background-color: rgba(112, 175, 226);
@@ -418,6 +440,7 @@ main {
 }
 
 /*--------------------------------------------Links*/
+/* Style for links */
 .link {
     color: rgba(112, 175, 226);
     text-decoration: none;
@@ -434,6 +457,7 @@ main {
 }
 
 /*--------------------------------------------Like Button*/
+/* Style for like buttons */
 .btn-like {
     color: #E84610;
     border: none;
@@ -448,22 +472,26 @@ main {
 }
 
 /*--------------------------------------------Delete Button*/
+/* Style for delete buttons */
 .btn-delete {
     color: #fff;
     background: #E84610;
 }
 
 /*--------------------------------------------Faded Text*/
+/* Style for faded text */
 .faded {
     color: rgb(172, 175, 175);
 }
 
 /*--------------------------------------------Approval Text*/
+/* Style for approval text */
 .approval {
     color: rgb(222, 146, 168);
 }
 
 /*--------------------------------------------Navigation Grid*/
+/* Style for navigation grid */
 .nav-grid {
     margin: 0;
 }
@@ -504,12 +532,14 @@ main {
 }
 
 /*--------------------------------------------Hover Effects*/
+/* Style for hover effects */
 .hvr-sweep-to-bottom:before {
     background: rgba(112, 175, 226, 0.8);
     height: 120px;
 }
 
 /*--------------------------------------------Favourite Posts*/
+/* Style for favorite posts */
 a {
     text-decoration: none;
     color: #000000;
@@ -538,6 +568,7 @@ a.text-dark:hover {
 }
 
 /*--------------------------------------------Add Review*/
+/* Style for adding reviews */
 .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -547,6 +578,7 @@ a.text-dark:hover {
 }
 
 /*--------------------------------------------Footer*/
+/* Style for the footer */
 footer {
     width: 100%;
     padding-top: 5px;
@@ -586,7 +618,7 @@ footer {
 }
 
 .centralize-content {
-    text-align: center
+    text-align: center;
 }
 
 h3 {
@@ -594,10 +626,8 @@ h3 {
     font-size: 1.2rem;
 }
 
-.social-links {
-    padding-bottom: 15px;
-}
-
+/*--------------------------------------------Social Links*/
+/* Style for social media icons within list items */
 .social-links li a i {
     width: 32px;
     height: 32px;
@@ -616,6 +646,7 @@ h3 {
 }
 
 /*--------------------------------------------Slideshow*/
+/* Style for individual slides */
 .mySlides {
     display: none;
     animation-duration: 1s;
@@ -638,7 +669,8 @@ img {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -660,8 +692,9 @@ img {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -696,44 +729,55 @@ img {
     transition: background-color 0.6s ease;
 }
 
-.dot:hover, .active {
+.dot:hover,
+.active {
     background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1s; /* Change the duration to 1s */
+    animation-duration: 1s;
+    /* Change the duration to 1s */
 }
 
 @keyframes fade {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-/*--------------------------------------------Responsive Styles*/
+
+
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {
+
+    .prev,
+    .next,
+    .text {
         font-size: 11px
     }
 }
 
 @media only screen and (min-width: 768px) {
+
     .footer-container-home {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        z-index: 3; /* Increase the z-index value */
+        z-index: 3;
+        /* Increase the z-index value */
     }
+
 }
 
 @media (max-width: 767.98px) {
+
     .mySlides img {
         height: 100%;
     }
@@ -750,8 +794,8 @@ img {
         background-color: rgba(0, 0, 0);
     }
 
-    .jumbotron-header-home {
-        font-size: 35px;
+    .jumbotron-header-home>h1 {
+        font-size: 20px;
         margin-top: 40px;
     }
 
@@ -780,10 +824,14 @@ img {
     }
 
     footer {
+        /* position: absolute; */
+        /* bottom: 0; */
+        /* left: 0; */
         width: 100%;
         color: #fafafa;
         padding-top: 20px;
         background-color: rgba(0, 0, 0);
+
     }
 
     .footer-container-home {
