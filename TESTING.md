@@ -486,7 +486,7 @@ The add.html and edit.html pages are based on Django Summernote. During the test
 - **Purpose:** Checks that the CSS code used on the website follows the rules set by the W3C and does not contain any mistakes.
 - **Process:** The CSS files (which control the styling and layout of the website) are checked using the W3C CSS Validator tool. Any issues or problems found are then fixed. Making these fixes helps the website look and work better on different web browsers.
 <details>
-<summary> CSS validator test
+<summary> CSS validator test - Click to watch
 </summary>
 
 ![html error](documentation/css-validator-images/css.png)
