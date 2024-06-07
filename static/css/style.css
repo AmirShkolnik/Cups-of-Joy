@@ -176,7 +176,6 @@ main {
 /* Navbar active state */
 .navbar .nav-link.active {
     background-color: transparent !important;
-    font-weight: bold;
 }
 
 /* Logo active state */
@@ -235,7 +234,6 @@ main {
 
 .jumbotron-header-home {
     color: #f3f3f3;
-    font-weight: bold;
     font-size: 45px;
     opacity: .9;
     text-align: center;
