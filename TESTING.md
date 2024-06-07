@@ -50,7 +50,7 @@ Return back to the [README.md](README.md) file.
     - [Solved Bugs](#solved-bugs)
     - [Known Bugs](#known-bugs)
     - [Unknown Bugs](#unknown-bugs)
-  - [Must Improve](#must-improve)
+  - [Future Improvements](#future-improvements)
 
 
 # Testing
@@ -627,9 +627,9 @@ Summernote
 
 ### Unknown Bugs
 
-I am not aware of any remaining bugs.
+There are no known bugs in the deployed project.
 
-### Must Improve
+### Future Improvements
 
 1. Reviews Page - Slidshow uploads slowly.
 2. Reduce images size for better performance.
