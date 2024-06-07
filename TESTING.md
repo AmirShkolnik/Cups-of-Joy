@@ -225,6 +225,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ![Add Favourite](documentation/messages/add-favourites-message.png)
 
+![Remove Favourite](documentation/Features/favourites-removal-page.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "My Favourites" link | Redirect to blog/favourites/ | Passed |
@@ -243,8 +245,10 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Singel Article Page
 
-![Navbar](documentation/Features/single-article-page-logged-in.png)
 ![Singel Article Page](documentation/Features/single-article-page-logged-in.png)
+
+![Comments](documentation/Features/comments.png)
+
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -263,6 +267,10 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Add New Review
 
+![Add New Review Page](documentation/Features/add-a-review.png)
+
+![Add New Review Message](documentation/messages/add-review-message.png)
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "Add New Review" link | Redirect to coffeeshop/add | Passed |
@@ -279,6 +287,10 @@ We tested this webpage very carefully many times while we were making it. We did
 | Status - Admin Rejected | Display "Status: This review got rejected, please follow our guidelines" under article headline. | Future Feature |
 
 ### Edit a Review 
+
+![Edit a Review](documentation/Features/edit-a-review.png)
+
+![Edit a Review Message](documentation/messages/edit-review-message-2.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
@@ -297,31 +309,30 @@ the user is redirected to coffeeshop/relevant-review, Green message prompt "Revi
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
-| Login | Notification: "Successfully signed in as {username}." | Passed |
-| Logout | Notification: "You have signed out." | Passed |
-| Register - Sign-up | Notification: "Successfully signed in as {username}." | Passed |
-|User's Review Administration Page| Empty: Notification - "You haven't added any reviews yet." | Passed |
-| Review created & submitted | Notification: "Review added successfully, waiting for approval." | Passed |
-| Review edited & submitted | Notification: "Review updated.", "Status: This review is in xxx status." Author name. | Passed |
-| Delete a Review confirmation | Notification: "Are you sure you want to delete "title"?" | Passed |
-| Delete a Review | Notification: "Review deleted successfully." | Passed |
-| My favourite posts page | Empty: "You don't have any favorites yet." | Passed |
-| Add favourite posts | Notification: "Added to favorites." | Passed |
-| Add favourite posts | Notification: "red bookmark sign" | Passed |
-| Remove favourite posts confirmation | Notification: "Are you sure you want to remove "title" from your favorites?" | Passed |
-| Remove favourite posts | Notification: "Removed from favorites." | Passed |
-| Add likes | Notification: "Added to likes." | Passed |
-| Likes counter | Displays the correct number of likes | Passed |
-| Remove likes confirmation | Notification: "Are you sure you want to remove "Title" from your likes?" | Passed |
-| Remove likes | Notification: "Removed from likes." | Passed |
-| My comments page | Empty: "You haven't made any comments yet." | Passed |
-| Post a comment | Notification: "Comment submitted and awaiting approval" | Passed |
-| Comment counter| Displays the correct number of comments | Passed |
-| Update a comment | Notification: "Comment updated and is awaiting approval." | Passed |
-| Delete a comment confirmation | Notification: "Are you sure you want to delete your comment? This action cannot be undone." | Passed |
-| Delete a comment | Notification: "Comment deleted!" | Passed |
-| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." | Passed |
-| Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND | Passed |
+| Login | Notification: "Successfully signed in as {username}." <details> <summary>**Click to View**</summary> ![features](documentation/messages/sign-in-message.png)</details> | Passed |
+| Logout | Notification: "You have signed out." <details> <summary>**Click to View**</summary> ![features](documentation/messages/sign-out-message.png)</details> | Passed |
+| Register - Sign-up | Notification: "Successfully signed in as {username}." <details> <summary>**Click to View**</summary> ![features](documentation/messages/sign-up-message.png)</details> | Passed |
+| User's Review Administration Page| Empty: Notification - "You haven't added any reviews yet." <details> <summary>**Click to View**</summary> ![features](documentation/Features/reviews-page-empty.png)</details> | Passed |
+| Review created & submitted | Notification: "Review added successfully, waiting for approval." <details> <summary>**Click to View**</summary> ![features](documentation/messages/add-review-message.png)</details> | Passed |
+| Review edited & submitted | Notification: "Review updated.", "Status: This review is in ___ status." Author name. <details> <summary>**Click to View**</summary> ![features](documentation/messages/add-review-message.png)</details> | Passed |
+| Delete a Review confirmation | Notification: "Are you sure you want to permanently delete the review "title"?" <details> <summary>**Click to View**</summary> ![features](documentation/Features/delete-a-review.png)</details> | Passed |
+| Delete a Review | Notification: "Review deleted successfully." <details> <summary>**Click to View**</summary> ![features](documentation/messages/delete-a-review-message.png)</details> | Passed |
+| My favourite posts page | Empty: "You don't have any favorites yet." <details> <summary>**Click to View**</summary> ![features](documentation/messages/my-favourites-empty.png)</details> | Passed |
+| Add favourite posts | Notification: "Added to favorites." <details> <summary>**Click to View**</summary> ![features](documentation/messages/add-favourites-message.png)</details> | Passed |
+| Remove favourite posts confirmation | Notification: "Are you sure you want to remove "title" from your favorites?" <details> <summary>**Click to View**</summary> ![features](documentation/Features/favourites-removal-page.png)</details> | Passed |
+| Remove favourite posts | Notification: "Removed from favorites." <details> <summary>**Click to View**</summary> ![features](documentation/messages/remove-favourites-message.png)</details> | Passed |
+| Add likes | Notification: "Added to likes."  <details> <summary>**Click to View**</summary> ![features](documentation/messages/add-likes-message.png)</details> | Passed |
+| Likes counter | Displays the correct number of likes <details> <summary>**Click to View**</summary> ![features](documentation/Features/like.png)</details> | Passed |
+| Remove likes confirmation | Notification: "Are you sure you want to remove "Title" from your likes?" <details> <summary>**Click to View**</summary> ![features](documentation/Features/like-removal-page.png)</details> | Passed |
+| Remove likes | Notification: "Removed from likes." <details> <summary>**Click to View**</summary> ![features](documentation/messages/like-removal-message.png)</details> | Passed |
+| My comments page | Empty: "You haven't made any comments yet." <details> <summary>**Click to View**</summary> ![features](documentation/messages/empty-comments-page.png)</details> | Passed |
+| Post a comment | Notification: "Comment submitted and awaiting approval" <details> <summary>**Click to View**</summary> ![features](documentation/messages/comment-submitted.png)</details> | Passed |
+| Comment counter| Displays the correct number of comments <details> <summary>**Click to View**</summary> ![features](documentation/Features/comments.png)</details> | Passed |
+| Update a comment | Notification: "Comment updated and is awaiting approval." <details> <summary>**Click to View**</summary> ![features](documentation/messages/comment-update.png)</details> | Passed |
+| Delete a comment confirmation | Notification: "Are you sure you want to delete your comment? This action cannot be undone." <details> <summary>**Click to View**</summary> ![features](documentation/messages/delete-comment-warning.png)</details>  | Passed |
+| Delete a comment | Notification: "Comment deleted!" <details> <summary>**Click to View**</summary> ![features](documentation/messages/comment-deleted.png)</details> | Passed |
+| Contact form submitted | Notification: "We got your message! We endeavor to respond within 2 working days." <details> <summary>**Click to View**</summary> ![features](documentation/messages/contact-us-message.png)</details> | Passed |
+| Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND <details> <summary>**Click to View**</summary> ![features](documentation/Features/404-page.png)</details> | Passed |
 
 ### Layout and Built in Functionality
 
