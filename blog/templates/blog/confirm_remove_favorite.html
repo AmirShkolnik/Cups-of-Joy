@@ -1,19 +1,24 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title %}Delete Your Review{% endblock %}
+{% extends "base.html" %} <!-- Extends the base template -->
+{% load static %} <!-- Loads the static files -->
+{% block title %}Delete Your Review{% endblock %} <!-- Sets the title of the page -->
 
-{% block content %}
+{% block content %} <!-- Start of the content block -->
 <div class="container">
     <section class="jumbotron text-center bg-white">
         <div class="container">
-<h2>Confirm Remove Favorite</h2>
-  <p>Are you sure you want to remove "{{ post.title }}" from your favorites?</p>
-  <form method="post" action="{% url 'favourite_remove' post.slug %}">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-primary hover">Confirm</button>
-<a href="{% url 'post_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
-  </form> 
+            <!-- Heading for the confirmation -->
+            <h2>Confirm Remove Favorite</h2>
+            <!-- Prompt for the user to confirm the removal of the favorite post -->
+            <p>Are you sure you want to remove "{{ post.title }}" from your favorites?</p>
+            <!-- Form to handle the removal of the favorite post -->
+            <form method="post" action="{% url 'favourite_remove' post.slug %}">
+                {% csrf_token %} <!-- CSRF token for security -->
+                <!-- Button to confirm the removal -->
+                <button type="submit" class="btn btn-primary hover">Confirm</button>
+                <!-- Link to cancel the removal and go back to the post detail page -->
+                <a href="{% url 'post_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </section>
 </div>
-</section>
-</div>
-{% endblock %}
+{% endblock %} <!-- End of the content block -->
