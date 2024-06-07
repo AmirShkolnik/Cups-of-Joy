@@ -41,9 +41,10 @@ def user_comments(request):
     """
     View for displaying all comments made by the current user.
     """
-    comments = Comment.objects.filter(author=request.user).prefetch_related('post').order_by('-created_on')
+    comments = Comment.objects.filter(
+        author=request.user).prefetch_related(
+            'post').order_by('-created_on')
     return render(request, 'blog/user_comments.html', {'comments': comments})
-
 
 
 class ArticlesView(ListView):
@@ -148,9 +149,13 @@ def comments_list(request, slug):
     View for displaying comments on a specific post.
     """
     post = get_object_or_404(Post, slug=slug)
-    comments = post.comments.filter(approved=True).prefetch_related('author').order_by('-created_on')
-    return render(request, 'blog/comments.html', {'comments': comments, 'post': post})
-
+    comments = (
+        post.comments.filter(approved=True)
+        .prefetch_related('author')
+        .order_by('-created_on')
+    )
+    return render(request, 'blog/comments.html',
+                  {'comments': comments, 'post': post})
 
 
 def comment_edit(request, slug, comment_id):
