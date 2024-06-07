@@ -1,7 +1,22 @@
+from .models import Comment
+from django import forms
 from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+
+
+class CommentForm(forms.ModelForm):
+    """
+    Form class for users to comment on a post
+    """
+    class Meta:
+        """
+        Specify the django model and order of the fields
+        """
+        model = Comment
+        fields = ('body',)
+
 
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
