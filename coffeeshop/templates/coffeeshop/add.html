@@ -5,29 +5,36 @@
 
 {% block content %}
 <div class="container pt-5">
+  <!-- Form for adding a review -->
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    <!-- Loop through each visible field in the form -->
     {% for field in form.visible_fields %}
       <div class="form-group">
+        <!-- Label for the form field -->
         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        <!-- Render the form field with a 'form-control' class -->
         {{ field|add_class:'form-control' }}
+        <!-- Display any errors associated with the form field -->
         {% for error in field.errors %}
           <span class="help-block">{{ error }}</span>
         {% endfor %}
       </div>
     {% endfor %}
-    
+    <!-- Checkbox for confirming submission -->
     <div class="form-group">
       <label for="confirm_submission">
         <input type="checkbox" id="confirm_submission" name="confirm_submission" required>
         I understand that all changes will be lost if I don't request approval.
       </label>
     </div>
-
+    <!-- Buttons for submitting the form or canceling -->
     <div class="form-group form-buttons">
+      <!-- Submit button, initially disabled -->
       <button type="submit" class="btn btn-success" disabled>
         <span class="glyphicon glyphicon-ok"></span> Request Approval
       </button>
+      <!-- Cancel button with a confirmation prompt -->
       <a href="{% url 'coffeeshop:add_review' %}" class="btn btn-outline-primary custom-remove-btn" onclick="return confirm('Are you sure you want to discard your changes?');">Cancel</a>
     </div>
   </form>
