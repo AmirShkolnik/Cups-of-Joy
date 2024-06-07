@@ -4,13 +4,19 @@
 
 {% block content %}
 <div class="container">
+    <!-- Section for confirming the removal of a liked post -->
     <section class="jumbotron text-center bg-white">
         <div class="container">
             <h2>Confirm Like Removal</h2>
+            <!-- Displays the title of the post the user wants to remove from their likes -->
             <p>Are you sure you want to remove "{{ post.title }}" from your likes?</p>
+            <!-- Form for submitting the like removal request -->
             <form method="post" action="{% url 'confirm_like_removal' post.slug %}">
+                <!-- CSRF token for security -->
                 {% csrf_token %}
+                <!-- Button to confirm the removal -->
                 <button type="submit" class="btn btn-primary hover">Confirm</button>
+                <!-- Link to cancel the removal and go back to the post detail page -->
                 <a href="{% url 'post_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
