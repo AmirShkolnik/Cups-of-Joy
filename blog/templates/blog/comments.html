@@ -5,26 +5,34 @@
 
 {% block content %}
 <div class="container">
+    <!-- Jumbotron section for the page header -->
     <section class="jumbotron text-center bg-white">
         <div class="container">
+            <!-- Display the user's name and a brief description -->
             <h1>{{ user }}'s Comments</h1>
             <p class="lead text-muted">Here you can view all the comments you have made on different posts. If you wish to edit or remove a comment, click on the relevant article, and you will find your comment at the end of the article.</p>
         </div>
     </section>
     <div>
+        <!-- Check if there are any comments -->
         {% if comments %}
+        <!-- Loop through each comment -->
             {% for comment in comments %}
                 <div class="card mb-4">
                     <div class="card-body">
+                        <!-- Display the title of the post the comment is related to -->
                         <h5 class="card-title">
                             <a href="{% url 'post_detail' comment.post.slug %}">{{ comment.post.title }}</a>
                         </h5>
+                        <!-- Display the comment body -->
                         <p class="card-text">{{ comment.body }}</p>
+                        <!-- Display the creation date of the comment -->
                         <p class="card-text"><small class="text-muted">{{ comment.created_on }}</small></p>
                     </div>
                 </div>
             {% endfor %}
         {% else %}
+            <!-- Message to display if the user hasn't made any comments -->
             <p>You haven't made any comments yet.</p>
         {% endif %}
     </div>

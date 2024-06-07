@@ -5,6 +5,7 @@ from django.views.generic import ListView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.db.models import Prefetch
 from blog.models import Post
 from .models import Post, Comment
 from .forms import CommentForm
