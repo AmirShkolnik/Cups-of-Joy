@@ -231,6 +231,8 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### My Comments Page
 
+![Navbar](![Navbar](documentation/Features/single-review-page-2.png))
+
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
 | Dropdown Menu - Click on the "My Comments" link | Redirect to blog/comments/ | Passed |
