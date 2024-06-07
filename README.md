@@ -1033,6 +1033,7 @@ The following blogs/tutorials complemented my learning for this project:
 - [Create Blog Like Button](https://www.youtube.com/watch?v=PXqRPqDjDgc)
 - [Am I Responsive](https://ui.dev/amiresponsive)
 - [ Creating a User Bookmark / Favourites Features](https://www.youtube.com/watch?v=H4QPHLmsZMU)
+- [Home Page](https://it-restaurant-42ee32c14928.herokuapp.com/)
 
 ## Media
 
