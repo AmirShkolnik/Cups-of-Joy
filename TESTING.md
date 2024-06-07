@@ -634,5 +634,6 @@ There are no known bugs in the deployed project.
 1. Reviews Page - Slidshow uploads slowly.
 2. Reduce images size for better performance.
 3. Enhance website accessibility by identifying and resolving issues to ensure compliance with web accessibility standards and guidelines, enabling seamless access for users with disabilities.
+4. Add more documentation and clarification comments to each and every piece of code. There were issues with adding comments to the Python code without getting errors during the testing phase on the CI Python Linter testing program.
 
 Back to the [README.md](README.md)
