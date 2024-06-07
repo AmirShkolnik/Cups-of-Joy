@@ -176,6 +176,7 @@ main {
 /* Navbar active state */
 .navbar .nav-link.active {
     background-color: transparent !important;
+
 }
 
 /* Logo active state */
