@@ -132,8 +132,6 @@ We tested this webpage very carefully many times while we were making it. We did
 
 ### Singel Review Page 
 
-![Singel Review Page](documentation/Features/single-review-page-3.png)
-
 ![Singel Review Page](documentation/Features/single-review-page-2.png)
 
 | What was tested | Expected Result | Outcome |
@@ -197,6 +195,10 @@ We tested this webpage very carefully many times while we were making it. We did
 | Click on the "User Name" button | Display dropdown menu | Passed |
 
 ### My Reviews Page
+
+![Sign In](documentation/Features/single-review-page-3.png)
+
+![Navbar](documentation/Features/single-review-page-2.png)
 
 | What was tested | Expected Result | Outcome |
 |------------------------------|--------------------------------------|--------|
