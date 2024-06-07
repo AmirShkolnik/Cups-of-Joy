@@ -5,18 +5,24 @@
 
 {% block content %}
 <div class="container">
+    <!-- Jumbotron section for the page header -->
     <section class="jumbotron text-center bg-white">
         <div class="container">
+            <!-- Display the user's name and a brief description -->
             <h1>My Comments</h1>
             <p class="lead text-muted">Here you can view all the comments you have made on different posts.</p>
         </div>
     </section>
     <div>
+         <!-- Check if there are any comments -->
         {% if comments %}
+        <!-- Loop through each comment -->
             {% for comment in comments %}
                 <div class="card mb-4">
                     <div class="card-body">
+                        <!-- Display the title of the post the comment is related to -->
                         <h5 class="card-title">{{ comment.post.title }}</h5>
+                        <!-- Display the comment body -->
                         <p class="card-text">{{ comment.body }}</p>
                         <p class="card-text">
                             <small class="text-muted">{{ comment.created_on }}</small>
@@ -35,6 +41,7 @@
                 </div>
             {% endfor %}
         {% else %}
+            <!-- Message to display if the user hasn't made any comments -->
             <p>You haven't made any comments yet.</p>
         {% endif %}
     </div>
