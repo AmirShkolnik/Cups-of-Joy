@@ -629,6 +629,10 @@ Reviews Page - The slideshow is uploading very slowly, even though the image siz
 
 When a user edits an article or a comment after approval, it gets published automatically. The edited article must be unpublished and approved again by an admin to prevent unwanted content from appearing.
 
+**Responsiveness**
+
+
+
 ### Unknown Bugs
 
 There are no known bugs in the deployed project.
