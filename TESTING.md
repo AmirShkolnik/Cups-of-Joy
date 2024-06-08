@@ -607,7 +607,7 @@ As this was my first Django/Database project, most of the bugs that I encountere
 
 ### Known Bugs
 
-Summernote
+**Summernote**
 
 - The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
 
@@ -615,6 +615,19 @@ Summernote
 
 ![Summernote Tutor](documentation/errors/Tutor-John-2.png)
 ![Add Review Validation Errors](documentation/errors/add-review.png)
+
+**Wave - Enhance website accessibility**
+
+- Empty button in the navigation bar.
+- Home Page - Contrat issues in the footer.
+
+**Slideshow**
+
+Reviews Page - The slideshow is uploading very slowly, even though the image sizes are small. A more thorough investigation of the JavaScript code is needed.
+
+**Edit approved commenet or article**
+
+When a user edits an article or a comment after approval, it gets published automatically. The edited article must be unpublished and approved again by an admin to prevent unwanted content from appearing.
 
 ### Unknown Bugs
 
