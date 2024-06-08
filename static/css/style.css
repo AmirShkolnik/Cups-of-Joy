@@ -752,9 +752,9 @@ img {
 }
 
 
-    /* Media query: Mobile devices. (min-width:321px - max-width:480px) */
+    /* Media query: Mobile devices. (min-width:319px - max-width:480px) */
     
-    @media (min-width: 321px) and (max-width: 480px) {
+    @media (min-width: 319px) and (max-width: 480px) {
         .jumbotron-header-home {
             font-size: 22px;
             margin-top: 40px;
