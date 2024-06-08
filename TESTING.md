@@ -470,7 +470,9 @@ The table below shows the results of checking the HTML code for different pages 
 
 #### Summernote
 
-The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
+- The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code." 
+
+- Error number 4 is a Summernote error that occurs when adding a form-control class to the code {{ field|add_class:'form-control' }}. Instead of merging the Summernote class with the form-control class, Summernote adds a separate class: class="summernote-div"  class="form-control".
 
 ![Summernote Tutor](documentation/errors/Tutor-John-2.png)
 
@@ -607,7 +609,9 @@ As this was my first Django/Database project, most of the bugs that I encountere
 
 Summernote
 
-The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
+- The add.html and edit.html pages are based on Django Summernote. During the testing and HTML validation phase, I encountered many errors. I tried to solve them myself without any success, as I did not write this code and cannot control it. I contacted tutor support, and here is John's response: "Ah, I'm with you. I don't think you'll be able to do anything about these errors, as they're not coming from your code."
+
+- Summernote error that occurs when adding a form-control class to the code {{ field|add_class:'form-control' }}. Instead of merging the Summernote class with the form-control class, Summernote adds a separate class: class="summernote-div" class="form-control".
 
 ![Summernote Tutor](documentation/errors/Tutor-John-2.png)
 ![Add Review Validation Errors](documentation/errors/add-review.png)
@@ -620,7 +624,7 @@ There are no known bugs in the deployed project.
 
 1. Reviews Page - Slidshow uploads slowly.
 2. Reduce images size for better performance.
-3. Enhance website accessibility by identifying and resolving issues to ensure compliance with web accessibility standards and guidelines, enabling seamless access for users with disabilities.
+3. Enhance website accessibility by identifying and resolving issues to ensure compliance with web accessibility standards and guidelines, enabling seamless access for users with disabilities. As remove empty buttons and improve contrast errors.
 4. Add more documentation and clarification comments to each and every piece of code. There were issues with adding comments to the Python code without getting errors during the testing phase on the CI Python Linter testing program.
 
 Back to the [README.md](README.md)
