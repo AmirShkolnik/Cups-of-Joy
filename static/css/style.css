@@ -33,9 +33,12 @@ body {
 
 /*--------------------------------------------Headings*/
 /* Set the font styles for headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Lato', sans-serif;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    /* Bold */
 }
 
 /*--------------------------------------------Text Colors*/
@@ -51,14 +54,18 @@ h1, h2, h3 {
 /*--------------------------------------------Buttons*/
 /* Style for secondary buttons */
 .btn-secondary {
-    background-color: #70AFE2; /* Set the desired background color */
-    color: #ffffff; /* Set the desired text color */
+    background-color: #70AFE2;
+    /* Set the desired background color */
+    color: #ffffff;
+    /* Set the desired text color */
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-    background-color: #85bfee; /* Set the desired background color on hover/focus */
-    color: #ffffff; /* Set the desired text color on hover/focus */
+    background-color: #85bfee;
+    /* Set the desired background color on hover/focus */
+    color: #ffffff;
+    /* Set the desired text color on hover/focus */
 }
 
 /*--------------------------------------------Layout*/
@@ -320,7 +327,8 @@ main {
 .image-container {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 .image-container img {
@@ -453,7 +461,8 @@ main {
 }
 
 .mr-3 {
-    margin-right: 0.75rem; /* Adjust the value as needed */
+    margin-right: 0.75rem;
+    /* Adjust the value as needed */
 }
 
 /*--------------------------------------------Like Button*/
@@ -573,7 +582,8 @@ a.text-dark:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem; /* Adjust the value as needed */
+    margin-top: 1rem;
+    /* Adjust the value as needed */
     margin-bottom: 5rem;
 }
 
@@ -596,7 +606,8 @@ footer {
     bottom: 10px;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
+    /* Increase the z-index value */
 }
 
 .footer-container-home {
@@ -604,7 +615,8 @@ footer {
     bottom: 0px;
     left: 0;
     width: 100%;
-    z-index: 3; /* Increase the z-index value */
+    z-index: 3;
+    /* Increase the z-index value */
 }
 
 .copyright-text {
@@ -752,15 +764,7 @@ img {
 }
 
 
-    /* Media query: Mobile devices. (min-width:319px - max-width:480px) */
-    
-    @media (min-width: 319px) and (max-width: 480px) {
-        .jumbotron-header-home {
-            font-size: 22px;
-            margin-top: 40px;
-        }
-    
-    }
+/* Media query (min-width:767.98px - max-width:1023px) */
 
 @media (max-width: 767.98px) {
 
@@ -780,9 +784,9 @@ img {
         background-color: rgba(0, 0, 0);
     }
 
-    .jumbotron-header-home>h1 {
-        font-size: 20px;
-        margin-top: 40px;
+    h1.jumbotron-header-home {
+        font-size: 45px;
+        margin-top: 10px;
     }
 
     .masthead {
@@ -823,4 +827,10 @@ img {
     .footer-container-home {
         position: relative;
     }
+
+    .callout-container-home {
+        height: 150vh;
+
+    }
+   
 }

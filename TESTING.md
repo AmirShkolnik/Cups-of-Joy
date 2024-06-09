@@ -631,7 +631,29 @@ When a user edits an article or a comment after approval, it gets published auto
 
 **Responsiveness**
 
+**Homepage**
 
+- For some small devices, the space between the navbar and headline is too large. This creates a suboptimal user experience (UX) as users need to scroll significantly.
+
+<details>
+<summary>Click to View Small Screens Space</summary>
+
+**Nest Hub**
+
+![Space](documentation/errors/margin-top.png)
+
+</details>
+
+- Nest Hub: The footer and navbar on Nest Hub are not aligned with the content, causing them to appear stacked on top of each other.
+
+<details>
+<summary>Click to View Nest Hub</summary>
+
+**Nest Hub**
+
+![NestHUb](documentation/errors/nest-hub.png)
+
+</details>
 
 ### Unknown Bugs
 

@@ -28,10 +28,8 @@
                             </div>
                             <!-- Link to the post detail page -->
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <h2 class="card-title">{{ post.title }}</h2></a>
                                 <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-
                             <hr>
                             <!-- Display the post creation date and number of likes -->
                             <p class="card-text text-muted h6">{{ post.created_on|date:"N j, Y" }}  <i class="fas fa-heart"></i>
