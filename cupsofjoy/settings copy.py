@@ -15,8 +15,8 @@ import os
 import sys
 from django.contrib.messages import constants as messages
 import dj_database_url
-from dotenv import load_dotenv
-load_dotenv()
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,12 +26,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-kkn_%w6g+jj_v4tzgs#ndpsq'
+'30&)$sdvxkl-hllheg8lqc=z(x'
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '.onrender.com',
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com',
                  '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io',
                  '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu112.gitpod.io',
                  ]
@@ -121,7 +123,6 @@ if 'test' in sys.argv:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.com",
     "https://*.herokuapp.com",
-    "https://*.onrender.com",
     "https://8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io",
     "https://8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu112.gitpod.io",
 ]
