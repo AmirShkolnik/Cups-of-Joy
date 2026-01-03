@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'False') == 'False'
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com', '.onrender.com',
                  '8000-amirshkolnik-jobfinder-0mqhu2bjjsz.ws-eu110.gitpod.io',
